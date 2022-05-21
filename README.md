@@ -112,6 +112,7 @@ su sudo_user && cd $HOME
 
 ~~sudo apt-get install -y language-pack-ja-base language-pack-ja~~
 
+``` ubuntu
 $ sudo locale-gen ja_JP.UTF-8
 Generating locales (this might take a while)...
   ja_JP.UTF-8... done
@@ -595,6 +596,225 @@ docker-compose up -d
 docker-compose down --volume
 ```
 
+## Python仮想環境構築
+
+<details>
+<summary>Python 2.7</summary>
+
+``` PowerShell
+$ py -2 -m virtualenv venv27
+created virtual environment CPython2.7.18.final.0-64 in 5958ms
+  creator CPython2Windows(dest=C:\Users\path\to\Python\venv27, clear=False, global=False)
+  seeder FromAppData(download=False, pip=latest, setuptools=latest, wheel=latest, via=copy, app_data_dir=C:\Users\pathto\AppData\Local\pypa\virtualenv\seed-app-data\v1.0.1)
+  activators PythonActivator,FishActivator,BatchActivator,BashActivator,PowerShellActivator
+ .\venv27\Scripts\activate
+(venv27) PS C:\Users\pathto\Development\Python>
+(venv27) PS C:\Users\pathto\Development\Python> pip list
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+Package    Version
+---------- -------
+pip        20.0.2 
+setuptools 44.1.0 
+wheel      0.34.2 
+WARNING: You are using pip version 20.0.2; however, version 20.3.4 is available.
+You should consider upgrading via the 'C:\Users\pathto\Development\Python\venv27\Scripts\python.exe -m pip install --upgrade pip' command.
+(venv27) PS C:\Users\pathto\Development\Python> python -m pip install -U pip
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+Collecting pip
+  Downloading pip-20.3.4-py2.py3-none-any.whl (1.5 MB)
+     |################################| 1.5 MB 2.0 MB/s
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 20.0.2
+    Uninstalling pip-20.0.2:
+      Successfully uninstalled pip-20.0.2
+Successfully installed pip-20.3.4
+```
+
+</details>
+
+<details>
+<summary>Python 3.x</summary>
+
+``` PowerShell
+PS C:\Users\pathto\Development\Python> py -3.10 -m venv venv310 
+PS C:\Users\pathto\Development\Python> .\venv310\Scripts\activate
+(venv310) PS C:\Users\pathto\Development\Python>
+(venv310) PS C:\Users\pathto\Development\Python> pip list
+Package    Version
+---------- -------
+pip        22.0.4
+setuptools 58.1.0
+WARNING: You are using pip version 22.0.4; however, version 22.1 is available.
+You should consider upgrading via the 'C:\Users\pathto\Development\Python\venv310\Scripts\python.exe -m pip install --upgrade pip' command.
+(venv310) PS C:\Users\pathto\Development> python -m pip install -U pip
+Requirement already satisfied: pip in c:\users\pathto\development\python\venv310\lib\site-packages (22.0.4)
+Collecting pip
+  Using cached pip-22.1-py3-none-any.whl (2.1 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 22.0.4
+    Uninstalling pip-22.0.4:
+      Successfully uninstalled pip-22.0.4
+Successfully installed pip-22.1
+```
+
+</details>
+
+## Shell Script
+
+<details>
+<summary>Shell Script</summary>
+
+``` sh
+#!/bin/sh
+
+stty -echo
+read -p "enter password: " entered
+stty echo
+echo "what you entered: $entered"
+
+```
+
+</details>
+
+## ubuntu 22.04にPython環境構築
+
+[docker image](https://hub.docker.com/repository/docker/enginearn/ubuntu-latest-jp)からubuntuを用意する
+
+<details>
+<summary>Pthon3の確認</summary>
+
+``` docker container
+$ which pythom3
+$ # python3が入ってない
+```
+
+</details>
+
+<details>
+<summary>Python3とpip3をインストール</summary>
+
+``` docker container
+$ sudo apt install python3 python3-pip
+パッケージリストを読み込んでいます... 完了
+依存関係ツリーを作成しています... 完了
+状態情報を読み取っています... 完了
+以下の追加パッケージがインストールされます:
+  binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2 ca-certificates cpp cpp-11 dirmngr dpkg-dev fakeroot fontconfig-config fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm
+  javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan6 libassuan0 libatomic1 libbinutils libbrotli1 libbsd0 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libdpkg-perl libexpat1-dev libfakeroot     
+  libfile-fcntllock-perl libfontconfig1 libfreetype6 libgcc-11-dev libgd3 libgdbm-compat4 libgdbm6 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore libksba8 libldap-2.5-0 libldap-common liblocale-gettext-perl liblsan0 libmd0 libmpc3   
+  libmpfr6 libnpth0 libnsl-dev libperl5.34 libpng16-16 libpython3-dev libpython3-stdlib libpython3.10-dev libquadmath0 libsasl2-2 libsasl2-modules libsasl2-modules-db libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4   
+  linux-libc-dev lto-disabled-list make manpages manpages-dev netbase openssl patch perl perl-modules-5.34 pinentry-curses python3-dev python3-distutils python3-lib2to3 python3-minimal python3-pkg-resources python3-setuptools python3-wheel python3.10 python3.10-dev python3.10-minimal       
+  rpcsvc-proto ucf xz-utils zlib1g-dev
+提案パッケージ:
+  binutils-doc bzip2-doc cpp-doc gcc-11-locales dbus-user-session libpam-systemd pinentry-gnome3 tor debian-keyring g++-multilib g++-11-multilib gcc-11-doc gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-11-multilib parcimonie xloadimage scdaemon apache2 | lighttpd        
+  | httpd glibc-doc git bzr libgd-tools gdbm-l10n libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql libstdc++-11-doc make-doc man-browser ed diffutils-doc perl-doc libterm-readline-gnu-perl
+  | libterm-readline-perl-perl libtap-harness-archive-perl pinentry-doc python3-doc python3-tk python3-venv python-setuptools-doc python3.10-venv python3.10-doc binfmt-support
+以下のパッケージが新たにインストールされます:
+  binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2 ca-certificates cpp cpp-11 dirmngr dpkg-dev fakeroot fontconfig-config fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm
+  javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan6 libassuan0 libatomic1 libbinutils libbrotli1 libbsd0 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libdpkg-perl libexpat1-dev libfakeroot     
+  libfile-fcntllock-perl libfontconfig1 libfreetype6 libgcc-11-dev libgd3 libgdbm-compat4 libgdbm6 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore libksba8 libldap-2.5-0 libldap-common liblocale-gettext-perl liblsan0 libmd0 libmpc3   
+  libmpfr6 libnpth0 libnsl-dev libperl5.34 libpng16-16 libpython3-dev libpython3-stdlib libpython3.10-dev libquadmath0 libsasl2-2 libsasl2-modules libsasl2-modules-db libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4   
+  linux-libc-dev lto-disabled-list make manpages manpages-dev netbase openssl patch perl perl-modules-5.34 pinentry-curses python3 python3-dev python3-distutils python3-lib2to3 python3-minimal python3-pip python3-pkg-resources python3-setuptools python3-wheel python3.10 python3.10-dev      
+  python3.10-minimal rpcsvc-proto ucf xz-utils zlib1g-dev
+アップグレード: 0 個、新規インストール: 122 個、 削除: 0 個、保留: 0 個。
+95.0 MB のアーカイブを取得する必要があります。
+この操作後に追加で 333 MB のディスク容量が消費されます。
+続行しますか? [Y/n] n
+中断しました。
+```
+
+提案パッケージの中にpython3-venv python3.10-venvがいるので、一旦インストールをキャンセル
+
+提案パッケージも纏めて入れるようにコマンドを追加
+
+``` docker container
+$ sudo apt install python3 python3-pip --install-suggests
+アップグレード: 0 個、新規インストール: 4730 個、 削除: 0 個、保留: 0 個。
+7,119 MB のアーカイブを取得する必要があります。
+この操作後に追加で 22.2 GB のディスク容量が消費されます。
+続行しますか? [Y/n] n
+中断しました。
+```
+
+よくわからんのが入りすぎて22GBとかイミフなので、以下でインストール
+
+``` docker container
+$ sudo apt install python3 python3-pip python3-venv
+パッケージリストを読み込んでいます... 完了
+依存関係ツリーを作成しています... 完了
+状態情報を読み取っています... 完了
+以下の追加パッケージがインストールされます:
+  binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2 ca-certificates cpp cpp-11 dirmngr dpkg-dev fakeroot fontconfig-config fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm       
+  javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan6 libassuan0 libatomic1 libbinutils libbrotli1 libbsd0 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libfontconfig1 libfreetype6 libgcc-11-dev libgd3 libgdbm-compat4 libgdbm6 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore libksba8 libldap-2.5-0 libldap-common liblocale-gettext-perl liblsan0 libmd0 libmpc3   
+  libmpfr6 libnpth0 libnsl-dev libperl5.34 libpng16-16 libpython3-dev libpython3-stdlib libpython3.10-dev libquadmath0 libsasl2-2 libsasl2-modules libsasl2-modules-db libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4   
+  linux-libc-dev lto-disabled-list make manpages manpages-dev netbase openssl patch perl perl-modules-5.34 pinentry-curses python3-dev python3-distutils python3-lib2to3 python3-minimal python3-pip-whl python3-pkg-resources python3-setuptools python3-setuptools-whl python3-wheel python3.10  
+  python3.10-dev python3.10-minimal python3.10-venv rpcsvc-proto ucf xz-utils zlib1g-dev
+提案パッケージ:
+  binutils-doc bzip2-doc cpp-doc gcc-11-locales dbus-user-session libpam-systemd pinentry-gnome3 tor debian-keyring g++-multilib g++-11-multilib gcc-11-doc gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-11-multilib parcimonie xloadimage scdaemon apache2 | lighttpd        
+  | httpd glibc-doc git bzr libgd-tools gdbm-l10n libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql libstdc++-11-doc make-doc man-browser ed diffutils-doc perl-doc libterm-readline-gnu-perl
+  | libterm-readline-perl-perl libtap-harness-archive-perl pinentry-doc python3-doc python3-tk python-setuptools-doc python3.10-doc binfmt-support
+以下のパッケージが新たにインストールされます:
+  binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2 ca-certificates cpp cpp-11 dirmngr dpkg-dev fakeroot fontconfig-config fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm
+  javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan6 libassuan0 libatomic1 libbinutils libbrotli1 libbsd0 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libdpkg-perl libexpat1-dev libfakeroot     
+  libfile-fcntllock-perl libfontconfig1 libfreetype6 libgcc-11-dev libgd3 libgdbm-compat4 libgdbm6 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore libksba8 libldap-2.5-0 libldap-common liblocale-gettext-perl liblsan0 libmd0 libmpc3   
+  libmpfr6 libnpth0 libnsl-dev libperl5.34 libpng16-16 libpython3-dev libpython3-stdlib libpython3.10-dev libquadmath0 libsasl2-2 libsasl2-modules libsasl2-modules-db libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4   
+  linux-libc-dev lto-disabled-list make manpages manpages-dev netbase openssl patch perl perl-modules-5.34 pinentry-curses python3 python3-dev python3-distutils python3-lib2to3 python3-minimal python3-pip python3-pip-whl python3-pkg-resources python3-setuptools python3-setuptools-whl       
+  python3-venv python3-wheel python3.10 python3.10-dev python3.10-minimal python3.10-venv rpcsvc-proto ucf xz-utils zlib1g-dev
+アップグレード: 0 個、新規インストール: 126 個、 削除: 0 個、保留: 0 個。
+97.4 MB のアーカイブを取得する必要があります。
+この操作後に追加で 336 MB のディスク容量が消費されます。
+続行しますか? [Y/n]
+```
+
+</details>
+
+<details>
+<summary>Python3起動確認</summary>
+
+``` docker container
+$ which python3
+/usr/bin/python3
+
+$ python3
+Python 3.10.4 (main, Apr  2 2022, 09:04:19) [GCC 11.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
+
+</details>
+
+<details>
+<summary>Python3でvenv</summary>
+
+``` docker container
+redmine-ubuntu-ansible$ python3 -m venv venv
+redmine-ubuntu-ansible$ . venv/bin/activate
+(venv) redmine-ubuntu-ansible$
+```
+
+```
+sudo apt install hoge --install-suggests
+sudo apt install hoge --install-recommends
+```
+
+</details>
+
+
+<details>
+<summary>install postgresql</summary>
+
+``` ubuntu
+sudo apt install postgresql postgresql-dev-145 --install-suggests
+```
+
+</details>
+
+
+---
+
 [Docker環境でnodemonがwatchしてくれない問題と対処方法](https://jpdebug.com/p/2477366)
 
 [【node.js】MySQL8.0に接続できない。Error: ER_NOT_SUPPORTED_AUTH_MODE](https://www.chuken-engineer.com/entry/2020/09/04/074216)
@@ -606,3 +826,13 @@ docker-compose down --volume
 [Dockerコンテナに一般ユーザーを追加するときのDockerfileの設定](https://qiita.com/Spritaro/items/602118d946a4383bd2bb)
 
 [Docker 停止中 or 稼働中の Ubuntu コンテナの Bash に入る - docker start attach](https://kei-s-lifehack.hatenablog.com/entry/docker-use-stopped-or-running-ubuntu-container-bash)
+
+[AttributeError: 'str' object has no attribute 'read'](https://yohei-a.hatenablog.jp/entry/20200408/1586291597)
+
+[PythonでJSON 読み込み](https://qiita.com/kikuchiTakuya/items/53990fca06fb9ba1d8a7)
+
+[Pythonで辞書を作成するdict()と波括弧、辞書内包表記](https://note.nkmk.me/python-dict-create/)
+
+[pythonでのcsvファイルの読み込み](https://qiita.com/motoki1990/items/0274d8bcf1a97fe4a869)
+
+[Pythonプログラミング入門](https://utokyo-ipp.github.io/)
