@@ -1,7 +1,177 @@
 # 雑多なメモたち
 
+## WSL2
+
+<details>
+<summary>WSL2のDistributionへアクセス</summary>
+
 ``` PowerShell
-Hyper-VのON / OFF
+wsl --list
+Linux 用 Windows サブシステム ディストリビューション:
+Ubuntu (既定)
+docker-desktop-data
+Ubuntu-22.04
+docker-desktop
+wsl -d Ubuntu-22.04 -u root
+Welcome to Ubuntu 22.04 LTS (GNU/Linux 5.10.102.1-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed May 25 05:59:04 AM JST 2022
+
+  System load:  0.0                Processes:             12
+  Usage of /:   0.6% of 250.98GB   Users logged in:       0
+  Memory usage: 12%                IPv4 address for eth0: xxx.xxx.xxx.xxx
+  Swap usage:   0%
+
+0 updates can be applied immediately.
+
+
+
+This message is shown once a day. To disable it please create the
+/root/.hushlogin file.
+root@GPD-P2-Max:/mnt/c/Users/nagar#
+```
+
+</details>
+
+<details>
+<summary>WSL2のカレントフォルダをマウント元のフォルダで開く</summary>
+
+``` WLS2 ubuntu 22.04
+$ explorer.exe .
+```
+
+</details>
+
+
+<details>
+<summary>WLS2のubuntuでpip3でインストールしたパッケージの追加</summary>
+
+``` WLS ubuntu 22.04
+$ python3 requests_header_encoding.py https://gihyo.jp/dp
+^C # ここでCtrl + C
+Traceback (most recent call last):
+  File "/home/nagar/requests_header_encoding.py", line 5, in <module>
+    r = requests.get(url)
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+KeyboardInterrupt
+$ pip3 list
+Package                Version
+---------------------- -------------
+requests               2.25.1
+urllib3                1.26.5
+```
+
+requestsのインストール先を確認
+
+``` WSL2 ubuntu22.04
+$ pip3 show requests
+Name: requests
+Version: 2.25.1
+Summary: Python HTTP for Humans.
+Home-page: https://requests.readthedocs.io
+Author: Kenneth Reitz
+Author-email: me@kennethreitz.org
+License: Apache 2.0
+Location: /usr/lib/python3/dist-packages
+Requires:
+
+Required-by:
+```
+packageのインストール先を確認
+
+``` WSL2 ubuntu22.04
+$ python3 -c "import sys, pprint; pprint.pprint(sys.path)"
+['',
+ '/usr/lib/python310.zip',
+ '/usr/lib/python3.10',
+ '/usr/lib/python3.10/lib-dynload',
+ '/usr/local/lib/python3.10/dist-packages',
+ '/usr/lib/python3/dist-packages']
+```
+
+念のため、もう1回追加
+
+``` WSL2 ubuntu22.04
+$ python3 -c 'sys.path.append("/usr/lib/python3/dist-packages")'
+```
+
+</details>
+
+## PowerShell
+
+<details>
+<summary>Invoke-WebRequestを使う</summary>
+
+``` PowerShell
+Invoke-WebRequest -Uri https://ferret-plus.com/4637
+                                                                                                                        
+StatusCode        : 200
+StatusDescription : OK
+Content           : <!DOCTYPE html><html lang="ja"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><link crossorigin="" href="//fo…
+RawContent        : HTTP/1.1 200 OK
+                    Date: Sat, 21 May 2022 12:00:36 GMT
+                    Transfer-Encoding: chunked
+                    Connection: keep-alive
+                    Server: nginx
+                    X-Frame-Options: SAMEORIGIN
+                    X-XSS-Protection: 1; mode=block
+                    X-Content-Type-Op…
+Headers           : {[Date, System.String[]], [Transfer-Encoding, System.String[]], [Connection, System.String[]], [Server, System.String[]]…}
+Images            : {@{outerHTML=<img loading="lazy" alt="「URIとは？「URL」と「URI」の違いを解説！」の見出し画像" width="800" height="600" src="https://ferret.akamaized.net/uploads/article/4637/eyecatch/default-d51f6b54f653accfe5bf19d2d2d75fb7.jpg" />; tagName=IMG; loading=lazy; alt=「URI 
+                    とは？「URL」と「URI」の違いを解説！」の見出し画像; width=800; height=600; src=https://ferret.akamaized.net/uploads/article/4637/eyecatch/default-d51f6b54f653accfe5bf19d2d2d75fb7.jpg}, @{outerHTML=<img src="https://ferret.akamaized.net/images/579073cb69702d514a0a0000/la 
+                    rge.jpeg?1469084618" alt="Untitled(3)_(3).png">; tagName=IMG; src=https://ferret.akamaized.net/images/579073cb69702d514a0a0000/large.jpeg?1469084618; alt=Untitled(3)_(3).png}, @{outerHTML=<img class="article-eyecatch" loading="lazy" alt="「市場調査の方法は？3つの手法と  
+                    具体的なレポート事例を解説」の見出し画像" width="400" height="300" src="https://ferret.akamaized.net/uploads/article/63461/eyecatch/default-3501af993cf2c87dcd0b5a3ccd2b460d.jpg" />; tagName=IMG; class=article-eyecatch; loading=lazy; alt=「市場調査の方法は？3つの手法と具 
+                    体的なレポート事例を解説」の見出し画像; width=400; height=300; src=https://ferret.akamaized.net/uploads/article/63461/eyecatch/default-3501af993cf2c87dcd0b5a3ccd2b460d.jpg}, @{outerHTML=<img class="article-eyecatch" loading="lazy" alt="「顧客管理のやり方間違ってませんか 
+                    ？リアル店舗とECにおけるデータ管理の課題と“心地良い購買体験”とは
+                    」の見出し画像" width="400" height="300" src="https://ferret.akamaized.net/uploads/article/64210/eyecatch/default-e4f3c25863ba596dbd23c1b9d4e6702c.jpg" />; tagName=IMG; class=article-eyecatch; loading=lazy; alt=「顧客管理のやり方間違ってませんか？リアル店舗とECにおける  
+                    データ管理の課題と“心地良い購買体験”とは
+                    」の見出し画像; width=400; height=300; src=https://ferret.akamaized.net/uploads/article/64210/eyecatch/default-e4f3c25863ba596dbd23c1b9d4e6702c.jpg}…}
+InputFields       : {@{outerHTML=<input class="q-text-field js-search-form-input" required="required" placeholder="キーワードで記事を検索" type="text" name="q" id="q" />; tagName=INPUT; class=q-text-field js-search-form-input; required=required; placeholder=キーワードで記事を検索; type=tex 
+                    t; name=q; id=q}}
+Links             : {@{outerHTML=<a class="ferret-root-link" href="/"><svg class="ferret-icon"><use xlink:href="https://ferret-plus.com/assets/icons-501a8b6f6002f26fac774ba463aa6c7f39c2cb481106f85e62da592cf4b172ad.svg#ferret"></use></svg></a>; tagName=A; class=ferret-root-link; href=/}, @{ 
+                    outerHTML=<a class="main-link is-current" href="/articles">記事</a>; tagName=A; class=main-link is-current; href=/articles}, @{outerHTML=<a class="main-link " href="/useful-items">お役立ち資料</a>; tagName=A; class=main-link ; href=/useful-items}, @{outerHTML=<a class=" 
+                    main-link " href="/tools">ツール</a>; tagName=A; class=main-link ; href=/tools}…}
+RawContentLength  : 89148
+RelationLink      : {}
+```
+
+``` PowerShell
+Invoke-WebRequest -Uri https://gihyo.jp/feed/rss2 | Out-File rss2.xml
+```
+
+[Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.2)
+
+</details>
+
+<details>
+<summary>Hyper-VのON / OFF</summary>
+
+``` PowerShell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 
@@ -9,11 +179,13 @@ Enable-VMEventing
 Disable-VMEventing
 ```
 
-``` PowerShell Python
+</details>
+
+``` Python 3.10
 py -3.10 -m pip install -U pip
 ```
 
-``` PowerShell Python
+``` Python 3.10
 py -3.10 -m venv venv
 ```
 
@@ -596,6 +768,21 @@ docker-compose up -d
 docker-compose down --volume
 ```
 
+## Python
+
+<details>
+<summary>printの出力結果をUTF-8に</summary>
+
+``` 
+# printの出力結果をUTF-8に
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+print('標準出力(stdout)へ、utf-8で出力')
+print('標準エラー出力(stderr)へ、utf-8で出力', file=sys.stderr)
+```
+
+</details>
+
 ## Python仮想環境構築
 
 <details>
@@ -836,3 +1023,5 @@ sudo apt install postgresql postgresql-dev-145 --install-suggests
 [pythonでのcsvファイルの読み込み](https://qiita.com/motoki1990/items/0274d8bcf1a97fe4a869)
 
 [Pythonプログラミング入門](https://utokyo-ipp.github.io/)
+
+[[Python3]printで文字化けするので、文字コードを変更したい](https://www.curict.com/item/c7/c7eaca3.html)
