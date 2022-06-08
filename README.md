@@ -181,6 +181,16 @@ Disable-VMEventing
 
 </details>
 
+<details>
+<summary>システム環境変数を編集</summary>
+
+``` PowerShell
+# adminでPowerShellを実行
+Start C:\Windows\system32\rundll32.exe sysdm.cpl, EditEnvironmentVariables
+```
+
+</details>
+
 ``` Python 3.10
 py -3.10 -m pip install -U pip
 ```
@@ -870,7 +880,7 @@ echo "what you entered: $entered"
 [docker image](https://hub.docker.com/repository/docker/enginearn/ubuntu-latest-jp)からubuntuを用意する
 
 <details>
-<summary>Pthon3の確認</summary>
+<summary>Python3の確認</summary>
 
 ``` docker container
 $ which pythom3
@@ -999,6 +1009,93 @@ sudo apt install postgresql postgresql-dev-145 --install-suggests
 
 </details>
 
+## winget
+
+<details>
+<summary>基本的な使い方</summary>
+
+``` 
+
+```
+
+</details>
+
+
+## oh-my-posh
+
+<details>
+<summary>winget install oh-my-posh</summary>
+
+``` PowerSHell
+winget install oh-my-posh
+'msstore' ソースを使用するには、使用する前に次の契約を表示する必要があります。
+Terms of Transaction: https://aka.ms/microsoft-store-terms-of-transaction
+ソースが正常に機能するには、現在のマシンの 2 文字の地理的リージョンをバックエンド サービスに送信する必要があります (例: "US")。
+
+すべてのソース契約条件に同意しますか?
+[Y] はい  [N] いいえ: Y
+複数のパッケージが入力条件に一致しました。入力内容を修正してください。
+名前       ID                      ソース
+------------------------------------------
+oh-my-posh XP8K0HKJFRXGCK          msstore
+Oh My Posh JanDeDobbeleer.OhMyPosh winget
+```
+
+``` PowerShell
+winget install oh-my-posh --id XP8K0HKJFRXGCK
+見つかりました oh-my-posh [XP8K0HKJFRXGCK] バージョン Unknown
+このアプリケーションは所有者からライセンス供与されます。
+Microsoft はサードパーティのパッケージに対して責任を負わず、ライセンスも付与しません。
+バージョン: Unknown
+公開元: jandedobbeleer
+発行元 URL: https://ohmyposh.dev/
+発行元のサポート URL: http://support@ohmyposh.dev/
+説明: A prompt theme engine for any shell.
+ライセンス: Copyright 2022 Jan De Dobbeleer
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
+and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+著作権: 2022 Jan De Dobbeleer
+契約:
+Category: Productivity
+Pricing: Free
+Free Trial: No
+Terms of Transaction: https://aka.ms/microsoft-store-terms-of-transaction
+Seizure Warning: https://aka.ms/microsoft-store-seizure-warning
+Store License Terms: https://aka.ms/microsoft-store-license
+
+
+発行元は、お客様がインストール前に上記の情報を表示し、契約に同意することを必要としています。
+使用条件に同意しますか?
+[Y] はい  [N] いいえ: Y
+Downloading https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v7.94.1/install-amd64.exe
+  ██████████████████████████████  6.23 MB / 6.23 MB
+インストーラーハッシュが正常に検証されました
+パッケージのインストールを開始しています...
+インストールが完了しました
+```
+
+</details>
+
+<details>
+<summary>theme</summary>
+
+``` Powershell
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
+```
+
+</details>
+
+
 
 ---
 
@@ -1025,3 +1122,7 @@ sudo apt install postgresql postgresql-dev-145 --install-suggests
 [Pythonプログラミング入門](https://utokyo-ipp.github.io/)
 
 [[Python3]printで文字化けするので、文字コードを変更したい](https://www.curict.com/item/c7/c7eaca3.html)
+
+[DockerのMySQLコンテナを日本語対応させる](https://qiita.com/zongxiaojie/items/6b593ec4ce5e85bb342c)
+
+[nerdfonts](https://www.nerdfonts.com/#home)
