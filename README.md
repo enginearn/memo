@@ -726,6 +726,329 @@ SET character_set_results = utf8mb4;
 SET collation_connection = @@collation_database;
 ```
 
+## GCPのWordPressアップグレード
+
+<details>
+<summary>MySQL5.7 -> MySQL8.0</summary>
+
+``` bash
+$ mysql --version
+mysql  Ver 14.14 Distrib 5.7.38, for Linux (x86_64) using  EditLine wrapper
+
+$ wget https://repo.mysql.com//mysql-apt-config_0.8.22-1_all.deb
+--2022-06-09 22:00:39--  https://repo.mysql.com//mysql-apt-config_0.8.22-1_all.deb
+Resolving repo.mysql.com (repo.mysql.com)... 23.40.193.17
+Connecting to repo.mysql.com (repo.mysql.com)|23.40.193.17|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 18012 (18K) [application/x-debian-package]
+Saving to: ‘mysql-apt-config_0.8.22-1_all.deb’
+
+mysql-apt-config_0.8.22-1_a 100%[========================================>]  17.59K  --.-KB/s    in 0s      
+
+2022-06-09 22:00:39 (128 MB/s) - ‘mysql-apt-config_0.8.22-1_all.deb’ saved [18012/18012]
+
+$ sudo dpkg -i mysql-apt-config_0.8.22-1_all.deb
+(Reading database ... 75925 files and directories currently installed.)
+Preparing to unpack mysql-apt-config_0.8.22-1_all.deb ...
+Unpacking mysql-apt-config (0.8.22-1) over (0.8.22-1) ...
+Setting up mysql-apt-config (0.8.22-1) ...
+Warning: apt-key should not be used in scripts (called from postinst maintainerscript of the package mysql-apt-config)
+OK
+
+$ sudo apt update
+$ sudo apt upgrade -y
+Configuration file '/etc/mysql/mysql.conf.d/mysqld.cnf'
+ ==> Modified (by you or by a script) since installation.
+ ==> Package distributor has shipped an updated version.
+   What would you like to do about it ?  Your options are:
+    Y or I  : install the package maintainer's version
+    N or O  : keep your currently-installed version
+      D     : show the differences between the versions
+      Z     : start a shell to examine the situation
+ The default action is to keep your current version.
+*** mysqld.cnf (Y/I/N/O/D/Z) [default=N] ? Y
+Installing new version of config file /etc/mysql/mysql.conf.d/mysqld.cnf ...
+Setting up mysql-server (8.0.29-1debian10) ...
+Processing triggers for man-db (2.8.5-2) ...
+Processing triggers for libc-bin (2.28-10+deb10u1) ...
+
+$ mysql --version
+mysql  Ver 8.0.29 for Linux on x86_64 (MySQL Community Server - GPL)
+
+$ sudo service apache2 restart
+```
+</details>
+
+<details>
+<summary>Install phpMyAdmin</summary>
+
+``` bash
+$ sudo apt install phpmyadmin
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ phpmyadmin : Depends: php-twig (> 2.9) but 2.6.2-2 is to be installed
+              Recommends: php-bz2
+              Recommends: php-tcpdf but it is not going to be installed
+              Recommends: php-zip
+E: Unable to correct problems, you have held broken packages.
+
+$ sudo apt upgrade phpmyadmin
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ phpmyadmin : Depends: dbconfig-mysql but it is not going to be installed or
+                       dbconfig-no-thanks but it is not going to be installed or
+                       dbconfig-common (< 2.0.0) but it is not going to be installed
+              Depends: libjs-bootstrap4 but it is not going to be installed
+              Depends: libjs-codemirror but it is not going to be installed
+              Depends: libjs-jquery but it is not going to be installed
+              Depends: libjs-jquery-mousewheel but it is not going to be installed
+              Depends: libjs-jquery-timepicker but it is not going to be installed
+              Depends: libjs-jquery-ui but it is not going to be installed
+              Depends: libjs-openlayers but it is not going to be installed
+              Depends: php-mysql
+              Depends: php-google-recaptcha (>= 1.1) but it is not going to be installed
+              Depends: php-google-recaptcha (< 2~~) but it is not going to be installed
+              Depends: php-phpmyadmin-motranslator (< 6~~) but it is not going to be installed
+              Depends: php-phpmyadmin-shapefile (>= 2.0) but it is not going to be installed
+              Depends: php-phpmyadmin-shapefile (< 3~~) but it is not going to be installed
+              Depends: php-phpmyadmin-sql-parser (>= 5.0) but it is not going to be installed
+              Depends: php-phpmyadmin-sql-parser (< 6~~) but it is not going to be installed
+              Depends: php-twig-i18n-extension but it is not going to be installed
+              Depends: php-phpseclib (>= 2.0)
+              Depends: php-phpseclib (< 3~~)
+              Depends: php-symfony-config (< 5~~) but it is not going to be installed
+              Depends: php-symfony-dependency-injection (< 5~~) but it is not going to be installed
+              Depends: php-symfony-expression-language (< 5~~) but it is not going to be installed
+              Depends: php-symfony-yaml (< 5~~) but it is not going to be installed
+              Depends: php-twig (> 2.9) but it is not going to be installed
+              Depends: php-twig (< 4~~) but it is not going to be installed
+              Depends: php-mariadb-mysql-kbs (>= 1.2) but it is not going to be installed
+              Depends: php-mariadb-mysql-kbs (< 2~~) but it is not going to be installed
+              Depends: libjs-sphinxdoc (>= 1.0) but it is not going to be installed
+              Recommends: php-bz2
+              Recommends: php-tcpdf but it is not going to be installed
+              Recommends: php-zip
+
+$ sudo apt install \
+> dbconfig-no-thanks dbconfig-common libjs-bootstrap4 libjs-codemirror libjs-jquery libjs-jquery-mousewheel \> libjs-jquery-timepicker libjs-jquery-ui libjs-openlayers php-mysql php-google-recaptcha php-phpmyadmin-motranslator \
+> php-phpmyadmin-shapefile php-phpmyadmin-sql-parser php-twig-i18n-extension php-phpseclib php-symfony-config \
+> php-symfony-dependency-injection php-symfony-expression-language php-symfony-yaml php-twig php-mariadb-mysql-kbs \
+> libjs-sphinxdoc php-bz2 php-tcpdf php-zip
+```
+
+``` bash
+$ sudo apt install phpmyadmin
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ phpmyadmin : Depends: php-twig (> 2.9) but 2.6.2-2 is to be installed
+```
+
+``` bash
+$ sudo apt -t buster-backports install php-twig
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  php-twig-doc
+The following packages will be upgraded:
+  php-twig
+1 upgraded, 0 newly installed, 0 to remove and 53 not upgraded.
+Need to get 121 kB of archives.
+After this operation, 73.7 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian buster-backports/main amd64 php-twig all 2.14.3-1~bpo10+1 [121 kB]
+Fetched 121 kB in 0s (386 kB/s) 
+(Reading database ... 79611 files and directories currently installed.)
+Preparing to unpack .../php-twig_2.14.3-1~bpo10+1_all.deb ...
+Unpacking php-twig (2.14.3-1~bpo10+1) over (2.6.2-2) ...
+Setting up php-twig (2.14.3-1~bpo10+1) ...
+
+$ wget https://files.phpmyadmin.net/phpMyAdmin/5.2.0/phpMyAdmin-5.2.0-all-languages.zip
+$ unzip phpMyAdmin-5.2.0-all-languages.zip
+$ sudo service mysql stop && sudo service apache2 stop
+$ sudo mv /usr/share/phpmyadmin /usr/share/phpmyadmin_old
+$ sudo mv phpMyAdmin-5.2.0-all-languages phpmyadmin
+$ sudo cp -r phpmyadmin /usr/share/
+$ sudo cp /usr/share/phpmyadmin/config.sample.inc.php /usr/share/phpmyadmin/config.inc.php
+$ sudo vim /usr/share/phpmyadmin/config.inc.php # 32文字以上のパスフレーズを設定
+$ sudo mkdir /usr/share/phpmyadmin/tmp
+$ sudo chown -R www-data:www-data /usr/share/phpmyadmin/tmp
+$ sudo service mysql start && sudo service apache2 start
+```
+
+</details>
+
+<details>
+<summary>Upgrade php</summary>
+
+``` bash
+$ sudo apt install php-fpm
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  php8.1-fpm
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  php-fpm php8.1-fpm
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1679 kB of archives.
+After this operation, 5594 kB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+Get:1 https://packages.sury.org/php buster/main amd64 php8.1-fpm amd64 8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1 [1672 kB]
+Get:2 https://packages.sury.org/php buster/main amd64 php-fpm all 2:8.1+92+0~20220117.43+debian10~1.gbpe0d14e [7476 B]
+Fetched 1679 kB in 2s (885 kB/s)
+Selecting previously unselected package php8.1-fpm.
+(Reading database ... 81559 files and directories currently installed.)
+Preparing to unpack .../php8.1-fpm_8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1_amd64.deb ...
+Unpacking php8.1-fpm (8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1) ...
+Selecting previously unselected package php-fpm.
+Preparing to unpack .../php-fpm_2%3a8.1+92+0~20220117.43+debian10~1.gbpe0d14e_all.deb ...
+Unpacking php-fpm (2:8.1+92+0~20220117.43+debian10~1.gbpe0d14e) ...
+Setting up php8.1-fpm (8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1) ...
+
+Creating config file /etc/php/8.1/fpm/php.ini with new version
+NOTICE: Not enabling PHP 8.1 FPM by default.
+NOTICE: To enable PHP 8.1 FPM in Apache2 do:
+NOTICE: a2enmod proxy_fcgi setenvif
+NOTICE: a2enconf php8.1-fpm
+NOTICE: You are seeing this message because you have apache2 package installed.
+Created symlink /etc/systemd/system/multi-user.target.wants/php8.1-fpm.service → /lib/systemd/system/php8.1-fpm.service.
+Setting up php-fpm (2:8.1+92+0~20220117.43+debian10~1.gbpe0d14e) ...
+Processing triggers for man-db (2.8.5-2) ...
+Processing triggers for systemd (241-7~deb10u8) ...
+Processing triggers for php8.1-fpm (8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1) ...
+NOTICE: Not enabling PHP 8.1 FPM by default.
+NOTICE: To enable PHP 8.1 FPM in Apache2 do:
+NOTICE: a2enmod proxy_fcgi setenvif
+NOTICE: a2enconf php8.1-fpm
+NOTICE: You are seeing this message because you have apache2 package installed.
+```
+
+``` bash
+$ php --version
+PHP 8.1.6 (cli) (built: May 17 2022 16:49:19) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.1.6, Copyright (c) Zend Technologies
+    with Zend OPcache v8.1.6, Copyright (c), by Zend Technologies
+```
+
+``` bash
+$ sudo apt install libapache2-mod-php8.0
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  php8.0-cli php8.0-common php8.0-opcache php8.0-readline
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  libapache2-mod-php8.0 php8.0-cli php8.0-common php8.0-opcache php8.0-readline
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Creating config file /etc/php/8.0/apache2/php.ini with new version
+libapache2-mod-php8.0: php7.4 module already enabled, not enabling PHP 8.0
+Processing triggers for man-db (2.8.5-2) ...
+Processing triggers for php8.0-cli (1:8.0.19-1+0~20220517.33+debian10~1.gbpbb919b) ...
+Processing triggers for libapache2-mod-php8.0 (1:8.0.19-1+0~20220517.33+debian10~1.gbpbb919b) ...
+```
+
+``` bash
+$ sudo apt install libapache2-mod-php8.1
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  libapache2-mod-php8.1
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1603 kB of archives.
+After this operation, 5425 kB of additional disk space will be used.
+Get:1 https://packages.sury.org/php buster/main amd64 libapache2-mod-php8.1 amd64 8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1 [1603 kB]
+Fetched 1603 kB in 2s (903 kB/s)                 
+Selecting previously unselected package libapache2-mod-php8.1.
+(Reading database ... 81807 files and directories currently installed.)
+Preparing to unpack .../libapache2-mod-php8.1_8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1_amd64.deb ...
+Unpacking libapache2-mod-php8.1 (8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1) ...
+Setting up libapache2-mod-php8.1 (8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1) ...
+
+Creating config file /etc/php/8.1/apache2/php.ini with new version
+libapache2-mod-php8.1: php8.0 module already enabled, not enabling PHP 8.1
+Processing triggers for libapache2-mod-php8.1 (8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1) ...
+```
+
+``` bash
+$ sudo a2enmod php8.0
+Considering dependency mpm_prefork for php8.0:
+Considering conflict mpm_event for mpm_prefork:
+Considering conflict mpm_worker for mpm_prefork:
+Module mpm_prefork already enabled
+Considering conflict php5 for php8.0:
+Enabling module php8.0.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+```
+
+``` bash
+$ sudo a2dismod php7.4
+Module php7.4 disabled.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+```
+
+``` bash
+$ sudo systemctl restart apache2
+```
+
+``` bash
+$ php -r "echo phpinfo();" | grep "php.ini"
+Configuration File (php.ini) Path => /etc/php/8.1/cli
+Loaded Configuration File => /etc/php/8.1/cli/php.ini
+```
+
+``` bash
+$ sudo update-alternatives --config php
+There are 3 choices for the alternative php (providing /usr/bin/php).
+
+  Selection    Path             Priority   Status
+------------------------------------------------------------
+* 0            /usr/bin/php8.1   81        auto mode
+  1            /usr/bin/php7.4   74        manual mode
+  2            /usr/bin/php8.0   80        manual mode
+  3            /usr/bin/php8.1   81        manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 0
+```
+
+</details>
+
+
+
 ## git commands
 
 ``` git
@@ -1126,3 +1449,19 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 [DockerのMySQLコンテナを日本語対応させる](https://qiita.com/zongxiaojie/items/6b593ec4ce5e85bb342c)
 
 [nerdfonts](https://www.nerdfonts.com/#home)
+
+[Wikimedia Downloads](https://dumps.wikimedia.org/)
+
+[wikipediaを使ったword2vecコーパスの作り方をまとめてみた](https://qiita.com/Zect/items/d106d46fc94eaa2ed361)
+
+[【Docker, Python】MySQL connectorサンプルコード](https://baran-gizagiza.com/docker-python-mysql-connector/)
+
+[MySQL Rejecting Correct Password “Error 1045: Access denied for user (using password: YES)”](https://devanswers.co/mysql-rejecting-correct-password-error-1045-access-denied-for-user-using-password-yes/)
+
+[Pythonで環境変数を活用する](https://www.twilio.com/blog/environment-variables-python-jp)
+
+[mysql-phpmyadmin：依存：php-twig（> = 2.9）ですが、2.6.2-2がインストールされます。何？](https://yaoply.com/items/phpmyadmin-depends-php-twig-2-9-but-2-6-2-2-is-to-be-installed-what)
+
+[How To Install MySQL 8.0 on Debian 11/10 /9](https://computingforgeeks.com/how-to-install-mysql-8-0-on-debian/)
+
+[第26回　【WordPress】　MySQL5.7→MySQL8.0へアップグレード](https://tohyo2020.org/mysql-57-mysql-80/)
