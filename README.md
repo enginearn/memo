@@ -146,6 +146,7 @@ Running  ssh-agent          OpenSSH Authentication Agent
 <summary>秘密鍵と公開鍵の作成</summary>
 
 ``` PowerShell
+mkdir $HOME/.ssh && cd $HOME/.ssh
 ssh-keygen -t ed25519 -f github_LENOVO13 -C "yourmail@address.com"
 Directory: C:\Users\pathto\.ssh
 
