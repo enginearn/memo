@@ -32,11 +32,7 @@ Welcome to Ubuntu 22.04 LTS (GNU/Linux 5.10.102.1-microsoft-standard-WSL2 x86_64
 
 This message is shown once a day. To disable it please create the
 /root/.hushlogin file.
-<<<<<<< HEAD
 root@GPD-P2-Max:/mnt/c/Users/username#
-=======
-root@GPD-P2-Max:/mnt/c/Users/path#
->>>>>>> 80b026c87587275d25b968d35d458aac0adebc7c
 ```
 
 </details>
@@ -58,11 +54,7 @@ $ explorer.exe .
 $ python3 requests_header_encoding.py https://gihyo.jp/dp
 ^C # ここでCtrl + C
 Traceback (most recent call last):
-<<<<<<< HEAD
-  File "/home/username/requests_header_encoding.py", line 5, in <module>
-=======
   File "/home/path/requests_header_encoding.py", line 5, in <module>
->>>>>>> 80b026c87587275d25b968d35d458aac0adebc7c
     r = requests.get(url)
   File "/usr/lib/python3/dist-packages/requests/api.py", line 76, in get
     return request('get', url, params=params, **kwargs)
@@ -1333,7 +1325,6 @@ Complete!
 
 </details>
 
-
 <details>
 <summary>パッケージ更新</summary>
 
@@ -1635,13 +1626,6 @@ docker-compose up -d
 docker-compose down --volume
 ```
 
-<<<<<<< HEAD
-</details>
-
-
-
-
-=======
 ## ubuntu server 初期設定
 
 <details>
@@ -1761,7 +1745,6 @@ Firewall is active and enabled on system startup
 </details>
 
 
->>>>>>> 80b026c87587275d25b968d35d458aac0adebc7c
 ## Python
 
 <details>
@@ -2127,7 +2110,6 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 
 [第26回　【WordPress】　MySQL5.7→MySQL8.0へアップグレード](https://tohyo2020.org/mysql-57-mysql-80/)
 
-<<<<<<< HEAD
 [QMK Firmware - All Supported Keyboards](https://qmk.fm/keyboards/)
 
 [https://login.docker.com/u/login/identifier?state=hKFo2SBhWndZdzR1U0hZQmYtQng2cTdWb2V4a2pSdHowUXc2aqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDNHLU4xVXFOeUN5S0JZR1FUbThBYzkyaWNVUTF6MTc2o2NpZNkgbHZlOUdHbDhKdFNVcm5lUTFFVnVDMGxiakhkaTluYjk](https://login.docker.com/u/login/identifier?state=hKFo2SBhWndZdzR1U0hZQmYtQng2cTdWb2V4a2pSdHowUXc2aqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDNHLU4xVXFOeUN5S0JZR1FUbThBYzkyaWNVUTF6MTc2o2NpZNkgbHZlOUdHbDhKdFNVcm5lUTFFVnVDMGxiakhkaTluYjk)
@@ -2137,13 +2119,11 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 [Debian 11.2に「sudo: ufw: command not found」の解決方法 - 最新IT技術情報_arkgame.com](https://arkgame.com/2020/03/29/post-44388/)
 
 [wordpress-1-vm – Compute Engine – My First Project – Google Cloud Platform](https://console.cloud.google.com/compute/instancesDetail/zones/asia-northeast1-a/instances/wordpress-1-vm?authuser=4&project=resolute-fold-352811&pageState=(%22duration%22:(%22groupValue%22:%22PT1H%22,%22customValue%22:null)))
-=======
 [VM インスタンス – Compute Engine – My First Project – Google Cloud Platform](https://console.cloud.google.com/compute/instances?authuser=4&project=resolute-fold-352811)
 
 [enginearn/memo at dev-lenovo-13](https://github.com/enginearn/memo/tree/dev-lenovo-13)
 
 [接続エラーを解決する - Google Chrome ヘルプ](https://support.google.com/chrome/answer/6098869#-200&zippy=%2C%E3%81%93%E3%81%AE%E6%8E%A5%E7%B6%9A%E3%81%A7%E3%81%AF%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%81%8C%E4%BF%9D%E8%AD%B7%E3%81%95%E3%82%8C%E3%81%BE%E3%81%9B%E3%82%93neterr-cert-authority-invaliderr-cert-common-name-invalidneterr-cert-weak-signature-algorithmerr-certificate-transparency-requiredssl-%E8%A8%BC%E6%98%8E%E6%9B%B8%E3%82%A8%E3%83%A9%E3%83%BC)
->>>>>>> 80b026c87587275d25b968d35d458aac0adebc7c
 
 [ネットワーク タグの構成  |  VPC  |  Google Cloud](https://cloud.google.com/vpc/docs/add-remove-network-tags?authuser=4&_ga=2.41882539.-80309478.1654773236&_gac=1.253379067.1655242528.CjwKCAjw46CVBhB1EiwAgy6M4o52LBfwXR-l-QDwtbYDicEX8zD7yFLH4bXRRJgXKDRBdftlZyVq8xoCDxAQAvD_BwE)
 
@@ -2249,15 +2229,12 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 
 [Win10起動時に仮想デスクトップ番号を指定してアプリを立ち上げる - Qiita](https://qiita.com/piyox2/items/328ca89a6e7effe58ced)
 
-<<<<<<< HEAD
 [Linuxのデバイスを確認するコマンド | パソコン工房 NEXMAG](https://www.pc-koubou.jp/magazine/36572)
 
 [【Docker】イメージダウンロードでエラー（Error response from daemon）が発生した場合の対応方法 | インフラエンジニアの技術LOG](https://genchan.net/it/virtualization/docker/2553/)
-=======
 [linux-tools-5.4.0-77-generic - Google 検索](https://www.google.com/search?q=linux-tools-5.4.0-77-generic&rlz=1C1QABZ_jaJP895JP895&oq=linux-tools-5.4.0-77-generic&aqs=chrome..69i57j0i5i19i30j0i19i30.4073j0j4&sourceid=chrome&ie=UTF-8)
 
 [how can i pass through USB device in docker for windows(Hyper -v ) · Issue #3926 · docker/for-win](https://github.com/docker/for-win/issues/3926)
->>>>>>> 80b026c87587275d25b968d35d458aac0adebc7c
 
 [How to Use Basler USB Cameras in Docker Container?](https://www.baslerweb.com/jp/sales-support/knowledge-base/frequently-asked-questions/how-to-use-basler-usb-cameras-in-docker-container/588488/)
 
@@ -2283,9 +2260,7 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 
 [macOS Catalinaでavrdudeを使ってProMicroに書き込もうとするとprogrammer is not respondingというエラーが出る - ぽよメモ](https://poyo.hatenablog.jp/entry/2019/11/04/005016)
 
-<<<<<<< HEAD
 [Error: The software identifier is not 'CATERIN': ASCII T - Google 検索](https://www.google.com/search?q=Error%3A+The+software+identifier+is+not+%27CATERIN%27%3A+ASCII+T&rlz=1C1QABZ_jaJP895JP895&oq=Error%3A+The+software+identifier+is+not+%27CATERIN%27%3A+ASCII+T&aqs=chrome.0.69i59j69i58.1653j0j7&sourceid=chrome&ie=UTF-8)
-=======
 [WordPressのログインURLを変更する方法！プラグインを使ってセキュリティ対策を｜ワプ活](https://www.conoha.jp/lets-wp/wp-loginurl/)
 
 [設定 - セキュリティ](chrome://settings/security?q=enhanced)
@@ -2357,5 +2332,3 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 [Raspberry Pi のIPアドレスを固定にするには？│FABSHOP.JP -デジタルでものづくり！ ファブショップ ！](https://www.fabshop.jp/raspberry-pi-static-ip/)
 
 [Linux kernel release 5.x <http://kernel.org/> — The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/admin-guide/README.html)
-
->>>>>>> 80b026c87587275d25b968d35d458aac0adebc7c
