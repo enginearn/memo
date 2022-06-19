@@ -1622,6 +1622,183 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 
 [第26回　【WordPress】　MySQL5.7→MySQL8.0へアップグレード](https://tohyo2020.org/mysql-57-mysql-80/)
 
+[VM インスタンス – Compute Engine – My First Project – Google Cloud Platform](https://console.cloud.google.com/compute/instances?authuser=4&project=resolute-fold-352811)
+
+[enginearn/memo at dev-lenovo-13](https://github.com/enginearn/memo/tree/dev-lenovo-13)
+
+[接続エラーを解決する - Google Chrome ヘルプ](https://support.google.com/chrome/answer/6098869#-200&zippy=%2C%E3%81%93%E3%81%AE%E6%8E%A5%E7%B6%9A%E3%81%A7%E3%81%AF%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%81%8C%E4%BF%9D%E8%AD%B7%E3%81%95%E3%82%8C%E3%81%BE%E3%81%9B%E3%82%93neterr-cert-authority-invaliderr-cert-common-name-invalidneterr-cert-weak-signature-algorithmerr-certificate-transparency-requiredssl-%E8%A8%BC%E6%98%8E%E6%9B%B8%E3%82%A8%E3%83%A9%E3%83%BC)
+
+[ネットワーク タグの構成  |  VPC  |  Google Cloud](https://cloud.google.com/vpc/docs/add-remove-network-tags?authuser=4&_ga=2.41882539.-80309478.1654773236&_gac=1.253379067.1655242528.CjwKCAjw46CVBhB1EiwAgy6M4o52LBfwXR-l-QDwtbYDicEX8zD7yFLH4bXRRJgXKDRBdftlZyVq8xoCDxAQAvD_BwE)
+
+[34.84.110.68 / localhost | phpMyAdmin 5.2.0](http://34.84.110.68/phpmyadmin/index.php?route=/&route=%2F)
+
+[PHP 8.1.7 - phpinfo()](https://enginearn.dev/.phpinfo.php)
+
+[PHPでmbstringを設定して日本語環境に対応する方法を現役エンジニアが解説【初心者向け】 | TechAcademyマガジン](https://techacademy.jp/magazine/39850)
+
+[【Vim】ファイル内で特定の文字列を検索するコマンド一覧 | かわたま.net](http://kawatama.net/web/1341)
+
+[PHP 8.x での php.ini の設定について](https://zenn.dev/ksh2ksk4/articles/3cb75ed89ae662c1352d)
+
+[【CentOS + PHP】「mbstring」を「Httpサーバー」にインストールする方法 - renoji.com](https://renoji.com/IT.php?Contents=OS_CentOS/Server_Http/Install_php_mbstring.html)
+
+[【GCPでWordPress構築】4. https化のためにやること/WebサーバのSSL証明書導入/WordPressのURL変更 | Hello, new World](https://tomorisblog.com/gcp-wordpress-04/)
+
+[Certbot Instructions | Certbot](https://certbot.eff.org/instructions?ws=apache&os=debianbuster)
+
+[Ubuntu 20.04でLet’s Encryptを使用してApacheを保護する方法 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-20-04-ja)
+
+[How To Install the Apache Web Server on Ubuntu 20.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04)
+
+[How To Install the Apache Web Server on Ubuntu 20.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04#step-5-%E2%80%94-setting-up-virtual-hosts-(recommended))
+
+[やさしいLet’s EncryptでSSL証明書を発行する方法 | Oji-Cloud](https://oji-cloud.net/2020/09/29/post-5570/)
+
+[iptablesが難しいためufwでWEBサーバーのファイアウォール設定 - Qiita](https://qiita.com/shimakaze_soft/items/c3cce2bfb7d584e1fbce)
+
+[DNSのゾーン設定を削除したあとにLet’s Encryptによる認証作業を行ったときに発生するエラーについて – エコテキブログ](https://e-yota.com/infrastructure/free_ssl_lets_encrypt_error/)
+
+[SSL サーバ証明書：Apacheトラブルシューティング｜DigiCert（デジサート）](https://rms.ne.jp/sslserver/install/troubleshoot_apache-html/)
+
+[SSL Server Test: enginearn.dev (Powered by Qualys SSL Labs)](https://www.ssllabs.com/ssltest/analyze.html?d=enginearn.dev)
+
+[[*SSL*] Apache2.4にてSSL化を行う - Qiita](https://qiita.com/cigalecigales/items/63698979c4be452c82ea)
+
+[ファイル認証　トラブルシューティング | さくらのサポート情報](https://help.sakura.ad.jp/rs/2268/?article_anchor=js-nav-3)
+
+[Apache | 設定ファイル(httpd.conf)の初期設定](https://www.javadrive.jp/apache/install/index2.html#section2)
+
+[日本語環境の設定 - mbstring - php.iniの設定 - PHP入門のカルマ](https://webkaru.net/php/mbstring-php-ini/)
+
+[GCEでSSH鍵でログインが出来ない(（Permission denied (publickey,gssapi-keyex,gssapi-with-mic)）の解決方法 - Qiita](https://qiita.com/tab02733/items/f1cbfafd39a06271d7ef)
+
+[[SSH]Permission deniedが出てきた時の対応 – ADACHIN SERVER LABO](https://blog.adachin.me/archives/2054)
+
+[VSCodeとGCPを使ってリモート開発マシン作ってみた](https://zenn.dev/noumi0k/articles/6ee90a47921cc6ee8743)
+
+[【秘密鍵/公開鍵】RSA暗号より強い、Ed25519を用いてSSHキーを作成する - Qiita](https://qiita.com/noumi0k/items/d277331819c9f4af6137)
+
+[ssh_config(5): OpenSSH SSH client config files - Linux man page](https://linux.die.net/man/5/ssh_config)
+
+[パスワード生成 (Passwords Generator)](https://www.graviness.com/app/pwg/)
+
+[Google Compute Engine && VS Code でのremote ssh環境構築｜hgsgtk｜note](https://note.com/hgsgtk/n/nb36465c1ac7f)
+
+[SSH で Permission Denied となる傾向と対策 - Qiita](https://qiita.com/youcune/items/2f427979403771f2e03a)
+
+[公開鍵と秘密鍵のペアの作り方と、秘密鍵から公開鍵を再生成する方法 - Qiita](https://qiita.com/hirohiro77/items/d5970791ebb420759aba)
+
+[Permission denied (publickey) の 対処方法はだいたいこれ | ORM ねこの遊び庭](https://ormcat.net/blog/20210509_github-denied-publickey/)
+
+[SSH接続するための秘密鍵と公開鍵をMacで作る | www.ni4.jp](https://www.ni4.jp/2021/01/31-134600.html)
+
+[実行ユーザーを指定してsshをした時にHost key verification failedが出たときの対処法 - Qiita](https://qiita.com/picapica/items/d4d3c80d8881fc2f279f)
+
+[SSHでPermission deniedが解決しないと思ったらauthorized_keysに"\n"が紛れ込んでいた - Qiita](https://qiita.com/noir_neo/items/60532baaf051f91f3013)
+
+[SSH公開鍵認証で接続するまで - Qiita](https://qiita.com/kazokmr/items/754169cfa996b24fcbf5)
+
+[sshの認証についてまとめ - 技術ブログ](https://nkawamura.hatenablog.com/entry/2018/05/05/120616)
+
+[インフラエンジニアじゃなくても押さえておきたいSSHの基礎知識 - Qiita](https://qiita.com/tag1216/items/5d06bad7468f731f590e)
+
+[VSCodeからGCP(GoogleCloudPlatform)にSSH接続 - FlatKids](https://flat-kids.net/2020/03/09/vscode%E3%81%8B%E3%82%89gcpgooglecloudplatform%E3%81%ABssh%E6%8E%A5%E7%B6%9A/)
+
+[SSHでPermission deniedが解決しないと思ったらauthorized_keysに"\n"が紛れ込んでいた - Qiita](https://qiita.com/noir_neo/items/60532baaf051f91f3013)
+
+[GCP: Compute Engineに対して通常のsshコマンドでSSHできるようにする - nwtgck / Ryo Ota](https://scrapbox.io/nwtgck/GCP:_Compute_Engine%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A6%E9%80%9A%E5%B8%B8%E3%81%AEssh%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%A7SSH%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B)
+
+[【設定爆速】VS CodeのRemote Developmentを使ってSSH接続したEC2上のファイルを編集する | DevelopersIO](https://dev.classmethod.jp/articles/vs-code-remote-development-ec2/)
+
+[公開鍵方式のssh接続ログイン時にパスワード入力が求められてしまう。](https://teratail.com/questions/337240)
+
+[How To Configure SSH Key-Based Authentication on a Linux Server | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
+
+[[秘密鍵/公開鍵]GCPにSSHで接続する方法 | エンジニアの眠れない夜](https://sleepless-se.net/2018/09/15/gcp-ssh/)
+
+[WindowsでSSHの鍵を作る - Qiita](https://qiita.com/digdagdag/items/9e5c061e7d86e0af9a57)
+
+[ssh-keygen（sshキー) - vzの尺なblog](https://vz-shark.hatenablog.com/entry/2018/10/03/164528)
+
+[[小ネタ] キーペアの秘密鍵が新OpenSSH形式であるためにWindows EC2インスタンスのログインパスワード復号に失敗するときの対処法 | DevelopersIO](https://dev.classmethod.jp/articles/windows-openssh-keypair/)
+
+[Debian 10 Buster : システムのタイムゾーンを設定する : Server World](https://www.server-world.info/query?os=Debian_10&p=timezone)
+
+[Debian 10 (buster) - 時刻同期設定(systemd-timesyncd)！ - mk-mode BLOG](https://www.mk-mode.com/blog/2019/10/23/debian-10-systemd-timesyncd/)
+
+[I can't use vault ssh in windows 10](https://groups.google.com/g/vault-tool/c/5IWWpYERupw)
+
+[メモモモモ: Windowsで始める初めてのSSH](http://memomo2.blogspot.com/2018/06/windowsssh.html)
+
+[Win10起動時に仮想デスクトップ番号を指定してアプリを立ち上げる - Qiita](https://qiita.com/piyox2/items/328ca89a6e7effe58ced)
+
+[linux-tools-5.4.0-77-generic - Google 検索](https://www.google.com/search?q=linux-tools-5.4.0-77-generic&rlz=1C1QABZ_jaJP895JP895&oq=linux-tools-5.4.0-77-generic&aqs=chrome..69i57j0i5i19i30j0i19i30.4073j0j4&sourceid=chrome&ie=UTF-8)
+
+[how can i pass through USB device in docker for windows(Hyper -v ) · Issue #3926 · docker/for-win](https://github.com/docker/for-win/issues/3926)
+
+[How to Use Basler USB Cameras in Docker Container?](https://www.baslerweb.com/jp/sales-support/knowledge-base/frequently-asked-questions/how-to-use-basler-usb-cameras-in-docker-container/588488/)
+
+[Docker - a way to give access to a host USB or serial device? - Stack Overflow](https://stackoverflow.com/questions/24225647/docker-a-way-to-give-access-to-a-host-usb-or-serial-device)
+
+[バインドマウントの利用 | Docker ドキュメント](https://matsuand.github.io/docs.docker.jp.onthefly/storage/bind-mounts/)
+
+[第17回 Dockerで植物が育つ様子を自動録画してみよう――その1：古賀政純の「攻めのITのためのDocker塾」（2/2 ページ） - ITmedia エンタープライズ](https://www.itmedia.co.jp/enterprise/articles/1603/02/news031_2.html)
+
+[Docker run reference | Docker Documentation](https://docs.docker.com/engine/reference/run/)
+
+[第17回 Dockerで植物が育つ様子を自動録画してみよう――その1：古賀政純の「攻めのITのためのDocker塾」（2/2 ページ） - ITmedia エンタープライズ](https://www.itmedia.co.jp/enterprise/articles/1603/02/news031_2.html)
+
+[Windows環境でDockerコンテナにUSBウェブカメラを認識させる | UNITRUST](https://www.unitrust.co.jp/7117)
+
+[USB デバイスを接続する | Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/wsl/connect-usb)
+
+[Release usbipd-win 2.3.0 · dorssel/usbipd-win](https://github.com/dorssel/usbipd-win/releases/tag/v2.3.0)
+
+[WSL その227 - WSL 2にUSBデバイスを接続し、LinuxディストリビューションからUSBデバイスにアクセスするには - kledgeb](https://kledgeb.blogspot.com/2021/11/wsl-227-wsl-2usblinuxusb.html)
+
+[Connecting USB devices to WSL - Windows Command Line](https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/)
+
+[macOS Catalinaでavrdudeを使ってProMicroに書き込もうとするとprogrammer is not respondingというエラーが出る - ぽよメモ](https://poyo.hatenablog.jp/entry/2019/11/04/005016)
+
+[WordPressのログインURLを変更する方法！プラグインを使ってセキュリティ対策を｜ワプ活](https://www.conoha.jp/lets-wp/wp-loginurl/)
+
+[設定 - セキュリティ](chrome://settings/security?q=enhanced)
+
+[gitignore.io - プロジェクトに役立つ.gitignoreファイルを作成しよう](https://www.toptal.com/developers/gitignore)
+
+[WordPress｜コアファイルの処理フロー(管理画面編) - わくわくBank](https://www.wakuwakubank.com/posts/657-wordpress-core-manage-flow/)
+
+[index.htmlとは（indexの優先順位も）【初心者向け】 | エンジニア足立のコーディング日記](https://deep-blog.jp/engineer/index-html-priority/)
+
+[WordPress｜コアファイルの処理フロー(管理画面編) - わくわくBank](https://www.wakuwakubank.com/posts/657-wordpress-core-manage-flow/)
+
+[CentOS Stream 9 LAMPサーバインストールメモ【Apache2.4＋MySQL8.0＋PHP8.0】 | あぱーブログ](https://blog.apar.jp/linux/15791/)
+
+[gohugoio/hugo: The world’s fastest framework for building websites.](https://github.com/gohugoio/hugo)
+
+[CentOS 7 firewalld よく使うコマンド - Qiita](https://qiita.com/kenjjiijjii/items/1057af2dddc34022b09e)
+
+[CentOS7でSSHのポート番号を変更する - Qiita](https://qiita.com/fk_2000/items/019b62818e34be973227)
+
+[【find・grep】特定の文字列を含むファイルのリストを取得する方法。 - Qiita](https://qiita.com/pokari_dz/items/0f14a21e3ca3df025d21)
+
+[Postfixのバージョンを確認する](https://www.linuxmaster.jp/linux_skill/2016/10/postfix.html)
+
+[Download and install - The Go Programming Language](https://go.dev/doc/install)
+
+[centos stream 9 に nginx と php8.1 をインストール - Qiita](https://qiita.com/ma7ma7pipipi/items/90000bce1248a41745f8)
+
+[PostgreSQL: Linux downloads (Red Hat family)](https://www.postgresql.org/download/linux/redhat/)
+
+[Install Hugo | Hugo](https://gohugo.io/getting-started/installing/)
+
+[gohugoio/hugo: The world’s fastest framework for building websites.](https://github.com/gohugoio/hugo)
+
+[インストール](https://garretlab.web.fc2.com/hugo/introduction/installation/)
+
+[ローカルgitリポジトリでリモートのリポジトリURL確認方法 - Qiita](https://qiita.com/zhao-xy/items/a35add58575ef7d9d4dc)
+
+[Options | CopyAllURLs](chrome-extension://djdmadneanknadilpjiknlnanaolmbfk/options.html)
 
 [最低限かつムダのないUbuntuサーバー初期設定【VPS】 | ジコログ](https://self-development.info/%E6%9C%80%E4%BD%8E%E9%99%90%E3%81%8B%E3%81%A4%E3%83%A0%E3%83%80%E3%81%AE%E3%81%AA%E3%81%84ubuntu%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E5%88%9D%E6%9C%9F%E8%A8%AD%E5%AE%9A%E3%80%90vps%E3%80%91/)
 
