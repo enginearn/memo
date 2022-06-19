@@ -32,7 +32,7 @@ Welcome to Ubuntu 22.04 LTS (GNU/Linux 5.10.102.1-microsoft-standard-WSL2 x86_64
 
 This message is shown once a day. To disable it please create the
 /root/.hushlogin file.
-root@GPD-P2-Max:/mnt/c/Users/nagar#
+root@GPD-P2-Max:/mnt/c/Users/path#
 ```
 
 </details>
@@ -54,7 +54,7 @@ $ explorer.exe .
 $ python3 requests_header_encoding.py https://gihyo.jp/dp
 ^C # ここでCtrl + C
 Traceback (most recent call last):
-  File "/home/nagar/requests_header_encoding.py", line 5, in <module>
+  File "/home/path/requests_header_encoding.py", line 5, in <module>
     r = requests.get(url)
   File "/usr/lib/python3/dist-packages/requests/api.py", line 76, in get
     return request('get', url, params=params, **kwargs)
@@ -118,6 +118,42 @@ $ python3 -c "import sys, pprint; pprint.pprint(sys.path)"
 
 ``` WSL2 ubuntu22.04
 $ python3 -c 'sys.path.append("/usr/lib/python3/dist-packages")'
+```
+
+</details>
+
+## SSH
+
+<details>
+<summary>ssh-agentを自動起動</summary>
+
+``` Powershell
+# PowerShellをAdminDEで起動
+Set-Service ssh-agent -StartType Automatic
+Start-Service ssh-agent
+Get-Service ssh-agent
+
+Status   Name               DisplayName
+------   ----               -----------
+Running  ssh-agent          OpenSSH Authentication Agent
+```
+
+</details>
+
+## ssh-keygen
+
+<details>
+<summary>秘密鍵と公開鍵の作成</summary>
+
+``` PowerShell
+ssh-keygen -t ed25519 -f github_LENOVO13 -C "yourmail@address.com"
+Directory: C:\Users\pathto\.ssh
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          2022/06/19    11:05            124 config
+-a---          2022/06/19    10:42            419 github_LENOVO13    
+-a---          2022/06/19    10:42            105 github_LENOVO13.pub
 ```
 
 </details>
