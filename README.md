@@ -32,7 +32,7 @@ Welcome to Ubuntu 22.04 LTS (GNU/Linux 5.10.102.1-microsoft-standard-WSL2 x86_64
 
 This message is shown once a day. To disable it please create the
 /root/.hushlogin file.
-root@GPD-P2-Max:/mnt/c/Users/nagar#
+root@GPD-P2-Max:/mnt/c/Users/username#
 ```
 
 </details>
@@ -54,7 +54,7 @@ $ explorer.exe .
 $ python3 requests_header_encoding.py https://gihyo.jp/dp
 ^C # ここでCtrl + C
 Traceback (most recent call last):
-  File "/home/nagar/requests_header_encoding.py", line 5, in <module>
+  File "/home/username/requests_header_encoding.py", line 5, in <module>
     r = requests.get(url)
   File "/usr/lib/python3/dist-packages/requests/api.py", line 76, in get
     return request('get', url, params=params, **kwargs)
@@ -735,7 +735,7 @@ SET collation_connection = @@collation_database;
 $ mysql --version
 mysql  Ver 14.14 Distrib 5.7.38, for Linux (x86_64) using  EditLine wrapper
 
-$ wget https://repo.mysql.com//mysql-apt-config_0.8.22-1_all.deb
+$ wget https://repo.mysql.com/mysql-apt-config_0.8.22-1_all.deb
 --2022-06-09 22:00:39--  https://repo.mysql.com//mysql-apt-config_0.8.22-1_all.deb
 Resolving repo.mysql.com (repo.mysql.com)... 23.40.193.17
 Connecting to repo.mysql.com (repo.mysql.com)|23.40.193.17|:443... connected.
@@ -755,8 +755,7 @@ Setting up mysql-apt-config (0.8.22-1) ...
 Warning: apt-key should not be used in scripts (called from postinst maintainerscript of the package mysql-apt-config)
 OK
 
-$ sudo apt update
-$ sudo apt upgrade -y
+$ sudo apt update && sudo apt upgrade -y
 Configuration file '/etc/mysql/mysql.conf.d/mysqld.cnf'
  ==> Modified (by you or by a script) since installation.
  ==> Package distributor has shipped an updated version.
@@ -775,7 +774,7 @@ Processing triggers for libc-bin (2.28-10+deb10u1) ...
 $ mysql --version
 mysql  Ver 8.0.29 for Linux on x86_64 (MySQL Community Server - GPL)
 
-$ sudo service apache2 restart
+$ sudo systemctl restart apache2
 ```
 </details>
 
@@ -847,10 +846,11 @@ The following packages have unmet dependencies:
               Recommends: php-zip
 
 $ sudo apt install \
-> dbconfig-no-thanks dbconfig-common libjs-bootstrap4 libjs-codemirror libjs-jquery libjs-jquery-mousewheel \> libjs-jquery-timepicker libjs-jquery-ui libjs-openlayers php-mysql php-google-recaptcha php-phpmyadmin-motranslator \
-> php-phpmyadmin-shapefile php-phpmyadmin-sql-parser php-twig-i18n-extension php-phpseclib php-symfony-config \
-> php-symfony-dependency-injection php-symfony-expression-language php-symfony-yaml php-twig php-mariadb-mysql-kbs \
-> libjs-sphinxdoc php-bz2 php-tcpdf php-zip
+dbconfig-no-thanks dbconfig-common libjs-bootstrap4 libjs-codemirror libjs-jquery libjs-jquery-mousewheel \
+libjs-jquery-timepicker libjs-jquery-ui libjs-openlayers php-mysql php-google-recaptcha php-phpmyadmin-motranslator \
+php-phpmyadmin-shapefile php-phpmyadmin-sql-parser php-twig-i18n-extension php-phpseclib php-symfony-config \
+php-symfony-dependency-injection php-symfony-expression-language php-symfony-yaml php-twig php-mariadb-mysql-kbs \
+libjs-sphinxdoc php-bz2 php-tcpdf php-zip
 ```
 
 ``` bash
@@ -890,6 +890,7 @@ Setting up php-twig (2.14.3-1~bpo10+1) ...
 $ wget https://files.phpmyadmin.net/phpMyAdmin/5.2.0/phpMyAdmin-5.2.0-all-languages.zip
 $ unzip phpMyAdmin-5.2.0-all-languages.zip
 $ sudo service mysql stop && sudo service apache2 stop
+$ sudo apt install phpmyadmin
 $ sudo mv /usr/share/phpmyadmin /usr/share/phpmyadmin_old
 $ sudo mv phpMyAdmin-5.2.0-all-languages phpmyadmin
 $ sudo cp -r phpmyadmin /usr/share/
@@ -906,7 +907,7 @@ $ sudo service mysql start && sudo service apache2 start
 <summary>Upgrade php</summary>
 
 ``` bash
-$ sudo apt install php-fpm
+$ sudo apt install php-fpm libapache2-mod-php8.1 php-mbstring
 Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
@@ -959,25 +960,6 @@ Zend Engine v4.1.6, Copyright (c) Zend Technologies
 ```
 
 ``` bash
-$ sudo apt install libapache2-mod-php8.0
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-The following additional packages will be installed:
-  php8.0-cli php8.0-common php8.0-opcache php8.0-readline
-Suggested packages:
-  php-pear
-The following NEW packages will be installed:
-  libapache2-mod-php8.0 php8.0-cli php8.0-common php8.0-opcache php8.0-readline
-0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
-Creating config file /etc/php/8.0/apache2/php.ini with new version
-libapache2-mod-php8.0: php7.4 module already enabled, not enabling PHP 8.0
-Processing triggers for man-db (2.8.5-2) ...
-Processing triggers for php8.0-cli (1:8.0.19-1+0~20220517.33+debian10~1.gbpbb919b) ...
-Processing triggers for libapache2-mod-php8.0 (1:8.0.19-1+0~20220517.33+debian10~1.gbpbb919b) ...
-```
-
-``` bash
 $ sudo apt install libapache2-mod-php8.1
 Reading package lists... Done
 Building dependency tree       
@@ -1000,18 +982,6 @@ Setting up libapache2-mod-php8.1 (8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1) ..
 Creating config file /etc/php/8.1/apache2/php.ini with new version
 libapache2-mod-php8.1: php8.0 module already enabled, not enabling PHP 8.1
 Processing triggers for libapache2-mod-php8.1 (8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1) ...
-```
-
-``` bash
-$ sudo a2enmod php8.0
-Considering dependency mpm_prefork for php8.0:
-Considering conflict mpm_event for mpm_prefork:
-Considering conflict mpm_worker for mpm_prefork:
-Module mpm_prefork already enabled
-Considering conflict php5 for php8.0:
-Enabling module php8.0.
-To activate the new configuration, you need to run:
-  systemctl restart apache2
 ```
 
 ``` bash
@@ -1045,19 +1015,531 @@ There are 3 choices for the alternative php (providing /usr/bin/php).
 Press <enter> to keep the current choice[*], or type selection number: 0
 ```
 
+``` bash
+sudo cp -r /etc/apache2/conf-available/php8.1-fpm.conf /etc/apache2/conf-enabled/
+```
+
+</details>
+
+## SSL証明書とHTTTPS通信有効化
+
+<details>
+<summary>Let's EncryptからSSL証明書を取得する準備</summary>
+
+[snap instalation](https://snapcraft.io/docs/installing-snap-on-debian)
+
+
+``` Debian bash
+$ sudo apt update && sudo apt install -y snap snapd python3-certbot-apache ufw
+$ sudo snap install core; sudo snap refresh core
+$ sudo apt remove certbot
+$ sudo snap install --classic certbot
+certbot 1.28.0 from Certbot Project (certbot-eff✓) installed
+$ sudo ln -s /snap/bin/certbot /usr/bin/certbot
+$ sudo certbot --apache -d enginearn.dev
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator apache, Installer apache
+Enter email address (used for urgent renewal and security notices) (Enter 'c' to
+cancel): enginyaaaaan@gmail.com
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Please read the Terms of Service at
+https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf. You must
+agree in order to register with the ACME server at
+https://acme-v02.api.letsencrypt.org/directory
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(A)gree/(C)ancel: A
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Would you be willing to share your email address with the Electronic Frontier
+Foundation, a founding partner of the Let's Encrypt project and the non-profit
+organization that develops Certbot? We'd like to send you email about our work
+encrypting the web, EFF news, campaigns, and ways to support digital freedom.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(Y)es/(N)o: Y
+Obtaining a new certificate
+Performing the following challenges:
+http-01 challenge for enginearn.dev
+Waiting for verification...
+Cleaning up challenges
+
+We were unable to find a vhost with a ServerName or Address of enginearn.dev.
+Which virtual host would you like to choose?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: wordpress-https.conf           |                       | HTTPS | Enabled
+2: 000-default.conf               |                       |       | Enabled
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1
+Deploying Certificate to VirtualHost /etc/apache2/sites-enabled/wordpress-https.conf
+
+Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: No redirect - Make no further changes to the webserver configuration.
+2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
+new sites, or if you're confident your site works on HTTPS. You can undo this
+change by editing your web server's configuration.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 2
+Redirecting vhost in /etc/apache2/sites-enabled/000-default.conf to ssl vhost in /etc/apache2/sites-enabled/wordpress-https.conf
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Congratulations! You have successfully enabled https://enginearn.dev
+
+You should test your configuration at:
+https://www.ssllabs.com/ssltest/analyze.html?d=enginearn.dev
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/enginearn.dev/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/enginearn.dev/privkey.pem
+   Your cert will expire on 2022-09-13. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot again
+   with the "certonly" option. To non-interactively renew *all* of
+   your certificates, run "certbot renew"
+ - Your account credentials have been saved in your Certbot
+   configuration directory at /etc/letsencrypt. You should make a
+   secure backup of this folder now. This configuration directory will
+   also contain certificates and private keys obtained by Certbot so
+   making regular backups of this folder is ideal.
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+```
+
+``` Debian bash
+$ sudo ufw app list
+Available applications:
+  AIM
+  Bonjour
+  CIFS
+  DNS
+  Deluge
+  IMAP
+  IMAPS
+  IPP
+  KTorrent
+  Kerberos Admin
+  Kerberos Full
+  Kerberos KDC
+  Kerberos Password
+  LDAP
+  LDAPS
+  LPD
+  MSN
+  MSN SSL
+  Mail submission
+  NFS
+  OpenSSH
+  POP3
+  POP3S
+  PeopleNearby
+  SMTP
+  SSH
+  Socks
+  Telnet
+  Transmission
+  Transparent Proxy
+  VNC
+  WWW
+  WWW Cache
+  WWW Full
+  WWW Secure
+  XMPP
+  Yahoo
+  qBittorrent
+  svnserve
+$ sudo ufw allow "WWW Full"
+Rules updated
+Rules updated (v6)
+
+# FireWallの状態
+$ sudo ufw status
+Status: inactive
+$ sudo ufw enable
+Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
+Firewall is active and enabled on system startup
+
+$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+WWW Full                   ALLOW       Anywhere
+WWW Full (v6)              ALLOW       Anywhere (v6)
+
+$ sudo certbot --apache -d enginearn.dev
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator apache, Installer apache
+Obtaining a new certificate
+Performing the following challenges:
+http-01 challenge for enginearn.dev
+Waiting for verification...
+Cleaning up challenges
+
+We were unable to find a vhost with a ServerName or Address of enginearn.dev.
+Which virtual host would you like to choose?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: wordpress-https.conf           |                       | HTTPS | Enabled
+2: 000-default.conf               |                       |       | Enabled
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1
+Deploying Certificate to VirtualHost /etc/apache2/sites-enabled/wordpress-https.conf
+
+Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: No redirect - Make no further changes to the webserver configuration.
+2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
+new sites, or if you're confident your site works on HTTPS. You can undo this
+change by editing your web server's configuration.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 2
+Redirecting vhost in /etc/apache2/sites-enabled/000-default.conf to ssl vhost in /etc/apache2/sites-enabled/wordpress-https.conf
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Congratulations! You have successfully enabled https://enginearn.dev
+
+You should test your configuration at:
+https://www.ssllabs.com/ssltest/analyze.html?d=enginearn.dev
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/enginearn.dev/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/enginearn.dev/privkey.pem
+   Your cert will expire on 2022-09-13. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot again
+   with the "certonly" option. To non-interactively renew *all* of
+   your certificates, run "certbot renew"
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+
+$ sudo certbot certonly --apache
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator apache, Installer apache
+
+Which names would you like to activate HTTPS for?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: enginearn.dev
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate numbers separated by commas and/or spaces, or leave input
+blank to select all options shown (Enter 'c' to cancel): 1
+Cert not yet due for renewal
+
+You have an existing certificate that has exactly the same domains or certificate name you requested and isn't close to expiry.
+(ref: /etc/letsencrypt/renewal/enginearn.dev.conf)
+
+What would you like to do?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: Keep the existing certificate for now
+2: Renew & replace the cert (limit ~5 per 7 days)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1
+Keeping the existing certificate
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Certificate not yet due for renewal; no action taken.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+```
+
+${APACHE_LOG_DIR}/error.log
+
+</details>
+
+## PHP Postges NGINX with CentOS stream9 on GCE 環境構築
+
+### CentOS strem9 基本設定
+
+<details>
+<summary>レポジトリ追加</summary>
+
+``` bash
+$ sudo dnf install https://rpms.remirepo.net/enterprise/remi-release-9.rpm
+$ sudo dnf config-manager --set-enabled remi
+$ sudo dnf module list reset php -y
+Last metadata expiration check: 0:14:13 ago on Fri 17 Jun 2022 10:00:15 PM JST.
+Remi's Modular repository for Enterprise Linux 9 - x86_64
+Name             Stream               Profiles                              Summary                          
+php              remi-7.4             common [d], devel, minimal            PHP scripting language           
+php              remi-8.0             common [d], devel, minimal            PHP scripting language           
+php              remi-8.1             common [d], devel, minimal            PHP scripting language           
+
+Hint: [d]efault, [e]nabled, [x]disabled, [i]nstalled
+$ sudo dnf module enable php:remi-8.1
+Last metadata expiration check: 0:15:38 ago on Fri 17 Jun 2022 10:00:15 PM JST.
+Dependencies resolved.
+=============================================================================================================
+ Package                  Architecture            Version                     Repository                Size
+=============================================================================================================
+Enabling module streams:
+ php                                              remi-8.1                                                  
+
+Transaction Summary
+=============================================================================================================
+
+Is this ok [y/N]: y
+Complete!
+```
+
 </details>
 
 
+<details>
+<summary>パッケージ更新</summary>
+
+``` bash
+$ sudo dnf -y groupinstall base
+$ sudo dnf -y groupinstall development
+$ sudo dnf update -y
+```
+
+</details>
+
+<details>
+<summary>不要な物を停止 削除</summary>
+
+``` bash
+$ sudo systemctl disable atd kdump mdmonitor
+$ sudo dnf remove -y cockpit
+$ sudo reboot
+```
+
+</details>
+
+<details>
+<summary>Firewallの設定</summary>
+
+``` bash
+$ sudo firewall-cmd --list-all
+trusted (active)
+  target: ACCEPT
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources: 
+  services: 
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules:
+```
+
+``` bash
+$ sudo firewall-cmd --remove-service=cockpit --permanent
+Warning: NOT_ENABLED: cockpit
+success
+$ sudo firewall-cmd --remove-service=dhcpv6-client --permanent
+Warning: NOT_ENABLED: dhcpv6-client
+success
+```
+
+``` bash
+$ sudo firewall-cmd --add-port=80/tcp --permanent
+success
+$ sudo firewall-cmd --add-port=443/tcp --permanent
+success
+sudo firewall-cmd --add-service=ssh --permanent
+success
+
+sudo firewall-cmd --reload
+success
+```
+
+``` bash
+$ sudo firewall-cmd --list-all
+trusted (active)
+  target: ACCEPT
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources: 
+  services: ssh
+  ports: 80/tcp 443/tcp
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules:
+```
+
+</details>
+
+<details>
+<summary>Chronyの設定</summary>
+
+``` bash
+$ sudo timedatectl set-timezone Asia/Tokyo
+$ sudo vim /etc/chrony.conf
+
+> # server metadata.google.internal iburst
+> server ntp.nict.jp iburst
+
+$ sudo systemctl restart chronyd
+```
+
+``` bash
+$ sudo systemctl enable chronyd
+[enginyaaaaan@centos-stream9 ~]$ chronyc sources -v
+
+  .-- Source mode  '^' = server, '=' = peer, '#' = local clock.
+ / .- Source state '*' = current best, '+' = combined, '-' = not combined,
+| /             'x' = may be in error, '~' = too variable, '?' = unusable.
+||                                                 .- xxxx [ yyyy ] +/- zzzz
+||      Reachability register (octal) -.           |  xxxx = adjusted offset,
+||      Log2(Polling interval) --.      |          |  yyyy = measured offset,
+||                                \     |          |  zzzz = estimated error.
+||                                 |    |           \
+MS Name/IP address         Stratum Poll Reach LastRx Last sample               
+===============================================================================
+^- ntp-b2.nict.go.jp             1   6   177    65   +176us[ +176us] +/- 1329us
+^* metadata.google.internal      2   6   177    65  +9151ns[  +24us] +/-  353us
+```
+
+</details>
+
+<details>
+<summary>postfixでメール送信設定</summary>
+
+``` bash
+$ sudo dnf install -y postfix
+$ sudo systemctl enable --now postfix
+Created symlink /etc/systemd/system/multi-user.target.wants/postfix.service → /usr/lib/systemd/system/postfix.service.
+$ sudo systemctl status postfix
+● postfix.service - Postfix Mail Transport Agent
+     Loaded: loaded (/usr/lib/systemd/system/postfix.service; enabled; vendor preset: disabled)
+     Active: active (running) since Fri 2022-06-17 20:55:17 JST; 15s ago
+    Process: 2754 ExecStartPre=/usr/sbin/restorecon -R /var/spool/postfix/pid/master.pid (code=exited, statu>
+    Process: 2755 ExecStartPre=/usr/libexec/postfix/aliasesdb (code=exited, status=0/SUCCESS)
+    Process: 2759 ExecStartPre=/usr/libexec/postfix/chroot-update (code=exited, status=0/SUCCESS)
+    Process: 2760 ExecStart=/usr/sbin/postfix start (code=exited, status=0/SUCCESS)
+   Main PID: 2829 (master)
+      Tasks: 3 (limit: 11072)
+     Memory: 4.9M
+        CPU: 480ms
+     CGroup: /system.slice/postfix.service
+             ├─2829 /usr/libexec/postfix/master -w
+             ├─2830 pickup -l -t unix -u
+             └─2831 qmgr -l -t unix -u
+
+$ sudo vim /etc/postfix/gmail # [smtp.gmail.com]:587 enginyaaaaan@gmail.com:PASSWD
+$ sudo chmod 600 /etc/postfix/gmail
+$ sudo postmap /etc/postfix/gmail
+$ sudo vim /etc/postfix/main.cf
+
+relayhost = [smtp.gmail.com]:587
+smtp_sasl_auth_enable = yes
+smtp_sasl_password_maps = hash:/etc/postfix/gmail
+smtp_sasl_security_options = noanonymous
+smtp_sasl_tls_security_options = noanonymous
+smtp_sasl_mechanism_filter = plain
+smtp_use_tls = yes
+
+$ sudo systemctl reload postfix
+```
+
+</details>
+
+<details>
+<summary>送信テスト</summary>
+
+``` bash
+$ echo test | sendmail "test mail" enginyaaaaan@gmail.com
+You have new mail in /var/spool/mail/enginyaaaaan # success!
+```
+
+</details>
+
+<details>
+<summary>PHPをインストール</summary>
+
+``` bash
+$ sudo dnf install php
+$ php --version
+PHP 8.1.7 (cli) (built: Jun  7 2022 18:21:38) (NTS gcc x86_64)
+Copyright (c) The PHP Group
+Zend Engine v4.1.7, Copyright (c) Zend Technologies
+    with Zend OPcache v8.1.7, Copyright (c), by Zend Technologies
+```
+
+</details>
+
+
+<details>
+<summary>golangをインストール</summary>
+
+``` bash
+$ wget https://go.dev/dl/go1.18.3.linux-amd64.tar.gz
+$ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.18.3.linux-amd64.tar.gz
+echo 'PATH="$PATH":/usr/local/go/bin' >> ~/.bashrc
+$ source .bashrc
+$ go version
+go version go1.18.3 linux/amd64
+
+```
+
+PATHを通すの挙動
+
+``` bash
+$ echo $PATH
+/home/enginyaaaaan/.local/bin:/home/enginyaaaaan/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+$ echo $PATH
+/home/enginyaaaaan/.local/bin:/home/enginyaaaaan/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/go/bin
+$ echo $PATH
+After logout, PATH: "/usr/local/go/bin" gone!
+/home/enginyaaaaan/.local/bin:/home/enginyaaaaan/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+```
+
+``` DANGER COMMAND
+$ export PATH=$PATH:/usr/local/go/bin
+```
+
+</details>
+
+<details>
+<summary>Hugoのインストール</summary>
+
+``` bash
+$ mkdir $HOME/src
+$ cd $HOME/src
+$ git clone https://github.com/gohugoio/hugo.git
+$ cd hugo
+$ go install --tags extended
+```
+
+</details>
+
 
 ## git commands
+
+<details>
+<summary>git addを取り消す</summary>
 
 ``` git
 git rm --cached -r .
 ```
 
+</details>
+
+<details>
+<summary>branch削除</summary>
+
 ``` git
 git branch -d origin
 ```
+
+</details>
+
+<details>
+<summary>まだあんまり理解してないコマンド</summary>
 
 ``` git
 git revert <commit id>
@@ -1096,10 +1578,22 @@ git remote add origin https://github.com/enginearn/docker-getting-started-app.gi
 git push -u origin main
 ```
 
+</details>
+
+## docker-compose
+
+<details>
+<summary></summary>
+
 ``` docker
 docker-compose up -d
 docker-compose down --volume
 ```
+
+</details>
+
+
+
 
 ## Python
 
@@ -1465,3 +1959,147 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 [How To Install MySQL 8.0 on Debian 11/10 /9](https://computingforgeeks.com/how-to-install-mysql-8-0-on-debian/)
 
 [第26回　【WordPress】　MySQL5.7→MySQL8.0へアップグレード](https://tohyo2020.org/mysql-57-mysql-80/)
+
+[QMK Firmware - All Supported Keyboards](https://qmk.fm/keyboards/)
+
+[https://login.docker.com/u/login/identifier?state=hKFo2SBhWndZdzR1U0hZQmYtQng2cTdWb2V4a2pSdHowUXc2aqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDNHLU4xVXFOeUN5S0JZR1FUbThBYzkyaWNVUTF6MTc2o2NpZNkgbHZlOUdHbDhKdFNVcm5lUTFFVnVDMGxiakhkaTluYjk](https://login.docker.com/u/login/identifier?state=hKFo2SBhWndZdzR1U0hZQmYtQng2cTdWb2V4a2pSdHowUXc2aqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDNHLU4xVXFOeUN5S0JZR1FUbThBYzkyaWNVUTF6MTc2o2NpZNkgbHZlOUdHbDhKdFNVcm5lUTFFVnVDMGxiakhkaTluYjk)
+
+[Overlay2 について調べてみた - Qiita](https://qiita.com/toshihirock/items/e99889e4a77a76f28455)
+
+[Debian 11.2に「sudo: ufw: command not found」の解決方法 - 最新IT技術情報_arkgame.com](https://arkgame.com/2020/03/29/post-44388/)
+
+[wordpress-1-vm – Compute Engine – My First Project – Google Cloud Platform](https://console.cloud.google.com/compute/instancesDetail/zones/asia-northeast1-a/instances/wordpress-1-vm?authuser=4&project=resolute-fold-352811&pageState=(%22duration%22:(%22groupValue%22:%22PT1H%22,%22customValue%22:null)))
+
+[ネットワーク タグの構成  |  VPC  |  Google Cloud](https://cloud.google.com/vpc/docs/add-remove-network-tags?authuser=4&_ga=2.41882539.-80309478.1654773236&_gac=1.253379067.1655242528.CjwKCAjw46CVBhB1EiwAgy6M4o52LBfwXR-l-QDwtbYDicEX8zD7yFLH4bXRRJgXKDRBdftlZyVq8xoCDxAQAvD_BwE)
+
+[34.84.110.68 / localhost | phpMyAdmin 5.2.0](http://34.84.110.68/phpmyadmin/index.php?route=/&route=%2F)
+
+[PHP 8.1.7 - phpinfo()](https://enginearn.dev/.phpinfo.php)
+
+[PHPでmbstringを設定して日本語環境に対応する方法を現役エンジニアが解説【初心者向け】 | TechAcademyマガジン](https://techacademy.jp/magazine/39850)
+
+[【Vim】ファイル内で特定の文字列を検索するコマンド一覧 | かわたま.net](http://kawatama.net/web/1341)
+
+[PHP 8.x での php.ini の設定について](https://zenn.dev/ksh2ksk4/articles/3cb75ed89ae662c1352d)
+
+[【CentOS + PHP】「mbstring」を「Httpサーバー」にインストールする方法 - renoji.com](https://renoji.com/IT.php?Contents=OS_CentOS/Server_Http/Install_php_mbstring.html)
+
+[【GCPでWordPress構築】4. https化のためにやること/WebサーバのSSL証明書導入/WordPressのURL変更 | Hello, new World](https://tomorisblog.com/gcp-wordpress-04/)
+
+[Certbot Instructions | Certbot](https://certbot.eff.org/instructions?ws=apache&os=debianbuster)
+
+[Ubuntu 20.04でLet’s Encryptを使用してApacheを保護する方法 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-20-04-ja)
+
+[How To Install the Apache Web Server on Ubuntu 20.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04)
+
+[How To Install the Apache Web Server on Ubuntu 20.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04#step-5-%E2%80%94-setting-up-virtual-hosts-(recommended))
+
+[やさしいLet’s EncryptでSSL証明書を発行する方法 | Oji-Cloud](https://oji-cloud.net/2020/09/29/post-5570/)
+
+[iptablesが難しいためufwでWEBサーバーのファイアウォール設定 - Qiita](https://qiita.com/shimakaze_soft/items/c3cce2bfb7d584e1fbce)
+
+[DNSのゾーン設定を削除したあとにLet’s Encryptによる認証作業を行ったときに発生するエラーについて – エコテキブログ](https://e-yota.com/infrastructure/free_ssl_lets_encrypt_error/)
+
+[SSL サーバ証明書：Apacheトラブルシューティング｜DigiCert（デジサート）](https://rms.ne.jp/sslserver/install/troubleshoot_apache-html/)
+
+[SSL Server Test: enginearn.dev (Powered by Qualys SSL Labs)](https://www.ssllabs.com/ssltest/analyze.html?d=enginearn.dev)
+
+[[*SSL*] Apache2.4にてSSL化を行う - Qiita](https://qiita.com/cigalecigales/items/63698979c4be452c82ea)
+
+[ファイル認証　トラブルシューティング | さくらのサポート情報](https://help.sakura.ad.jp/rs/2268/?article_anchor=js-nav-3)
+
+[Apache | 設定ファイル(httpd.conf)の初期設定](https://www.javadrive.jp/apache/install/index2.html#section2)
+
+[日本語環境の設定 - mbstring - php.iniの設定 - PHP入門のカルマ](https://webkaru.net/php/mbstring-php-ini/)
+
+[GCEでSSH鍵でログインが出来ない(（Permission denied (publickey,gssapi-keyex,gssapi-with-mic)）の解決方法 - Qiita](https://qiita.com/tab02733/items/f1cbfafd39a06271d7ef)
+
+[[SSH]Permission deniedが出てきた時の対応 – ADACHIN SERVER LABO](https://blog.adachin.me/archives/2054)
+
+[VSCodeとGCPを使ってリモート開発マシン作ってみた](https://zenn.dev/noumi0k/articles/6ee90a47921cc6ee8743)
+
+[【秘密鍵/公開鍵】RSA暗号より強い、Ed25519を用いてSSHキーを作成する - Qiita](https://qiita.com/noumi0k/items/d277331819c9f4af6137)
+
+[ssh_config(5): OpenSSH SSH client config files - Linux man page](https://linux.die.net/man/5/ssh_config)
+
+[パスワード生成 (Passwords Generator)](https://www.graviness.com/app/pwg/)
+
+[Google Compute Engine && VS Code でのremote ssh環境構築｜hgsgtk｜note](https://note.com/hgsgtk/n/nb36465c1ac7f)
+
+[SSH で Permission Denied となる傾向と対策 - Qiita](https://qiita.com/youcune/items/2f427979403771f2e03a)
+
+[公開鍵と秘密鍵のペアの作り方と、秘密鍵から公開鍵を再生成する方法 - Qiita](https://qiita.com/hirohiro77/items/d5970791ebb420759aba)
+
+[Permission denied (publickey) の 対処方法はだいたいこれ | ORM ねこの遊び庭](https://ormcat.net/blog/20210509_github-denied-publickey/)
+
+[SSH接続するための秘密鍵と公開鍵をMacで作る | www.ni4.jp](https://www.ni4.jp/2021/01/31-134600.html)
+
+[実行ユーザーを指定してsshをした時にHost key verification failedが出たときの対処法 - Qiita](https://qiita.com/picapica/items/d4d3c80d8881fc2f279f)
+
+[SSHでPermission deniedが解決しないと思ったらauthorized_keysに"\n"が紛れ込んでいた - Qiita](https://qiita.com/noir_neo/items/60532baaf051f91f3013)
+
+[SSH公開鍵認証で接続するまで - Qiita](https://qiita.com/kazokmr/items/754169cfa996b24fcbf5)
+
+[sshの認証についてまとめ - 技術ブログ](https://nkawamura.hatenablog.com/entry/2018/05/05/120616)
+
+[インフラエンジニアじゃなくても押さえておきたいSSHの基礎知識 - Qiita](https://qiita.com/tag1216/items/5d06bad7468f731f590e)
+
+[VSCodeからGCP(GoogleCloudPlatform)にSSH接続 - FlatKids](https://flat-kids.net/2020/03/09/vscode%E3%81%8B%E3%82%89gcpgooglecloudplatform%E3%81%ABssh%E6%8E%A5%E7%B6%9A/)
+
+[SSHでPermission deniedが解決しないと思ったらauthorized_keysに"\n"が紛れ込んでいた - Qiita](https://qiita.com/noir_neo/items/60532baaf051f91f3013)
+
+[GCP: Compute Engineに対して通常のsshコマンドでSSHできるようにする - nwtgck / Ryo Ota](https://scrapbox.io/nwtgck/GCP:_Compute_Engine%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A6%E9%80%9A%E5%B8%B8%E3%81%AEssh%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%A7SSH%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B)
+
+[【設定爆速】VS CodeのRemote Developmentを使ってSSH接続したEC2上のファイルを編集する | DevelopersIO](https://dev.classmethod.jp/articles/vs-code-remote-development-ec2/)
+
+[公開鍵方式のssh接続ログイン時にパスワード入力が求められてしまう。](https://teratail.com/questions/337240)
+
+[How To Configure SSH Key-Based Authentication on a Linux Server | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
+
+[[秘密鍵/公開鍵]GCPにSSHで接続する方法 | エンジニアの眠れない夜](https://sleepless-se.net/2018/09/15/gcp-ssh/)
+
+[WindowsでSSHの鍵を作る - Qiita](https://qiita.com/digdagdag/items/9e5c061e7d86e0af9a57)
+
+[ssh-keygen（sshキー) - vzの尺なblog](https://vz-shark.hatenablog.com/entry/2018/10/03/164528)
+
+[[小ネタ] キーペアの秘密鍵が新OpenSSH形式であるためにWindows EC2インスタンスのログインパスワード復号に失敗するときの対処法 | DevelopersIO](https://dev.classmethod.jp/articles/windows-openssh-keypair/)
+
+[Debian 10 Buster : システムのタイムゾーンを設定する : Server World](https://www.server-world.info/query?os=Debian_10&p=timezone)
+
+[Debian 10 (buster) - 時刻同期設定(systemd-timesyncd)！ - mk-mode BLOG](https://www.mk-mode.com/blog/2019/10/23/debian-10-systemd-timesyncd/)
+
+[I can't use vault ssh in windows 10](https://groups.google.com/g/vault-tool/c/5IWWpYERupw)
+
+[メモモモモ: Windowsで始める初めてのSSH](http://memomo2.blogspot.com/2018/06/windowsssh.html)
+
+[Win10起動時に仮想デスクトップ番号を指定してアプリを立ち上げる - Qiita](https://qiita.com/piyox2/items/328ca89a6e7effe58ced)
+
+[Linuxのデバイスを確認するコマンド | パソコン工房 NEXMAG](https://www.pc-koubou.jp/magazine/36572)
+
+[【Docker】イメージダウンロードでエラー（Error response from daemon）が発生した場合の対応方法 | インフラエンジニアの技術LOG](https://genchan.net/it/virtualization/docker/2553/)
+
+[How to Use Basler USB Cameras in Docker Container?](https://www.baslerweb.com/jp/sales-support/knowledge-base/frequently-asked-questions/how-to-use-basler-usb-cameras-in-docker-container/588488/)
+
+[Docker - a way to give access to a host USB or serial device? - Stack Overflow](https://stackoverflow.com/questions/24225647/docker-a-way-to-give-access-to-a-host-usb-or-serial-device)
+
+[バインドマウントの利用 | Docker ドキュメント](https://matsuand.github.io/docs.docker.jp.onthefly/storage/bind-mounts/)
+
+[第17回 Dockerで植物が育つ様子を自動録画してみよう――その1：古賀政純の「攻めのITのためのDocker塾」（2/2 ページ） - ITmedia エンタープライズ](https://www.itmedia.co.jp/enterprise/articles/1603/02/news031_2.html)
+
+[Docker run reference | Docker Documentation](https://docs.docker.com/engine/reference/run/)
+
+[第17回 Dockerで植物が育つ様子を自動録画してみよう――その1：古賀政純の「攻めのITのためのDocker塾」（2/2 ページ） - ITmedia エンタープライズ](https://www.itmedia.co.jp/enterprise/articles/1603/02/news031_2.html)
+
+[Windows環境でDockerコンテナにUSBウェブカメラを認識させる | UNITRUST](https://www.unitrust.co.jp/7117)
+
+[USB デバイスを接続する | Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/wsl/connect-usb)
+
+[Release usbipd-win 2.3.0 · dorssel/usbipd-win](https://github.com/dorssel/usbipd-win/releases/tag/v2.3.0)
+
+[WSL その227 - WSL 2にUSBデバイスを接続し、LinuxディストリビューションからUSBデバイスにアクセスするには - kledgeb](https://kledgeb.blogspot.com/2021/11/wsl-227-wsl-2usblinuxusb.html)
+
+[Connecting USB devices to WSL - Windows Command Line](https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/)
+
+[macOS Catalinaでavrdudeを使ってProMicroに書き込もうとするとprogrammer is not respondingというエラーが出る - ぽよメモ](https://poyo.hatenablog.jp/entry/2019/11/04/005016)
+
+[Error: The software identifier is not 'CATERIN': ASCII T - Google 検索](https://www.google.com/search?q=Error%3A+The+software+identifier+is+not+%27CATERIN%27%3A+ASCII+T&rlz=1C1QABZ_jaJP895JP895&oq=Error%3A+The+software+identifier+is+not+%27CATERIN%27%3A+ASCII+T&aqs=chrome.0.69i59j69i58.1653j0j7&sourceid=chrome&ie=UTF-8)
