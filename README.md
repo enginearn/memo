@@ -32,7 +32,11 @@ Welcome to Ubuntu 22.04 LTS (GNU/Linux 5.10.102.1-microsoft-standard-WSL2 x86_64
 
 This message is shown once a day. To disable it please create the
 /root/.hushlogin file.
+<<<<<<< HEAD
 root@GPD-P2-Max:/mnt/c/Users/username#
+=======
+root@GPD-P2-Max:/mnt/c/Users/path#
+>>>>>>> 80b026c87587275d25b968d35d458aac0adebc7c
 ```
 
 </details>
@@ -54,7 +58,11 @@ $ explorer.exe .
 $ python3 requests_header_encoding.py https://gihyo.jp/dp
 ^C # ここでCtrl + C
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "/home/username/requests_header_encoding.py", line 5, in <module>
+=======
+  File "/home/path/requests_header_encoding.py", line 5, in <module>
+>>>>>>> 80b026c87587275d25b968d35d458aac0adebc7c
     r = requests.get(url)
   File "/usr/lib/python3/dist-packages/requests/api.py", line 76, in get
     return request('get', url, params=params, **kwargs)
@@ -122,6 +130,43 @@ $ python3 -c 'sys.path.append("/usr/lib/python3/dist-packages")'
 
 </details>
 
+## SSH
+
+<details>
+<summary>ssh-agentを自動起動</summary>
+
+``` Powershell
+# PowerShellをAdminDEで起動
+Set-Service ssh-agent -StartType Automatic
+Start-Service ssh-agent
+Get-Service ssh-agent
+
+Status   Name               DisplayName
+------   ----               -----------
+Running  ssh-agent          OpenSSH Authentication Agent
+```
+
+</details>
+
+## ssh-keygen
+
+<details>
+<summary>秘密鍵と公開鍵の作成</summary>
+
+``` PowerShell
+mkdir $HOME/.ssh && cd $HOME/.ssh
+ssh-keygen -t ed25519 -f github_LENOVO13 -C "yourmail@address.com"
+Directory: C:\Users\pathto\.ssh
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          2022/06/19    11:05            124 config
+-a---          2022/06/19    10:42            419 github_LENOVO13
+-a---          2022/06/19    10:42            105 github_LENOVO13.pub
+```
+
+</details>
+
 ## PowerShell
 
 <details>
@@ -129,7 +174,7 @@ $ python3 -c 'sys.path.append("/usr/lib/python3/dist-packages")'
 
 ``` PowerShell
 Invoke-WebRequest -Uri https://ferret-plus.com/4637
-                                                                                                                        
+
 StatusCode        : 200
 StatusDescription : OK
 Content           : <!DOCTYPE html><html lang="ja"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><link crossorigin="" href="//fo…
@@ -1590,11 +1635,133 @@ docker-compose up -d
 docker-compose down --volume
 ```
 
+<<<<<<< HEAD
 </details>
 
 
 
 
+=======
+## ubuntu server 初期設定
+
+<details>
+<summary>updating packages</summary>
+
+``` bash
+sudo apt update && sudo apt upgrade -y
+```
+
+</details>
+
+<details>
+<summary>set hostname</summary>
+
+``` bash
+$ hostname
+ubuntu
+
+$ sudo hostnamectl set-hostname ubuntu-server-1
+$ hostname
+ubuntu-server-1
+```
+
+</details>
+
+<details>
+<summary>setting timezone</summary>
+
+``` bash
+$ timedatectl status
+               Local time: Sun 2022-06-19 12:45:45 UTC
+           Universal time: Sun 2022-06-19 12:45:45 UTC
+                 RTC time: n/a
+                Time zone: Etc/UTC (UTC, +0000)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+
+$ sudo timedatectl set-timezone "Asia/Tokyo"
+$ timedatectl status
+               Local time: Sun 2022-06-19 21:46:50 JST
+           Universal time: Sun 2022-06-19 12:46:50 UTC
+                 RTC time: n/a
+                Time zone: Asia/Tokyo (JST, +0900)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+
+```
+
+</details>
+
+<details>
+<summary>locale</summary>
+
+``` bash
+$ localectl list-locales
+C.UTF-8
+en_US.UTF-8
+
+$ sudo apt install -y language-pack-ja
+$ localectl list-locales
+C.UTF-8
+en_US.UTF-8
+ja_JP.UTF-8
+
+$ localectl status
+   System Locale: LANG=C.UTF-8
+       VC Keymap: n/a
+      X11 Layout: us
+       X11 Model: pc105
+
+$ sudo localectl set-locale LANG=ja_JP.UTF-8
+$ localectl status
+   System Locale: LANG=ja_JP.UTF-8
+       VC Keymap: n/a
+      X11 Layout: us
+       X11 Model: pc105
+```
+
+</details>
+
+<details>
+<summary>Firewall settings</summary>
+
+``` bash
+$ sudo apt install -y ufw
+$ sudo ufw status
+Status: inactive
+
+$ sudo vim /etc/ssh/sshd_config # Port 22
+ubuntu@ubuntu:~$ sudo ufw default deny
+Default incoming policy changed to 'deny' 
+(be sure to update your rules accordingly)
+
+$ sudo ufw enable
+Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
+Firewall is active and enabled on system startup
+```
+
+</details>
+
+<details>
+<summary>staitc ipの設定</summary>
+
+`/etc/dhcp/dhclient.conf`を以下のように編集
+
+> interface eth0
+> static ip_address=xxx.xxx.xxx.xxx/24
+> static routers=xxx.xxx.xxx.xxx # デフォルトゲートウェイのIPアドレス
+> static domain_name_servers=xxx.xxx.xxx.xxx # DNSのIPアドレス
+>
+> interface wlan0
+> static ip_address=xxx.xxx.xxx.xxx/24
+> static routers=xxx.xxx.xxx.xxx # デフォルトゲートウェイのIPアドレス
+> static domain_name_servers=xxx.xxx.xxx.xxx # DNSのIPアドレス
+</details>
+
+
+>>>>>>> 80b026c87587275d25b968d35d458aac0adebc7c
 ## Python
 
 <details>
@@ -1960,6 +2127,7 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 
 [第26回　【WordPress】　MySQL5.7→MySQL8.0へアップグレード](https://tohyo2020.org/mysql-57-mysql-80/)
 
+<<<<<<< HEAD
 [QMK Firmware - All Supported Keyboards](https://qmk.fm/keyboards/)
 
 [https://login.docker.com/u/login/identifier?state=hKFo2SBhWndZdzR1U0hZQmYtQng2cTdWb2V4a2pSdHowUXc2aqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDNHLU4xVXFOeUN5S0JZR1FUbThBYzkyaWNVUTF6MTc2o2NpZNkgbHZlOUdHbDhKdFNVcm5lUTFFVnVDMGxiakhkaTluYjk](https://login.docker.com/u/login/identifier?state=hKFo2SBhWndZdzR1U0hZQmYtQng2cTdWb2V4a2pSdHowUXc2aqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDNHLU4xVXFOeUN5S0JZR1FUbThBYzkyaWNVUTF6MTc2o2NpZNkgbHZlOUdHbDhKdFNVcm5lUTFFVnVDMGxiakhkaTluYjk)
@@ -1969,6 +2137,13 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 [Debian 11.2に「sudo: ufw: command not found」の解決方法 - 最新IT技術情報_arkgame.com](https://arkgame.com/2020/03/29/post-44388/)
 
 [wordpress-1-vm – Compute Engine – My First Project – Google Cloud Platform](https://console.cloud.google.com/compute/instancesDetail/zones/asia-northeast1-a/instances/wordpress-1-vm?authuser=4&project=resolute-fold-352811&pageState=(%22duration%22:(%22groupValue%22:%22PT1H%22,%22customValue%22:null)))
+=======
+[VM インスタンス – Compute Engine – My First Project – Google Cloud Platform](https://console.cloud.google.com/compute/instances?authuser=4&project=resolute-fold-352811)
+
+[enginearn/memo at dev-lenovo-13](https://github.com/enginearn/memo/tree/dev-lenovo-13)
+
+[接続エラーを解決する - Google Chrome ヘルプ](https://support.google.com/chrome/answer/6098869#-200&zippy=%2C%E3%81%93%E3%81%AE%E6%8E%A5%E7%B6%9A%E3%81%A7%E3%81%AF%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%81%8C%E4%BF%9D%E8%AD%B7%E3%81%95%E3%82%8C%E3%81%BE%E3%81%9B%E3%82%93neterr-cert-authority-invaliderr-cert-common-name-invalidneterr-cert-weak-signature-algorithmerr-certificate-transparency-requiredssl-%E8%A8%BC%E6%98%8E%E6%9B%B8%E3%82%A8%E3%83%A9%E3%83%BC)
+>>>>>>> 80b026c87587275d25b968d35d458aac0adebc7c
 
 [ネットワーク タグの構成  |  VPC  |  Google Cloud](https://cloud.google.com/vpc/docs/add-remove-network-tags?authuser=4&_ga=2.41882539.-80309478.1654773236&_gac=1.253379067.1655242528.CjwKCAjw46CVBhB1EiwAgy6M4o52LBfwXR-l-QDwtbYDicEX8zD7yFLH4bXRRJgXKDRBdftlZyVq8xoCDxAQAvD_BwE)
 
@@ -2074,9 +2249,15 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 
 [Win10起動時に仮想デスクトップ番号を指定してアプリを立ち上げる - Qiita](https://qiita.com/piyox2/items/328ca89a6e7effe58ced)
 
+<<<<<<< HEAD
 [Linuxのデバイスを確認するコマンド | パソコン工房 NEXMAG](https://www.pc-koubou.jp/magazine/36572)
 
 [【Docker】イメージダウンロードでエラー（Error response from daemon）が発生した場合の対応方法 | インフラエンジニアの技術LOG](https://genchan.net/it/virtualization/docker/2553/)
+=======
+[linux-tools-5.4.0-77-generic - Google 検索](https://www.google.com/search?q=linux-tools-5.4.0-77-generic&rlz=1C1QABZ_jaJP895JP895&oq=linux-tools-5.4.0-77-generic&aqs=chrome..69i57j0i5i19i30j0i19i30.4073j0j4&sourceid=chrome&ie=UTF-8)
+
+[how can i pass through USB device in docker for windows(Hyper -v ) · Issue #3926 · docker/for-win](https://github.com/docker/for-win/issues/3926)
+>>>>>>> 80b026c87587275d25b968d35d458aac0adebc7c
 
 [How to Use Basler USB Cameras in Docker Container?](https://www.baslerweb.com/jp/sales-support/knowledge-base/frequently-asked-questions/how-to-use-basler-usb-cameras-in-docker-container/588488/)
 
@@ -2102,4 +2283,79 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 
 [macOS Catalinaでavrdudeを使ってProMicroに書き込もうとするとprogrammer is not respondingというエラーが出る - ぽよメモ](https://poyo.hatenablog.jp/entry/2019/11/04/005016)
 
+<<<<<<< HEAD
 [Error: The software identifier is not 'CATERIN': ASCII T - Google 検索](https://www.google.com/search?q=Error%3A+The+software+identifier+is+not+%27CATERIN%27%3A+ASCII+T&rlz=1C1QABZ_jaJP895JP895&oq=Error%3A+The+software+identifier+is+not+%27CATERIN%27%3A+ASCII+T&aqs=chrome.0.69i59j69i58.1653j0j7&sourceid=chrome&ie=UTF-8)
+=======
+[WordPressのログインURLを変更する方法！プラグインを使ってセキュリティ対策を｜ワプ活](https://www.conoha.jp/lets-wp/wp-loginurl/)
+
+[設定 - セキュリティ](chrome://settings/security?q=enhanced)
+
+[gitignore.io - プロジェクトに役立つ.gitignoreファイルを作成しよう](https://www.toptal.com/developers/gitignore)
+
+[WordPress｜コアファイルの処理フロー(管理画面編) - わくわくBank](https://www.wakuwakubank.com/posts/657-wordpress-core-manage-flow/)
+
+[index.htmlとは（indexの優先順位も）【初心者向け】 | エンジニア足立のコーディング日記](https://deep-blog.jp/engineer/index-html-priority/)
+
+[WordPress｜コアファイルの処理フロー(管理画面編) - わくわくBank](https://www.wakuwakubank.com/posts/657-wordpress-core-manage-flow/)
+
+[CentOS Stream 9 LAMPサーバインストールメモ【Apache2.4＋MySQL8.0＋PHP8.0】 | あぱーブログ](https://blog.apar.jp/linux/15791/)
+
+[gohugoio/hugo: The world’s fastest framework for building websites.](https://github.com/gohugoio/hugo)
+
+[CentOS 7 firewalld よく使うコマンド - Qiita](https://qiita.com/kenjjiijjii/items/1057af2dddc34022b09e)
+
+[CentOS7でSSHのポート番号を変更する - Qiita](https://qiita.com/fk_2000/items/019b62818e34be973227)
+
+[【find・grep】特定の文字列を含むファイルのリストを取得する方法。 - Qiita](https://qiita.com/pokari_dz/items/0f14a21e3ca3df025d21)
+
+[Postfixのバージョンを確認する](https://www.linuxmaster.jp/linux_skill/2016/10/postfix.html)
+
+[Download and install - The Go Programming Language](https://go.dev/doc/install)
+
+[centos stream 9 に nginx と php8.1 をインストール - Qiita](https://qiita.com/ma7ma7pipipi/items/90000bce1248a41745f8)
+
+[PostgreSQL: Linux downloads (Red Hat family)](https://www.postgresql.org/download/linux/redhat/)
+
+[Install Hugo | Hugo](https://gohugo.io/getting-started/installing/)
+
+[gohugoio/hugo: The world’s fastest framework for building websites.](https://github.com/gohugoio/hugo)
+
+[インストール](https://garretlab.web.fc2.com/hugo/introduction/installation/)
+
+[ローカルgitリポジトリでリモートのリポジトリURL確認方法 - Qiita](https://qiita.com/zhao-xy/items/a35add58575ef7d9d4dc)
+
+[Options | CopyAllURLs](chrome-extension://djdmadneanknadilpjiknlnanaolmbfk/options.html)
+
+[最低限かつムダのないUbuntuサーバー初期設定【VPS】 | ジコログ](https://self-development.info/%E6%9C%80%E4%BD%8E%E9%99%90%E3%81%8B%E3%81%A4%E3%83%A0%E3%83%80%E3%81%AE%E3%81%AA%E3%81%84ubuntu%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E5%88%9D%E6%9C%9F%E8%A8%AD%E5%AE%9A%E3%80%90vps%E3%80%91/)
+
+[ラズベリーパイで固定IPアドレスを設定する - ムギークのブログ](https://mugeek.hatenablog.com/entry/2019/05/27/230256)
+
+[新しい SSH キーを生成して ssh-agent に追加する - GitHub Docs](https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+[SSH キーのパスフレーズを使う - GitHub Docs](https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases)
+
+[ssh-agentを自動起動する - Qiita](https://qiita.com/fuji44/items/da63086c11c772c9f5fb)
+
+[Visual Studio Code Remote Development Troubleshooting Tips and Tricks](https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent)
+
+[メモモモモ: Windowsで始める初めてのSSH](http://memomo2.blogspot.com/2018/06/windowsssh.html)
+
+[クリップボードに値をコピーする : PowerShell プログラミング | iPentec](https://www.ipentec.com/document/powershell-copy-to-clipboard)
+
+[Raspberry Pi 3用Ubuntu MATEのカーネルのアップデート方法 | Memoteki](https://memoteki.net/archives/1206)
+
+[Raspberry Pi ファームウェアとカーネルをバージョンアップ | MIKI-IE.COM（みきいえMIKIIE）](https://www.miki-ie.com/raspberry-pi/raspberry-pi-upgrade-os-firmware/)
+
+[SDカードのフォーマットできないを解決｜初期化・復元の正しい方法 | bitWave](https://bitwave.showcase-tv.com/sd-microsd-format/)
+
+[diskpartコマンドでディスクのパーティションを操作する (2/3) | 「DORA君」転職](http://51.jpis.co.jp/?p=501)
+
+[Raspberry Pi Documentation - The Linux kernel](https://www.raspberrypi.com/documentation/computers/linux_kernel.html#kernel)
+
+[Raspberry Pi 4にUbuntu Serverを入れて初期設定をするまで【簡単なセキュリティを添えて】 - Qiita](https://qiita.com/quailDegu/items/63114ba1e14416df8040)
+
+[Raspberry Pi のIPアドレスを固定にするには？│FABSHOP.JP -デジタルでものづくり！ ファブショップ ！](https://www.fabshop.jp/raspberry-pi-static-ip/)
+
+[Linux kernel release 5.x <http://kernel.org/> — The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/admin-guide/README.html)
+
+>>>>>>> 80b026c87587275d25b968d35d458aac0adebc7c
