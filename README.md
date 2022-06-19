@@ -152,7 +152,7 @@ Directory: C:\Users\pathto\.ssh
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
 -a---          2022/06/19    11:05            124 config
--a---          2022/06/19    10:42            419 github_LENOVO13    
+-a---          2022/06/19    10:42            419 github_LENOVO13
 -a---          2022/06/19    10:42            105 github_LENOVO13.pub
 ```
 
@@ -165,7 +165,7 @@ Mode                 LastWriteTime         Length Name
 
 ``` PowerShell
 Invoke-WebRequest -Uri https://ferret-plus.com/4637
-                                                                                                                        
+
 StatusCode        : 200
 StatusDescription : OK
 Content           : <!DOCTYPE html><html lang="ja"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><link crossorigin="" href="//fo…
@@ -1137,6 +1137,125 @@ docker-compose up -d
 docker-compose down --volume
 ```
 
+## ubuntu server 初期設定
+
+<details>
+<summary>updating packages</summary>
+
+``` bash
+sudo apt update && sudo apt upgrade -y
+```
+
+</details>
+
+<details>
+<summary>set hostname</summary>
+
+``` bash
+$ hostname
+ubuntu
+
+$ sudo hostnamectl set-hostname ubuntu-server-1
+$ hostname
+ubuntu-server-1
+```
+
+</details>
+
+<details>
+<summary>setting timezone</summary>
+
+``` bash
+$ timedatectl status
+               Local time: Sun 2022-06-19 12:45:45 UTC
+           Universal time: Sun 2022-06-19 12:45:45 UTC
+                 RTC time: n/a
+                Time zone: Etc/UTC (UTC, +0000)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+
+$ sudo timedatectl set-timezone "Asia/Tokyo"
+$ timedatectl status
+               Local time: Sun 2022-06-19 21:46:50 JST
+           Universal time: Sun 2022-06-19 12:46:50 UTC
+                 RTC time: n/a
+                Time zone: Asia/Tokyo (JST, +0900)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+
+```
+
+</details>
+
+<details>
+<summary>locale</summary>
+
+``` bash
+$ localectl list-locales
+C.UTF-8
+en_US.UTF-8
+
+$ sudo apt install -y language-pack-ja
+$ localectl list-locales
+C.UTF-8
+en_US.UTF-8
+ja_JP.UTF-8
+
+$ localectl status
+   System Locale: LANG=C.UTF-8
+       VC Keymap: n/a
+      X11 Layout: us
+       X11 Model: pc105
+
+$ sudo localectl set-locale LANG=ja_JP.UTF-8
+$ localectl status
+   System Locale: LANG=ja_JP.UTF-8
+       VC Keymap: n/a
+      X11 Layout: us
+       X11 Model: pc105
+```
+
+</details>
+
+<details>
+<summary>Firewall settings</summary>
+
+``` bash
+$ sudo apt install -y ufw
+$ sudo ufw status
+Status: inactive
+
+$ sudo vim /etc/ssh/sshd_config # Port 22
+ubuntu@ubuntu:~$ sudo ufw default deny
+Default incoming policy changed to 'deny' 
+(be sure to update your rules accordingly)
+
+$ sudo ufw enable
+Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
+Firewall is active and enabled on system startup
+```
+
+</details>
+
+<details>
+<summary>staitc ipの設定</summary>
+
+`/etc/dhcp/dhclient.conf`を以下のように編集
+
+> interface eth0
+> static ip_address=xxx.xxx.xxx.xxx/24
+> static routers=xxx.xxx.xxx.xxx # デフォルトゲートウェイのIPアドレス
+> static domain_name_servers=xxx.xxx.xxx.xxx # DNSのIPアドレス
+>
+> interface wlan0
+> static ip_address=xxx.xxx.xxx.xxx/24
+> static routers=xxx.xxx.xxx.xxx # デフォルトゲートウェイのIPアドレス
+> static domain_name_servers=xxx.xxx.xxx.xxx # DNSのIPアドレス
+</details>
+
+
 ## Python
 
 <details>
@@ -1501,3 +1620,37 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 [How To Install MySQL 8.0 on Debian 11/10 /9](https://computingforgeeks.com/how-to-install-mysql-8-0-on-debian/)
 
 [第26回　【WordPress】　MySQL5.7→MySQL8.0へアップグレード](https://tohyo2020.org/mysql-57-mysql-80/)
+
+
+[最低限かつムダのないUbuntuサーバー初期設定【VPS】 | ジコログ](https://self-development.info/%E6%9C%80%E4%BD%8E%E9%99%90%E3%81%8B%E3%81%A4%E3%83%A0%E3%83%80%E3%81%AE%E3%81%AA%E3%81%84ubuntu%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E5%88%9D%E6%9C%9F%E8%A8%AD%E5%AE%9A%E3%80%90vps%E3%80%91/)
+
+[ラズベリーパイで固定IPアドレスを設定する - ムギークのブログ](https://mugeek.hatenablog.com/entry/2019/05/27/230256)
+
+[新しい SSH キーを生成して ssh-agent に追加する - GitHub Docs](https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+[SSH キーのパスフレーズを使う - GitHub Docs](https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases)
+
+[ssh-agentを自動起動する - Qiita](https://qiita.com/fuji44/items/da63086c11c772c9f5fb)
+
+[Visual Studio Code Remote Development Troubleshooting Tips and Tricks](https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent)
+
+[メモモモモ: Windowsで始める初めてのSSH](http://memomo2.blogspot.com/2018/06/windowsssh.html)
+
+[クリップボードに値をコピーする : PowerShell プログラミング | iPentec](https://www.ipentec.com/document/powershell-copy-to-clipboard)
+
+[Raspberry Pi 3用Ubuntu MATEのカーネルのアップデート方法 | Memoteki](https://memoteki.net/archives/1206)
+
+[Raspberry Pi ファームウェアとカーネルをバージョンアップ | MIKI-IE.COM（みきいえMIKIIE）](https://www.miki-ie.com/raspberry-pi/raspberry-pi-upgrade-os-firmware/)
+
+[SDカードのフォーマットできないを解決｜初期化・復元の正しい方法 | bitWave](https://bitwave.showcase-tv.com/sd-microsd-format/)
+
+[diskpartコマンドでディスクのパーティションを操作する (2/3) | 「DORA君」転職](http://51.jpis.co.jp/?p=501)
+
+[Raspberry Pi Documentation - The Linux kernel](https://www.raspberrypi.com/documentation/computers/linux_kernel.html#kernel)
+
+[Raspberry Pi 4にUbuntu Serverを入れて初期設定をするまで【簡単なセキュリティを添えて】 - Qiita](https://qiita.com/quailDegu/items/63114ba1e14416df8040)
+
+[Raspberry Pi のIPアドレスを固定にするには？│FABSHOP.JP -デジタルでものづくり！ ファブショップ ！](https://www.fabshop.jp/raspberry-pi-static-ip/)
+
+[Linux kernel release 5.x <http://kernel.org/> — The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/admin-guide/README.html)
+
