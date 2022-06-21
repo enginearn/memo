@@ -1544,15 +1544,82 @@ $ export PATH=$PATH:/usr/local/go/bin
 <summary>Hugoのインストール</summary>
 
 ``` bash
-$ mkdir $HOME/src
-$ cd $HOME/src
-$ git clone https://github.com/gohugoio/hugo.git
-$ cd hugo
-$ go install --tags extended
+$ wget https://github.com/gohugoio/hugo/releases/download/v0.101.0/hugo_0.101.0_Linux-64bit.tar.gz
+]$ sudo tar -C /usr/bin -xvzf hugo_0.101.0_Linux-64bit.tar.gz 
+LICENSE
+README.md
+hugo
+$ hugo version
+hugo v0.101.0-466fa43c16709b4483689930a4f9ac8add5c9f66 linux/amd64 BuildDate=2022-06-16T07:09:16Z VendorInfo=gohugoio
 ```
 
 </details>
 
+<details>
+<summary>PostgreSQLインストール</summary>
+
+``` bash
+$ sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-9-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+Last metadata expiration check: 2:10:05 ago on Tue 21 Jun 2022 08:55:29 PM JST.
+pgdg-redhat-repo-latest.noarch.rpm                                           9.2 kB/s |  12 kB     00:01    
+Dependencies resolved.
+=============================================================================================================
+ Package                        Architecture         Version                Repository                  Size
+=============================================================================================================
+Installing:
+ pgdg-redhat-repo               noarch               42.0-24                @commandline                12 k
+
+Transaction Summary
+=============================================================================================================
+Install  1 Package
+
+Total size: 12 k
+Installed size: 12 k
+Downloading Packages:
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                     1/1 
+  Installing       : pgdg-redhat-repo-42.0-24.noarch                                                     1/1 
+  Verifying        : pgdg-redhat-repo-42.0-24.noarch                                                     1/1 
+
+Installed:
+  pgdg-redhat-repo-42.0-24.noarch                                                                            
+
+Complete!
+```
+
+``` bash
+$ sudo dnf -qy module disable postgresql
+Importing GPG key 0x442DF0F8:
+ Userid     : "PostgreSQL RPM Building Project <pgsql-pkg-yum@postgresql.org>"
+ Fingerprint: 68C9 E2B9 1A37 D136 FE74 D176 1F16 D2E1 442D F0F8
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Unable to resolve argument postgresql
+Error: Problems in request:
+missing groups or modules: postgresql
+```
+
+``` bash
+$ sudo dnf install -y postgresql14-server
+```
+
+``` bash
+$ sudo /usr/pgsql-14/bin/postgresql-14-setup initdb
+Initializing database ... OK
+
+
+$ sudo systemctl start postgresql-14
+```
+
+``` bash
+$ sudo systemctl enable postgresql-14
+Created symlink /etc/systemd/system/multi-user.target.wants/postgresql-14.service → /usr/lib/systemd/system/postgresql-14.service.
+```
+
+</details>
 
 ## git commands
 
@@ -2332,3 +2399,62 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 [Raspberry Pi のIPアドレスを固定にするには？│FABSHOP.JP -デジタルでものづくり！ ファブショップ ！](https://www.fabshop.jp/raspberry-pi-static-ip/)
 
 [Linux kernel release 5.x <http://kernel.org/> — The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/admin-guide/README.html)
+
+[VM インスタンス – Compute Engine – My First Project – Google Cloud Console](https://console.cloud.google.com/compute/instances?authuser=4&hl=ja&project=resolute-fold-352811)
+
+[Useful_PowerShell/Useful_PowerShell.ps1 at main · enginearn/Useful_PowerShell](https://github.com/enginearn/Useful_PowerShell/blob/main/Useful_PowerShell.ps1)
+
+[Certbot Instructions | Certbot](https://certbot.eff.org/instructions?ws=other&os=ubuntufocal)
+
+[コマンドの出力を「コピペ」したいなら「 xclip 」を使おう！【pbcopy・pbpaste】 | LFI](https://linuxfan.info/xclip)
+
+[Running a notebook server — Jupyter Notebook 6.4.12 documentation](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html)
+
+[Installing snap on Ubuntu | Snapcraft documentation](https://snapcraft.io/docs/installing-snap-on-ubuntu)
+
+[Snap.d error: cannot communicate with server connection refused - snapd - snapcraft.io](https://forum.snapcraft.io/t/snap-d-error-cannot-communicate-with-server-connection-refused/6093/14)
+
+[boot - System has not been booted with systemd as init system (PID 1). Can't operate - Ask Ubuntu](https://askubuntu.com/questions/1379425/system-has-not-been-booted-with-systemd-as-init-system-pid-1-cant-operate)
+
+[shayne/wsl2-hacks: Useful snippets / tools for using WSL2 as a development environment](https://github.com/shayne/wsl2-hacks)
+
+[GitHubでssh接続する手順~公開鍵・秘密鍵の生成から~ - Qiita](https://qiita.com/shizuma/items/2b2f873a0034839e47ce)
+
+[enginearn/Python_for_Algorithmic_Trading_2nd_ed-978-4873119793](https://github.com/enginearn/Python_for_Algorithmic_Trading_2nd_ed-978-4873119793)
+
+[【git エラー解決策】Permission denied (publickey). fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists. が出た時の解決方法 - " いいね " なライフをつくる。](https://tusukuru.hatenablog.com/entry/2018/08/29/021651)
+
+[Error: Permission denied (publickey) - GitHub Docs](https://docs.github.com/ja/authentication/troubleshooting-ssh/error-permission-denied-publickey)
+
+[【Git】リモートレポジトリ(origin)を変更・削除・上書き・追加する方法｜git remote add, remote -v, set-url, rename, rmの使い方（初心者向け、わかりやすい）](https://prograshi.com/general/git/git-remote-commands/)
+
+[docker - Run a script in Dockerfile - Stack Overflow](https://stackoverflow.com/questions/34549859/run-a-script-in-dockerfile)
+
+[innovation1005/python3-for-system-trade: Python3ではじめるシステムトレードのプログラムコードと学習ガイド](https://github.com/innovation1005/python3-for-system-trade)
+
+[Project Jupyter | Installing Jupyter](https://jupyter.org/install)
+
+[yhilpisch/py4at: Jupyter Notebooks and code for the book Python for Algorithmic Trading (O'Reilly) by Yves Hilpisch.](https://github.com/yhilpisch/py4at)
+
+[複数Quandl アカウントをレプリケーション](https://www.cdata.com/jp/kb/tech/quandl-sync-multiple-accounts.rst)
+
+[data_process… (auto-R : 2) - JupyterLab](http://localhost:8888/lab/workspaces/auto-R/tree/Chapter_03/data_processing.ipynb)
+
+['RM' is not recognized as an internal or external command while using Meteor on Windows - Stack Overflow](https://stackoverflow.com/questions/33188752/rm-is-not-recognized-as-an-internal-or-external-command-while-using-meteor-on)
+
+[WordPressでコメント入力時「Invalid CAPTCHA」と出てしまう時の対処法 | MERIDERI.com](https://merideri.com/comment-invalid-captcha)
+
+[マイドライブ - Google ドライブ](https://drive.google.com/drive/u/4/my-drive)
+
+[Account Activation - enginyaaaaan@gmail.com - Gmail](https://mail.google.com/mail/u/4/?tab=om#inbox/FMfcgzGpGdccPCNBJGshpCZRzrSnzNNr)
+
+[Documentation, Help and Support | Nasdaq Data Link](https://data.nasdaq.com/docs-and-help)
+
+[GETTING STARTED](https://docs.data.nasdaq.com/docs/getting-started)
+
+[Nasdaq Data Link Account Profile | Nasdaq Data Link](https://data.nasdaq.com/account/profile)
+
+[API Keys - Google スプレッドシート](https://docs.google.com/spreadsheets/d/13TrFpXzuYeOMLSr-Tvap6xGoXGpEV-yUcpsqYd6YpBs/edit#gid=0)
+
+[Eikon の仕様とダウンロード | リフィニティブ](https://www.refinitiv.com/ja/products/eikon-trading-software/download-eikon)
+
