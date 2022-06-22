@@ -1544,15 +1544,84 @@ $ export PATH=$PATH:/usr/local/go/bin
 <summary>Hugoのインストール</summary>
 
 ``` bash
-$ mkdir $HOME/src
-$ cd $HOME/src
-$ git clone https://github.com/gohugoio/hugo.git
-$ cd hugo
-$ go install --tags extended
+$ wget https://github.com/gohugoio/hugo/releases/download/v0.101.0/hugo_0.101.0_Linux-64bit.tar.gz
+]$ sudo tar -C /usr/bin -xvzf hugo_0.101.0_Linux-64bit.tar.gz 
+LICENSE
+README.md
+hugo
+$ hugo version
+hugo v0.101.0-466fa43c16709b4483689930a4f9ac8add5c9f66 linux/amd64 BuildDate=2022-06-16T07:09:16Z VendorInfo=gohugoio
 ```
 
 </details>
 
+<details>
+<summary>PostgreSQLインストール</summary>
+
+[postgesql.org download for redhat](https://www.postgresql.org/download/linux/redhat/)
+
+``` bash
+$ sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-9-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+Last metadata expiration check: 2:10:05 ago on Tue 21 Jun 2022 08:55:29 PM JST.
+pgdg-redhat-repo-latest.noarch.rpm                                           9.2 kB/s |  12 kB     00:01    
+Dependencies resolved.
+=============================================================================================================
+ Package                        Architecture         Version                Repository                  Size
+=============================================================================================================
+Installing:
+ pgdg-redhat-repo               noarch               42.0-24                @commandline                12 k
+
+Transaction Summary
+=============================================================================================================
+Install  1 Package
+
+Total size: 12 k
+Installed size: 12 k
+Downloading Packages:
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                     1/1 
+  Installing       : pgdg-redhat-repo-42.0-24.noarch                                                     1/1 
+  Verifying        : pgdg-redhat-repo-42.0-24.noarch                                                     1/1 
+
+Installed:
+  pgdg-redhat-repo-42.0-24.noarch                                                                            
+
+Complete!
+```
+
+``` bash
+$ sudo dnf -qy module disable postgresql
+Importing GPG key 0x442DF0F8:
+ Userid     : "PostgreSQL RPM Building Project <pgsql-pkg-yum@postgresql.org>"
+ Fingerprint: 68C9 E2B9 1A37 D136 FE74 D176 1F16 D2E1 442D F0F8
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
+Unable to resolve argument postgresql
+Error: Problems in request:
+missing groups or modules: postgresql
+```
+
+``` bash
+$ sudo dnf install -y postgresql14-server
+```
+
+``` bash
+$ sudo /usr/pgsql-14/bin/postgresql-14-setup initdb
+Initializing database ... OK
+
+
+$ sudo systemctl start postgresql-14
+```
+
+``` bash
+$ sudo systemctl enable postgresql-14
+Created symlink /etc/systemd/system/multi-user.target.wants/postgresql-14.service → /usr/lib/systemd/system/postgresql-14.service.
+```
+
+</details>
 
 ## git commands
 
@@ -2332,3 +2401,152 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 [Raspberry Pi のIPアドレスを固定にするには？│FABSHOP.JP -デジタルでものづくり！ ファブショップ ！](https://www.fabshop.jp/raspberry-pi-static-ip/)
 
 [Linux kernel release 5.x <http://kernel.org/> — The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/admin-guide/README.html)
+
+[VM インスタンス – Compute Engine – My First Project – Google Cloud Console](https://console.cloud.google.com/compute/instances?authuser=4&hl=ja&project=resolute-fold-352811)
+
+[Useful_PowerShell/Useful_PowerShell.ps1 at main · enginearn/Useful_PowerShell](https://github.com/enginearn/Useful_PowerShell/blob/main/Useful_PowerShell.ps1)
+
+[Certbot Instructions | Certbot](https://certbot.eff.org/instructions?ws=other&os=ubuntufocal)
+
+[コマンドの出力を「コピペ」したいなら「 xclip 」を使おう！【pbcopy・pbpaste】 | LFI](https://linuxfan.info/xclip)
+
+[Running a notebook server — Jupyter Notebook 6.4.12 documentation](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html)
+
+[Installing snap on Ubuntu | Snapcraft documentation](https://snapcraft.io/docs/installing-snap-on-ubuntu)
+
+[Snap.d error: cannot communicate with server connection refused - snapd - snapcraft.io](https://forum.snapcraft.io/t/snap-d-error-cannot-communicate-with-server-connection-refused/6093/14)
+
+[boot - System has not been booted with systemd as init system (PID 1). Can't operate - Ask Ubuntu](https://askubuntu.com/questions/1379425/system-has-not-been-booted-with-systemd-as-init-system-pid-1-cant-operate)
+
+[shayne/wsl2-hacks: Useful snippets / tools for using WSL2 as a development environment](https://github.com/shayne/wsl2-hacks)
+
+[GitHubでssh接続する手順~公開鍵・秘密鍵の生成から~ - Qiita](https://qiita.com/shizuma/items/2b2f873a0034839e47ce)
+
+[enginearn/Python_for_Algorithmic_Trading_2nd_ed-978-4873119793](https://github.com/enginearn/Python_for_Algorithmic_Trading_2nd_ed-978-4873119793)
+
+[【git エラー解決策】Permission denied (publickey). fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists. が出た時の解決方法 - " いいね " なライフをつくる。](https://tusukuru.hatenablog.com/entry/2018/08/29/021651)
+
+[Error: Permission denied (publickey) - GitHub Docs](https://docs.github.com/ja/authentication/troubleshooting-ssh/error-permission-denied-publickey)
+
+[【Git】リモートレポジトリ(origin)を変更・削除・上書き・追加する方法｜git remote add, remote -v, set-url, rename, rmの使い方（初心者向け、わかりやすい）](https://prograshi.com/general/git/git-remote-commands/)
+
+[docker - Run a script in Dockerfile - Stack Overflow](https://stackoverflow.com/questions/34549859/run-a-script-in-dockerfile)
+
+[innovation1005/python3-for-system-trade: Python3ではじめるシステムトレードのプログラムコードと学習ガイド](https://github.com/innovation1005/python3-for-system-trade)
+
+[Project Jupyter | Installing Jupyter](https://jupyter.org/install)
+
+[yhilpisch/py4at: Jupyter Notebooks and code for the book Python for Algorithmic Trading (O'Reilly) by Yves Hilpisch.](https://github.com/yhilpisch/py4at)
+
+[複数Quandl アカウントをレプリケーション](https://www.cdata.com/jp/kb/tech/quandl-sync-multiple-accounts.rst)
+
+[data_process… (auto-R : 2) - JupyterLab](http://localhost:8888/lab/workspaces/auto-R/tree/Chapter_03/data_processing.ipynb)
+
+['RM' is not recognized as an internal or external command while using Meteor on Windows - Stack Overflow](https://stackoverflow.com/questions/33188752/rm-is-not-recognized-as-an-internal-or-external-command-while-using-meteor-on)
+
+[WordPressでコメント入力時「Invalid CAPTCHA」と出てしまう時の対処法 | MERIDERI.com](https://merideri.com/comment-invalid-captcha)
+
+[マイドライブ - Google ドライブ](https://drive.google.com/drive/u/4/my-drive)
+
+[Account Activation - enginyaaaaan@gmail.com - Gmail](https://mail.google.com/mail/u/4/?tab=om#inbox/FMfcgzGpGdccPCNBJGshpCZRzrSnzNNr)
+
+[Documentation, Help and Support | Nasdaq Data Link](https://data.nasdaq.com/docs-and-help)
+
+[GETTING STARTED](https://docs.data.nasdaq.com/docs/getting-started)
+
+[Nasdaq Data Link Account Profile | Nasdaq Data Link](https://data.nasdaq.com/account/profile)
+
+[API Keys - Google スプレッドシート](https://docs.google.com/spreadsheets/d/13TrFpXzuYeOMLSr-Tvap6xGoXGpEV-yUcpsqYd6YpBs/edit#gid=0)
+
+[Eikon の仕様とダウンロード | リフィニティブ](https://www.refinitiv.com/ja/products/eikon-trading-software/download-eikon)
+
+[VM インスタンス – Compute Engine – My First Project – Google Cloud Console](https://console.cloud.google.com/compute/instances?authuser=4&hl=ja&project=resolute-fold-352811)
+
+[useキーワードでパスをスコープに持ち込む - The Rust Programming Language 日本語版](https://doc.rust-jp.rs/book-ja/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html)
+
+[wooting-analog-sdk/SDK_USAGE.md at develop · WootingKb/wooting-analog-sdk](https://github.com/WootingKb/wooting-analog-sdk/blob/develop/SDK_USAGE.md)
+
+[Overview | Wooting dev portal](https://dev.wooting.io/wooting-analog-sdk-guide/overview/)
+
+[WootingKb/wooting-analog-sdk: Native support for Analog Keyboards #WootDev](https://github.com/WootingKb/wooting-analog-sdk)
+
+[Introduction | Wooting dev portal](https://dev.wooting.nl/wooting-analog-sdk-guide/introduction/)
+
+[Garbius/WootingPlugin: Wooting support for Space Engineers](https://github.com/Garbius/WootingPlugin)
+
+[ShayBox/WootingProfileSwitcher: Automatically switch Wooting keyboard profiles](https://github.com/ShayBox/WootingProfileSwitcher)
+
+[davidtwco/rust-wooting-sdk: Rust bindings for Wooting Analog and RGB SDKs!](https://github.com/davidtwco/rust-wooting-sdk)
+
+[wooting_sdk - Rust](https://docs.rs/wooting-sdk/latest/wooting_sdk/)
+
+[lib.rs.html -- source](https://docs.rs/wooting-sdk/latest/src/wooting_sdk/lib.rs.html#786-794)
+
+[lib.rs.html -- source](https://docs.rs/wooting-sdk/latest/src/wooting_sdk/lib.rs.html#94-97)
+
+[Rust Playground](https://play.rust-lang.org/?code=%23!%5Ballow(unused)%5D%0Afn%20main()%20%7B%0Ause%20std%3A%3Apanic%3B%0A%0Alet%20result%20%3D%20panic%3A%3Acatch_unwind(%7C%7C%20%7B%0A%20%20%20%20println!(%22hello!%22)%3B%0A%7D)%3B%0Aassert!(result.is_ok())%3B%0A%0Alet%20result%20%3D%20panic%3A%3Acatch_unwind(%7C%7C%20%7B%0A%20%20%20%20panic!(%22oh%20no!%22)%3B%0A%7D)%3B%0Aassert!(result.is_err())%3B%0A%7D&edition=2021)
+
+[rust-wooting-sdk/wooting-sdk/examples at master · davidtwco/rust-wooting-sdk](https://github.com/davidtwco/rust-wooting-sdk/tree/master/wooting-sdk/examples)
+
+[enginearn (enginearn)](https://github.com/enginearn)
+
+[Rustのツール周りがモダンだって話 - Qiita](https://qiita.com/maeda_/items/0f47a1d74129160b86ed)
+
+[Rustのプロジェクトを始める前に知っておきたかったこと - Qiita](https://qiita.com/maeda_/items/d765d514e7c72778f29f)
+
+[Rustのプロジェクトで型に困惑した話 - Qiita](https://qiita.com/maeda_/items/3a0d33db69a5476693f6)
+
+[Rust勉強中 - その4 -> クレート - Qiita](https://qiita.com/deta-mamoru/items/f2b8b72fd962770fb7c2)
+
+[gcp_auth - crates.io: Rust Package Registry](https://crates.io/crates/gcp_auth)
+
+[awslabs/aws-sdk-rust: AWS SDK for the Rust Programming Language](https://github.com/awslabs/aws-sdk-rust)
+
+[The Manifest Format - The Cargo Book](https://doc.rust-lang.org/cargo/reference/manifest.html)
+
+[crate reviews](https://web.crev.dev/rust-reviews/crate/wooting-sdk)
+
+[wooting-sdk — Rust HW library // Lib.rs](https://lib.rs/crates/wooting-sdk)
+
+[wooting_sdk - Rust](https://docs.rs/wooting-sdk/latest/wooting_sdk/#rust-wooting-sdk)
+
+[wooting_analog_sdk_sys::__fsid_t - Rust](https://docs.rs/wooting-analog-sdk-sys/latest/wooting_analog_sdk_sys/struct.__fsid_t.html)
+
+[LLVM Clang の Windows へのインストールと使い方 | プログラマーズ雑記帳](http://yohshiy.blog.fc2.com/blog-entry-294.html)
+
+[Release LLVM 14.0.5 · llvm/llvm-project](https://github.com/llvm/llvm-project/releases/tag/llvmorg-14.0.5)
+
+[トレイト：共通の振る舞いを定義する - The Rust Programming Language 日本語版](https://doc.rust-jp.rs/book-ja/ch10-02-traits.html)
+
+[メソッド - Rust By Example 日本語版](https://doc.rust-jp.rs/rust-by-example-ja/fn/methods.html)
+
+[enginearn (enginearn)](https://github.com/enginearn)
+
+[参照と借用 - The Rust Programming Language 日本語版](https://doc.rust-jp.rs/book-ja/ch04-02-references-and-borrowing.html)
+
+[gohugoio/hugo: The world’s fastest framework for building websites.](https://github.com/gohugoio/hugo)
+
+[Rustを学ぶ - Rustプログラミング言語](https://www.rust-lang.org/ja/learn)
+
+[rust-lang/rustlings: Small exercises to get you used to reading and writing Rust code!](https://github.com/rust-lang/rustlings/)
+
+[Introduction - Rust By Example](https://doc.rust-lang.org/stable/rust-by-example/)
+
+[Dashboard — Gitpod](https://gitpod.io/#https://github.com/rust-lang/rustlings)
+
+[Actix Web | A powerful, pragmatic, and extremely fast web framework for Rust.](https://actix.rs/)
+
+[Rocket - Simple, Fast, Type-Safe Web Framework for Rust](https://rocket.rs/v0.4/)
+
+[Compiling Hugo from source (linux) - support - HUGO](https://discourse.gohugo.io/t/compiling-hugo-from-source-linux/1101)
+
+[centos9 streamにpostgresql11をインストールする方法 - Qiita](https://qiita.com/birune/items/01435f7be8371ea70f97)
+
+[PostgreSQL: Linux downloads (Red Hat family)](https://www.postgresql.org/download/linux/redhat/)
+
+[PostgreSQL12 Red Hat Enterprise Linux 8 dnf install: a23note](http://a23.sblo.jp/article/186925521.html)
+
+[GOPATHを掃除してGo Modulesに移行しよう - KAYAC engineers' blog](https://techblog.kayac.com/migration-gopath-to-go-modules)
+
+[Introducing CentOS Stream 9 – Blog.CentOS.org](https://blog.centos.org/2021/12/introducing-centos-stream-9/)
+
