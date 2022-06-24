@@ -2126,14 +2126,18 @@ Downloading https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v7.94
 <summary>theme</summary>
 
 ``` Powershell
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
+# adminでPowerShellを起動
+cd 
+notepad .\profile.ps1
+notepad .\Microsoft.VSCode_profile.ps1
+`C:\Users\nagar\AppData\Local\Programs\oh-my-posh\themes`
 ```
 
 </details>
 
-
-
 ---
+
+## References
 
 [Docker環境でnodemonがwatchしてくれない問題と対処方法](https://jpdebug.com/p/2477366)
 
@@ -2549,4 +2553,90 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 [GOPATHを掃除してGo Modulesに移行しよう - KAYAC engineers' blog](https://techblog.kayac.com/migration-gopath-to-go-modules)
 
 [Introducing CentOS Stream 9 – Blog.CentOS.org](https://blog.centos.org/2021/12/introducing-centos-stream-9/)
+
+[Microsoft about_profile](https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.2)
+
+[enginearn (enginearn)](https://github.com/enginearn)
+
+[centos9 streamにpostgresql11をインストールする方法 - Qiita](https://qiita.com/birune/items/01435f7be8371ea70f97)
+
+[Wooting | Signup](https://hub.wooting.io/auth/create-account)
+
+[[Markdown] An option to highlight a "Note" and "Warning" using blockquote (Beta) · Discussion #16925 · github-community/community](https://github.com/github-community/community/discussions/16925)
+
+[データ競合(data race)と競合状態(race condition)を混同しない - Qiita](https://qiita.com/yohhoy/items/00c6911aa045ef5729c6)
+
+[Non-Lexical Lifetimes - Qiita](https://qiita.com/_EnumHack/items/8b6ecdeb52e69a4ff384)
+
+[Announcing Rust 1.31 and Rust 2018 | Rust Blog](https://blog.rust-lang.org/2018/12/06/Rust-1.31-and-rust-2018.html#non-lexical-lifetimes)
+
+[肥大化していくプロジェクトをパッケージ、クレート、モジュールを利用して管理する - The Rust Programming Language 日本語版](https://doc.rust-jp.rs/book-ja/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html)
+
+[wooting_sdk::Key - Rust](https://docs.rs/wooting-sdk/latest/wooting_sdk/enum.Key.html)
+
+[wooting_sdk::analog::read_analog_keys - Rust](https://docs.rs/wooting-sdk/latest/wooting_sdk/analog/fn.read_analog_keys.html)
+
+[rust-wooting-sdk/read_analog_keys.rs at master · davidtwco/rust-wooting-sdk](https://github.com/davidtwco/rust-wooting-sdk/blob/master/wooting-sdk/examples/read_analog_keys.rs)
+
+[wooting_sdk::Key - Rust](https://docs.rs/wooting-sdk/latest/wooting_sdk/enum.Key.html#variant.LeftControl)
+
+[rust - expected enum `std::result::Result`, found () - Stack Overflow](https://stackoverflow.com/questions/60020738/expected-enum-stdresultresult-found)
+
+[Resultをイテレートする - Rust By Example 日本語版](https://doc.rust-jp.rs/rust-by-example-ja/error/iter_result.html)
+
+[if let - Rust By Example 日本語版](https://doc.rust-jp.rs/rust-by-example-ja/flow_control/if_let.html?highlight=enum#if-let)
+
+[lib.rs.html -- source](https://docs.rs/wooting-sdk/latest/src/wooting_sdk/lib.rs.html#65)
+
+[メソッド - Rust By Example 日本語版](https://doc.rust-jp.rs/rust-by-example-ja/generics/impl.html)
+
+[web scraping - expected struct `Vec`, found enum `Result` in tokio, cacache and match - Stack Overflow](https://stackoverflow.com/questions/72003772/expected-struct-vec-found-enum-result-in-tokio-cacache-and-match)
+
+[列挙型 - Rust By Example 日本語版](https://doc.rust-jp.rs/rust-by-example-ja/custom_types/enum.html)
+
+[バイナリ変換：2進数、10進数、16進数、ASCIIとテキストを相互変換 | ラッコツールズ🔧](https://rakko.tools/tools/74/)
+
+[Rustでバイト列から文字列へ - Qiita](https://qiita.com/4hiziri/items/dd9800ad7be42c395082)
+
+[u8 - Rust](https://doc.rust-lang.org/std/primitive.u8.html)
+
+[i8 - Rust](https://doc.rust-lang.org/std/primitive.i8.html#method.from_str_radix)
+
+[Rust Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021)
+
+[[Rust] 数値データをバイナリデータとして扱う - Qiita](https://qiita.com/osanshouo/items/5d3a29b16a9a34546155)
+
+[unit - Rust](https://doc.rust-lang.org/std/primitive.unit.html)
+
+[Rust Playground](https://play.rust-lang.org/?code=%23!%5Ballow(unused)%5D%0Afn%20main()%20%7B%0Afn%20returns_i64()%20-%3E%20i64%20%7B%0A%20%20%20%201i64%0A%7D%0Afn%20returns_unit()%20%7B%0A%20%20%20%201i64%3B%0A%7D%0A%0Alet%20is_i64%20%3D%20%7B%0A%20%20%20%20returns_i64()%0A%7D%3B%0Alet%20is_unit%20%3D%20%7B%0A%20%20%20%20returns_i64()%3B%0A%7D%3B%0A%7D&edition=2021)
+
+[unit - Rust](https://doc.rust-lang.org/std/primitive.unit.html)
+
+[Rust の型変換イディオム - Qiita](https://qiita.com/legokichi/items/0f1c592d46a9aaf9a0ea)
+
+[RustでString型をbytesに変換するには？](https://teratail.com/questions/204028)
+
+[「実践Rust入門」を書いたよ | κeenのHappy Hacκing Blog](https://keens.github.io/blog/2019/04/21/jissenrustnyuumon_wokaitayo/)
+
+[Rustでu8のバイト列を16進数（hex）の形式の文字列に変換する - nwtgck / Ryo Ota](https://scrapbox.io/nwtgck/Rust%E3%81%A7u8%E3%81%AE%E3%83%90%E3%82%A4%E3%83%88%E5%88%97%E3%82%9216%E9%80%B2%E6%95%B0%EF%BC%88hex%EF%BC%89%E3%81%AE%E5%BD%A2%E5%BC%8F%E3%81%AE%E6%96%87%E5%AD%97%E5%88%97%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B)
+
+[u8 - Rust](https://doc.rust-lang.org/std/primitive.u8.html#associatedconstant.MIN)
+
+[Rustのコレクション型まとめ (VecやHashMapなど) - Qiita](https://qiita.com/garkimasera/items/a6df4d1cd99bc5010a5e)
+
+[Result in std::result - Rust](https://doc.rust-lang.org/std/result/enum.Result.html)
+
+[wooting-analog-sdk/lib.rs at develop · WootingKb/wooting-analog-sdk](https://github.com/WootingKb/wooting-analog-sdk/blob/develop/wooting-analog-plugin-dev/src/lib.rs)
+
+[Wootility - Profile management | Wooting Support](https://help.wooting.io/en/article/wootility-profile-management-syu08u/?bust=1647604368394)
+
+[Wootility - Configuring device access for Wootility under Linux (udev rules) | Wooting Support](https://help.wooting.io/en/article/wootility-configuring-device-access-for-wootility-under-linux-udev-rules-r6lb2o/)
+
+[std::result - Rust](https://doc.rust-lang.org/std/result/index.html)
+
+[Defining an Enum - The Rust Programming Language](https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html)
+
+[プロファイルについて - PowerShell | Microsoft Docs](https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.2)
+
+[Themes | Oh My Posh](https://ohmyposh.dev/docs/themes)
 
