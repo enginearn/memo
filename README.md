@@ -1685,6 +1685,19 @@ git push -u origin main
 
 </details>
 
+<details>
+<summary>git initでmainブランチになる事前設定</summary>
+
+``` terminal
+git config --global init.defaultBranch main
+git init
+git remote add origin https://github.com/enginearn/rust-in-8-hours-979-8427568579.git
+git pull origin main
+```
+
+</details>
+
+
 ## docker-compose
 
 <details>
@@ -1828,6 +1841,35 @@ print('標準エラー出力(stderr)へ、utf-8で出力', file=sys.stderr)
 ```
 
 </details>
+
+## ubuntu server 追加のやつ（raspberry pi3B+）
+
+<details>
+<summary>install nginx</summary>
+
+``` 
+
+```
+
+</details>
+
+<details>
+<summary>ufw確認</summary>
+
+``` 
+$ sudo ufw status
+状態: アクティブ
+
+To          Action      From
+--          ------      ----
+11235       ALLOW       Anywhere
+11235 (v6)  ALLOW       Anywhere (v6)
+```
+
+</details>
+
+$ sudo ufw app list
+Nginx Full
 
 ## Python仮想環境構築
 
