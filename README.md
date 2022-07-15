@@ -1284,9 +1284,50 @@ Certificate not yet due for renewal; no action taken.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ```
 
-${APACHE_LOG_DIR}/error.log
+</details>
+
+## WordPress Adminサイトにアクセスできない時
+
+<details>
+<summary>phpMyAdminからsiteurlとhomeを変更する</summary>
+
+``` PhpmyAdmin
+MySQL WordPressテーブル -> siteurl
+MySQL WordPressテーブル -> home
+```
 
 </details>
+
+<details>
+<summary>The update cannot be installed because we will be unable to copy some files. This is usually due to inconsistent file permissions.: index.php</summary>
+
+``` terminal
+@wordpress-1-vm:/var$ ls -l
+total 44
+drwxr-xr-x  2 root root  4096 Jul 15 23:19 backups
+drwxr-xr-x 13 root root  4096 Jun 15 20:08 cache
+drwxr-xr-x 34 root root  4096 Jun 15 20:09 lib
+drwxrwsr-x  2 root staff 4096 Mar 19 22:44 local
+lrwxrwxrwx  1 root root     9 Apr  7 02:24 lock -> /run/lock
+drwxr-xr-x 11 root root  4096 Jul 15 00:00 log
+drwxrwsr-x  2 root mail  4096 Apr  7 02:24 mail
+drwxr-xr-x  2 root root  4096 Apr  7 02:24 opt
+lrwxrwxrwx  1 root root     4 Apr  7 02:24 run -> /run
+drwxr-xr-x  5 root root  4096 Jun 15 20:08 snap
+drwxr-xr-x  4 root root  4096 Apr  7 02:27 spool
+drwxrwxrwt  4 root root  4096 Jul 15 23:39 tmp
+drwxr-xr-x  3 root root  4096 May  2 00:53 www
+```
+
+``` terminal
+@wordpress-1-vm:/var$ sudo chown -R www-data:www-data /var/www
+@wordpress-1-vm:/var$ sudo chmod -R 755 /var/www
+@wordpress-1-vm:/var$ ls -l
+drwxr-xr-x  3 www-data www-data 4096 May  2 00:53 www
+```
+
+</details>
+
 
 ## PHP Postges NGINX with CentOS stream9 on GCE 環境構築
 
@@ -1685,6 +1726,19 @@ git push -u origin main
 
 </details>
 
+<details>
+<summary>git initでmainブランチになる事前設定</summary>
+
+``` terminal
+git config --global init.defaultBranch main
+git init
+git remote add origin https://github.com/enginearn/rust-in-8-hours-979-8427568579.git
+git pull origin main
+```
+
+</details>
+
+
 ## docker-compose
 
 <details>
@@ -1695,6 +1749,7 @@ docker-compose up -d
 docker-compose down --volume
 ```
 
+</details>
 ## ubuntu server 初期設定
 
 <details>
@@ -1828,6 +1883,35 @@ print('標準エラー出力(stderr)へ、utf-8で出力', file=sys.stderr)
 ```
 
 </details>
+
+## ubuntu server 追加のやつ（raspberry pi3B+）
+
+<details>
+<summary>install nginx</summary>
+
+``` 
+
+```
+
+</details>
+
+<details>
+<summary>ufw確認</summary>
+
+``` 
+$ sudo ufw status
+状態: アクティブ
+
+To          Action      From
+--          ------      ----
+11235       ALLOW       Anywhere
+11235 (v6)  ALLOW       Anywhere (v6)
+```
+
+</details>
+
+$ sudo ufw app list
+Nginx Full
 
 ## Python仮想環境構築
 
