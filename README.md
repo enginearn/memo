@@ -228,6 +228,31 @@ Start C:\Windows\system32\rundll32.exe sysdm.cpl, EditEnvironmentVariables
 
 </details>
 
+<details>
+<summary>変数の設定</summary>
+
+``` PowerShell
+$API_KEY = "APIキーを変数に代入する"
+echo $API_KEY
+APIキーを変数に代入する
+```
+
+</details>
+
+## curl
+
+<details>
+<summary>YouTube API v3を使って情報取得</summary>
+
+`-o`: ファイル出力
+
+``` PowerShell
+curl "https://www.googleapis.com/youtube/v3/search?key=$API_KEY&part=snippet&q=hololive&type=video" -o hololive.json
+```
+
+</details>
+
+
 ``` Python 3.10
 py -3.10 -m pip install -U pip
 ```
@@ -1329,6 +1354,24 @@ drwxr-xr-x  3 www-data www-data 4096 May  2 00:53 www
 </details>
 
 
+## Apache
+
+<details>
+<summary></summary>
+
+``` command prompt
+C:\WINDOWS\system32>cd C:\Apache24\bin
+
+C:\Apache24\bin>httpd.exe -k install
+Installing the 'Apache2.4' service
+The 'Apache2.4' service is successfully installed.
+Testing httpd.conf....
+Errors reported here must be corrected before the service can be started.
+```
+
+</details>
+
+
 ## PHP Postges NGINX with CentOS stream9 on GCE 環境構築
 
 ### CentOS strem9 基本設定
@@ -2219,9 +2262,27 @@ notepad .\Microsoft.VSCode_profile.ps1
 
 </details>
 
+### Regular Experession
+
+<details>
+<summary>YES NO</summary>
+
+``` 
+^(YES|Yes|yes|Y|y)$
+^(Y|y.+)$
+
+^(NO|No|no|N|n)$
+^(N|n.+)$
+```
+
+</details>
+
+
 ---
 
 ## References
+
+<details>
 
 [Docker環境でnodemonがwatchしてくれない問題と対処方法](https://jpdebug.com/p/2477366)
 
@@ -2724,3 +2785,354 @@ notepad .\Microsoft.VSCode_profile.ps1
 
 [Themes | Oh My Posh](https://ohmyposh.dev/docs/themes)
 
+[enginearn/memo: ひたすらメモ](https://github.com/enginearn/memo)
+
+[How To Delete a MongoDB Database Using Python | ObjectRocket](https://kb.objectrocket.com/mongo-db/how-to-delete-a-mongodb-database-using-python-358)
+
+[アソシエイト・セントラル - Product Advertising API](https://affiliate.amazon.co.jp/assoc_credentials/home)
+
+[MongoDBのcollection基本操作をpythonで（pymongo） - ろぐれこーど](https://dlrecord.hatenablog.com/entry/2020/11/17/204041)
+
+[クラウド コンピューティング サービス  |  Google Cloud](https://cloud.google.com/?authuser=1)
+
+[認証情報 – API とサービス – My First Project – Google Cloud Console](https://console.cloud.google.com/apis/credentials?authuser=1&project=resolute-fold-352811)
+
+[Chromeのアドレスバーに「保護されていない通信」と表示される原因とその対策：Google Chrome完全ガイド - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/1609/23/news023.html)
+
+[Dashboard ‹ WordPress on Google Compute Engine — WordPress](https://enginearn.dev/wp-admin/)
+
+[Python で OAuth 2.0 認証を通して YouTube Data API を叩いてみた | DevelopersIO](https://dev.classmethod.jp/articles/oauth2-youtube-data-api/)
+
+[34.84.110.68 / localhost | phpMyAdmin 5.2.0](http://34.84.110.68/phpmyadmin/index.php?route=/&route=%2F)
+
+[Installation — phpMyAdmin 5.2.0 documentation](http://34.84.110.68/phpmyadmin/doc/html/setup.html#ssl)
+
+[GCPのWordPressが勝手にリダイレクトされて接続できない場合の対処方法【アクセスできない方必見】](https://engineer-ninaritai.com/gcp-wordpres-not-access/)
+
+[静的フロントページの作成 - WordPress Codex 日本語版](https://wpdocs.osdn.jp/%E9%9D%99%E7%9A%84%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E4%BD%9C%E6%88%90)
+
+[Apache インストール （Windows編） - プログラミングスタイル](https://programming-style.com/apache/reference/install-win/)
+
+[Windows で 環境変数 を設定する - プログラミングスタイル](https://programming-style.com/blog/windows-environment-variable/)
+
+[Apache VS16 binaries and modules download](https://www.apachelounge.com/download/)
+
+[PHP For Windows: Binaries and sources Releases](https://windows.php.net/download#php-8.1)
+
+[PHPのスレッドセーフ版(TS)とノンスレッドセーフ版(NTS)の違い | Dr.Clover’s Computer Clinic](https://clover.fcg.world/2017/03/19/8093/)
+
+[異なるデザインの固定ページを作成する【WordPress制作入門講座】 | Skillhub[スキルハブ]](https://skillhub.jp/courses/241/lessons/1764)
+
+[PHPのスレッドセーフ版(TS)とノンスレッドセーフ版(NTS)の違い | Dr.Clover’s Computer Clinic](https://clover.fcg.world/2017/03/19/8093/)
+
+[Apache httpdでエラー！AH00558 : … fully qualified domain name… さあ、どうする？](https://salumarine.com/how-to-fix-fqdn-warning-on-httpd/)
+
+[How to install web server on Windows 10 (Apache 2.4, PHP 8, MySQL 8.0 and phpMyAdmin) - Ethical hacking and penetration testing](https://miloserdov.org/?p=55)
+
+[Apache | Apacheの起動と停止(サービスとコンソールアプリケーション)](https://www.javadrive.jp/apache/install/index3.html)
+
+[WordPressのトップページを任意のテンプレートで指定してブログ一覧を別にする方法 | HPcode（えいちぴーこーど）](https://haniwaman.com/front-page/)
+
+[Amazonから製品データ取得する3つの方法を公開！ | Octoparse](https://www.octoparse.jp/blog/scrape-product-data-from-amazon/)
+
+[Webクローラーツール20選｜Webデータの収集を自動化できる | Octoparse](https://www.octoparse.jp/blog/top-20-web-crawling-tools-for-extracting-web-data/)
+
+[Web Scraper - The #1 web scraping extension](https://www.webscraper.io/web-scraper-first-time-install)
+
+[PythonプログラムでGoogle認証してGoogleのサービスを利用する | marketechlabo](https://www.marketechlabo.com/python-google-auth/)
+
+[【2022年最新】これは使える！種類別アプリAPI一覧 | エンジニアスタイル東京](https://engineer-style.jp/articles/1675)
+
+[curl コマンド 使い方メモ - Qiita](https://qiita.com/yasuhiroki/items/a569d3371a66e365316f)
+
+[python - Google API (Sheets) API Error code 403. Insufficient Permission: Request had insufficient authentication scopes - Stack Overflow](https://stackoverflow.com/questions/56857018/google-api-sheets-api-error-code-403-insufficient-permission-request-had-ins)
+
+[Google API の OAuth 2.0 スコープ  |  Google Identity Platform  |  Google Developers](https://developers.google.com/identity/protocols/oauth2/scopes#youtube)
+
+[Comments: update  |  YouTube Data API  |  Google Developers](https://developers.google.com/youtube/v3/docs/comments/update?apix=true)
+
+[Google APIのOAuth検証：具体的な申請方法と承認を得るための注意点を解説 | halzo appdev blog](https://halzoblog.com/google-api-oauth-procedure/)
+
+[PythonからYouTube Data APIを叩いてアップロード済み動画のリストを取得する](https://zenn.dev/yorifuji/articles/youtube-data-api-python)
+
+[5.1.1. Google での設定を行う — Collaboration共通 ユーザ操作ガイド   第12版 2022-06-01   intra-mart Accel Collaboration](https://document.intra-mart.jp/library/iac/public/iac_core/iac_core_user_guide/texts/apply_guide/google_oauth/apply_guide_1.html)
+
+[pythonでGoogle APIを使ってAnalyticsの情報を取得する - プログラミング素人のはてなブログ](https://s51517765.hatenadiary.jp/entry/2019/03/29/073000)
+
+[【Google APIs】OAuth2.0を使って認証を通す - 箱のプログラミング日記。](https://www.y-hakopro.com/entry/google_oauth_api)
+
+[mongo_client – Tools for connecting to MongoDB — PyMongo 4.1.1 documentation](https://pymongo.readthedocs.io/en/stable/api/pymongo/mongo_client.html?highlight=database_names#pymongo.mongo_client.MongoClient.list_database_names)
+
+[Windows Services - Password shown under 'Network Service'... - Ars Technica OpenForum](https://arstechnica.com/civis/viewtopic.php?f=17&t=1437279)
+
+[Windows10 PowerShellでmysqlをコマンドラインから使う | うっかりさん！](https://www.ukkari-san.net/windows10-powershell%E3%81%A7mysql%E3%82%92%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3%E3%81%8B%E3%82%89%E4%BD%BF%E3%81%86/)
+
+[Windows10にzipのMySQLをインストールして起動する方法 - Qiita](https://qiita.com/KOJI-YAMAMOTO/items/02af20e7b5cd27932a27)
+
+[MySQL :: Begin Your Download](https://dev.mysql.com/downloads/file/?id=511179)
+
+[MySQLのデータベースに接続する３つの方法と接続手順 | サービス | プロエンジニア](https://proengineer.internous.co.jp/content/columnfeature/6584)
+
+[How to fix MySQL not recognized Windows error - Nathan Sebhastian](https://sebhastian.com/mysql-not-recognized-fix/)
+
+[MySQL8をzipファイルからインストール](https://nanbu.marune205.net/2022/06/windows-mysql8-zip-install.html?m=1)
+
+[次世代のvim！neovimを使う！ – MY ROBOTICS](https://sy-base.com/myrobotics/ubuntu/ubuntu_neovim/)
+
+[新しいRustにバージョンアップする - Qiita](https://qiita.com/DanYuya/items/1b3a9fbd9cef7047b3ca)
+
+[clap - Rust](https://docs.rs/clap/3.2.12/clap/index.html)
+
+[実践Rustプログラミング入門 | 初田直也, 山口聖弘, 吉川哲史, 豊田優貴, 松本健太郎, 原将己, 中村謙弘, フォルシア株式会社 | 工学 | Kindleストア | Amazon](https://www.amazon.co.jp/%E5%AE%9F%E8%B7%B5Rust%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%85%A5%E9%96%80-%E5%88%9D%E7%94%B0%E7%9B%B4%E4%B9%9F-ebook/dp/B08PF27TRZ)
+
+[Rustで手軽にCLIツールを作れるclapを軽く紹介する - Qiita](https://qiita.com/Tadahiro_Yamamura/items/4ae32347fb4be07ea642)
+
+[Getting started - Command Line Applications in Rust](https://rust-cli.github.io/book/index.html)
+
+[Rust勉強中の細かなメモ](https://zenn.dev/sleeping_husky/scraps/128d263bb1d90c)
+
+[clap - Rust](https://docs.rs/clap/2.16.3/clap/index.html)
+
+[clap-rs/clap: A full featured, fast Command Line Argument Parser for Rust](https://github.com/clap-rs/clap)
+
+[Rust で grep コマンドを実装する - emahiro/b.log](https://ema-hiro.hatenablog.com/entry/2021/08/10/213652)
+
+[Postgres - Official Image | Docker Hub](https://hub.docker.com/_/postgres)
+
+[docs/README.md at master · docker-library/docs](https://github.com/docker-library/docs/blob/master/mongo/README.md#supported-tags-and-respective-dockerfile-links)
+
+[PostgreSQL: Documentation: 14: initdb](https://www.postgresql.org/docs/14/app-initdb.html)
+
+[PostgreSQL へ他の端末から接続するための設定 - PostgreSQL Documents - Project Group](https://www.projectgroup.info/documents/PostgreSQL/POS_000007.html)
+
+[PostgreSQL: Documentation: 14: 1.3. Creating a Database](https://www.postgresql.org/docs/current/tutorial-createdb.html)
+
+[PostgreSQLのよく使うコマンド一覧 - 知的好奇心](https://intellectual-curiosity.tokyo/2019/04/20/postgresql%E3%81%AE%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7/)
+
+[Postgresqlに接続できない時の対処法 - Qiita](https://qiita.com/Dexctersu/items/3d6bc50bf1d4a294980b)
+
+[Docker上のPostgreSQLコンテナの中に入って中身を見る手順とコマンドの詳細を実例で解説｜psqlで対話モードにならない時の対処法（DBやテーブル、主なSQL一覧）](https://prograshi.com/platform/docker/execute-psql-in-postgresql-in-docker/)
+
+[linux - initdb: cannot be run as root - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/426439/initdb-cannot-be-run-as-root)
+
+[Linuxのユーザー追加、useraddコマンドの使い方 - Qiita](https://qiita.com/yasushi-jp/items/78d5965c1624b1529ff6)
+
+[useraddコマンドについて詳しくまとめました 【Linuxコマンド集】](https://eng-entrance.com/linux-command-useradd)
+
+[PostgreSQL | psqlメタコマンドの一覧と実行方法](https://www.javadrive.jp/postgresql/connect/index5.html)
+
+[PostgreSQL | 作成済みのデータベース一覧を表示する](https://www.javadrive.jp/postgresql/database/index1.html)
+
+[【Python】PostgreSQLを操作する② -SELECT結果を取得する | naoの学習＆学習](https://www.learning-nao.com/?p=3016)
+
+[【Python】PostgreSQLを操作する① -DBへの接続 | naoの学習＆学習](https://www.learning-nao.com/?p=3002)
+
+[Installation - psycopg 3.1.dev0 documentation](https://www.psycopg.org/psycopg3/docs/basic/install.html)
+
+[MongoDB Python Connection | MongoDB](https://www.mongodb.com/languages/python)
+
+[MySQL :: MySQL Connector/Python Developer Guide :: 6 Connector/Python Tutorials](https://dev.mysql.com/doc/connector-python/en/connector-python-tutorials.html)
+
+[MySQL :: MySQL Connector/Python Developer Guide :: 6.1 Tutorial: Raise Employee's Salary Using a Buffered Cursor](https://dev.mysql.com/doc/connector-python/en/connector-python-tutorial-cursorbuffered.html)
+
+[【エラー】「Ports are not available 〜 address already in use」の対処法 | offlo.in（オフロイン）](https://offlo.in/blog/port-kill.html)
+
+[MySQLdb User’s Guide — MySQLdb 1.2.4b4 documentation](https://mysqlclient.readthedocs.io/user_guide.html#some-mysql-examples)
+
+[How to fix MySQL can't connect to server on localhost (10061) error - Nathan Sebhastian](https://sebhastian.com/fix-cant-connect-mysql-server-localhost-10061/)
+
+[PostgreSQL Tutorial - Learn PostgreSQL from Scratch](https://www.postgresqltutorial.com/)
+
+[Dockerのマルチホストネットワークで複数ホスト間を繋ぐ仮想ネットワークを作る（Dockerの最新機能を使ってみよう：第1回） | さくらのナレッジ](https://knowledge.sakura.ad.jp/4786/)
+
+[docker network create — Docker-docs-ja 20.10 ドキュメント](https://docs.docker.jp/engine/reference/commandline/network_create.html)
+
+[マルチホスト・ネットワーク機能を始める — Docker-docs-ja 19.03 ドキュメント](https://docs.docker.jp/engine/userguide/networking/get-started-overlay.html)
+
+[MySQL connection from Docker action? - Code to Cloud / GitHub Actions - GitHub Community](https://github.community/t/mysql-connection-from-docker-action/17094/4)
+
+[enginearn/docker-alpine-latest-jst: alpine:latestを日本時間にしてあるDockerfile](https://github.com/enginearn/docker-alpine-latest-jst)
+
+[metabase/metabase - Docker Image | Docker Hub](https://hub.docker.com/r/metabase/metabase)
+
+[Welcome to Python.org](https://www.python.org/)
+
+[GiNZA - Japanese NLP Library | Universal Dependenciesに基づくオープンソース日本語NLPライブラリ](https://megagonlabs.github.io/ginza/)
+
+[pandasでExcelファイル（xlsx, xls）の読み込み（read_excel） | note.nkmk.me](https://note.nkmk.me/python-pandas-read-excel/)
+
+[[python] pandasのdatetimeを日、時間、週などに丸める方法](https://www.deep-rain.com/programming/python/1355)
+
+[［解決！Python］日付や時刻をYYMMDDhhmmssなどの形式に書式化するには：解決！Python - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/2111/09/news015.html)
+
+[【matplotlib】日本語文字化けを解決するjapanize_matplotlib | 日々、学ぶ](https://take-tech-engineer.com/matplotlib-japanese/)
+
+[matplotlibのstyleを変える - Qiita](https://qiita.com/eriksoon/items/b93030ba4dc686ecfbba)
+
+[matplotlib と seaborn のデザイン（スタイル）を １行 で良い感じにする方法 | BOUL](https://boul.tech/mplsns-stylesheet/)
+
+[Style sheets reference — Matplotlib 3.5.2 documentation](https://matplotlib.org/stable/gallery/style_sheets/style_sheets_reference.html)
+
+[seaborn: statistical data visualization — seaborn 0.11.2 documentation](https://seaborn.pydata.org/)
+
+[Pythonでしか描けない美しいグラフを描こう！（その1） - Qiita](https://qiita.com/hima2b4/items/2bdb20a25fde2923afa5)
+
+[isortでPython PEP8に準拠したpackageの並びにする | dev2prod](https://dev2prod.site/python/install-isort/)
+
+[Welcome to EDB](https://www.enterprisedb.com/postgresql-tutorial-resources-training?uuid=db55e32d-e9f0-4d7c-9aef-b17d01210704&campaignId=7012J000001NhszQAC)
+
+[PowerShell に Alias を登録する](http://www.vwnet.jp/windows/PowerShell/2020100601/PsAlias.htm)
+
+[【Python】joinの正しい使い方 - Qiita](https://qiita.com/conf8o/items/d57f74b4bcb67882be37)
+
+[みやさかしんや@Python/DX/エンジニア (@miyashin_prg) / Twitter](https://twitter.com/miyashin_prg?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)
+
+[@miyasakashinya | Linktree](https://linktr.ee/miyasakashinya)
+
+[みやしんのプログラミングスキル通信](https://miyashinblog.com/)
+
+[2021年版Pythonの型ヒントの書き方 (for Python 3.9) | フューチャー技術ブログ](https://future-architect.github.io/articles/20201223/#:~:text=%E5%9E%8B%E3%83%92%E3%83%B3%E3%83%88%E3%81%A8%E3%81%84%E3%81%86%E3%81%A8%E3%80%81%E5%A4%89%E6%95%B0,%E3%81%93%E3%81%A8%E3%81%8C%E5%AE%9F%E7%8F%BE%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%80%82)
+
+[ValueError: invalid literal for int() with base 10: 'xxx'とは何ですか？ - Python学習チャンネル by PyQ](https://blog.pyq.jp/entry/Python_kaiketsu_200106)
+
+[pandasで欠損値NaNを置換（穴埋め）するfillna | note.nkmk.me](https://note.nkmk.me/python-pandas-nan-fillna/)
+
+[matplotlib.font_manager — Matplotlib 3.5.2 documentation](https://matplotlib.org/stable/api/font_manager_api.html#matplotlib.font_manager.findfont)
+
+[Python/matplotlibで日本語文字列を使う - PukiWiki](https://azusa.shinshu-u.ac.jp/~hasegawa/class/programming/index.php?Python/matplotlib%E3%81%A7%E6%97%A5%E6%9C%AC%E8%AA%9E%E6%96%87%E5%AD%97%E5%88%97%E3%82%92%E4%BD%BF%E3%81%86)
+
+[PythonのLinter、Formatterについて](https://zenn.dev/naiq112/articles/df1b32fc08d383)
+
+[google/yapf: A formatter for Python files](https://github.com/google/yapf)
+
+[psf/black: The uncompromising Python code formatter](https://github.com/psf/black)
+
+[特定の日付のみ表示させるグラフが作りたい](https://teratail.com/questions/218687)
+
+[Python matplotlib 時系列グラフ（時間軸の設定） - Qiita](https://qiita.com/damyarou/items/19f19658b618fd05b3b6)
+
+[Matplotlib　2変量棒グラフのx軸表示について](https://teratail.com/questions/pj24mqm954rb56)
+
+[matplotlibのめっちゃまとめ - Qiita](https://qiita.com/nkay/items/d1eb91e33b9d6469ef51#0-%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB)
+
+[【無料のイケてるBI】Metabase環境作って触ってみました](https://knowledge.insight-lab.co.jp/bi/metabase-touch-the-trial)
+
+[docker composeでmetabaseを構築する | mebee](https://mebee.info/2021/10/13/post-44615/)
+
+[Metabase](http://localhost:3000/)
+
+[windows 7 - Metabase on docker not getting exposed - Stack Overflow](https://stackoverflow.com/questions/50970497/metabase-on-docker-not-getting-exposed)
+
+[データベース稼働マシンのIPアドレスまたはホスト名を変更する場合](http://itdoc.hitachi.co.jp/manuals/link/cosmi_v0870/SASK/EU530147.HTM)
+
+[docker 割り振られているIPアドレスを確認する | mebee](https://mebee.info/2021/08/05/post-40153/)
+
+[Metabaseで日経225をグラフ表示まで – IT Learning](https://obenkyolab.com/?p=876)
+
+[MetabaseをMySQLやPostgreSQLで動かす - 毎日へっぽこ](https://hepokon365.hatenablog.com/entry/2019/08/26/032709)
+
+[PostgreSQL - ArchWiki](https://wiki.archlinux.jp/index.php/PostgreSQL)
+
+[DockerのAlpineにPostgreSQLをインストールする - きゃまメモ](http://kyamawork.info/post/0005/)
+
+[Install and Start PostgreSQL on Alpine Linux – Technical Scratchpad](https://luppeng.wordpress.com/2020/02/28/install-and-start-postgresql-on-alpine-linux/)
+
+[【Linux】psqlコマンドが叩けない](https://zenn.dev/mizuneko4345/articles/d3dcae86b9cb05)
+
+[Postgresqlに接続できない時の対処法 - Qiita](https://qiita.com/Dexctersu/items/3d6bc50bf1d4a294980b)
+
+[17.3. データベースサーバの起動](https://www.postgresql.jp/docs/9.5/server-start.html)
+
+[PostgreSQL サーバの起動と停止方法まとめ - Qiita](https://qiita.com/domodomodomo/items/12fe7555513de6b078db)
+
+[Postgresqlに接続できなくなった時の対処法 - Qiita](https://qiita.com/daishin0413/items/f525ed3e4c1d5ac34a51)
+
+[PostgreSQLに接続できず困った - Qiita](https://qiita.com/waro_a2606/items/0b0957066241887530d4)
+
+[PostgreSQLサーバにpsqlコマンドで接続できなくなった場合の対処法 - Qiita](https://qiita.com/yurutaka252o/items/3f2a632cf41b47a186e1)
+
+[postgresql — ポート5432でpostgresqlに接続できません](https://www.web-dev-qa-db-ja.com/ja/postgresql/%E3%83%9D%E3%83%BC%E3%83%885432%E3%81%A7postgresql%E3%81%AB%E6%8E%A5%E7%B6%9A%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93/957137713/)
+
+[enginearn (enginearn)](https://github.com/enginearn)
+
+[HTML5 table](https://ja.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fja.dbpedia.org&query=PREFIX+geo%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23%3E%0D%0APREFIX+dbpedia-owl%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0Aselect+*+where+%7B%0D%0A++%3Flink+a+dbpedia-owl%3AStation%3B+%0D%0A++rdfs%3Alabel+%3Ftitle%3B%0D%0A++geo%3Alat+%3Flat%3B%0D%0A++geo%3Along+%3Flong.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on&log_debug_info=on)
+
+[About: 玉縄歴史館](https://ja.dbpedia.org/page/%E7%8E%89%E7%B8%84%E6%AD%B4%E5%8F%B2%E9%A4%A8)
+
+[【データの集めかた講座】PythonでLinked Open Dataを取得する-オリンピックデータを探索-｜Kitahara｜note](https://note.com/kitahara_note/n/nd15638cc7005)
+
+[【データの集め方講座】SPARQLの基本文法と実践方法｜Kitahara｜note](https://note.com/kitahara_note/n/n1eb47a34012c)
+
+[【Webエンジニアの備忘録】SPARQLとは何か -SQLとの本質的な違い-｜Kitahara｜note](https://note.com/kitahara_note/n/nd61ba47e2e4a)
+
+[【データの集め方講座】Pythonで株式情報を収集しMySQLに保存｜Kitahara｜note](https://note.com/kitahara_note/n/nfa667a2d3dfa)
+
+[Search results · PyPI](https://pypi.org/search/?q=SPARQL)
+
+[DBpedia Japanese](https://ja.dbpedia.org/)
+
+[SPARQL 1.1 Query Language](https://www.w3.org/TR/2013/REC-sparql11-query-20130321/)
+
+[SPARQLを利用した逆マッシュアップ-プログラミングを必要としないアプリ作成方法-](http://uedayou.net/sparql-examples/)
+
+[RDF用SPARQLプロトコル](http://www.asahi-net.or.jp/~ax2s-kmtn/internet/rdf/rdf-sparql-protocol.html)
+
+[SPARQL 1.1クエリ言語](http://www.asahi-net.or.jp/~ax2s-kmtn/internet/rdf/REC-sparql11-query-20130321.html)
+
+[データセットおよびSPARQLクエリサービスの利用方法 | MADB Lab](https://mediag.bunka.go.jp/madb_lab/lod/howto/)
+
+[HTML5 table](https://ja.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fja.dbpedia.org&query=PREFIX+geo%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23%3E%0D%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+prop-ja%3A+%3Chttp%3A%2F%2Fja.dbpedia.org%2Fproperty%2F%3E%0D%0A%0D%0Aselect+*+where+%7B%0D%0A++%3Flink+a+owl%3AMuseum+%3B%0D%0A++rdfs%3Alabel+%3Ftitle+%3B%0D%0A++prop-ja%3A%E6%89%80%E5%9C%A8%E5%9C%B0+%3Faddress+%3B%0D%0A++geo%3Alat+%3Flat+%3B%0D%0A++geo%3Along+%3Flong+.+%0D%0AFILTER+REGEX%28%3Faddress%2C+%27%5E%5C%5Cp%7BHan%7D%7B2%2C3%7D%5B%E9%83%BD%E9%81%93%E5%BA%9C%E7%9C%8C%5D%27%29%0D%0A%7D+ORDER+BY+%3Ftitle&format=text%2Fhtml&timeout=0&signal_void=on)
+
+[enginearn (enginearn)](https://github.com/enginearn)
+
+[PyPI · The Python Package Index](https://pypi.org/)
+
+[Setup Nu · Actions · GitHub Marketplace](https://github.com/marketplace/actions/setup-nu)
+
+[Setup | Nushell](https://www.nushell.sh/cookbook/setup.html)
+
+[Nu のインストール | Nushell](https://www.nushell.sh/ja/book/installation.html#%E3%83%92%E3%82%99%E3%83%AB%E3%83%88%E3%82%99%E6%B8%88%E3%81%BF%E3%81%AE%E3%83%8F%E3%82%99%E3%82%A4%E3%83%8A%E3%83%AA%E3%83%BC)
+
+[PowerShellの演算子](http://www.vwnet.jp/windows/PowerShell/Ope/OpeListg.htm)
+
+[変数の値が NULL かを判定する方法[PowerShell] : バヤシタ](https://bayashita.com/p/entry/show/214)
+
+[.gitignore は、生成サービス gitignore.io を使って作ろう！ | Articles | Riotz.works](https://riotz.works/articles/lulzneko/2019/06/18/lets-create-gitignore-using-generation-service-gitignoreio/)
+
+[git ignoreコマンドで.gitignoreを取得する | something tech.](https://blog.web-apps.tech/gitignore-from-cli/)
+
+[Gitignore.io Template Fork](https://blog.joeblau.com/gitignore-io-template-fork)
+
+[github/gitignore: A collection of useful .gitignore templates](https://github.com/github/gitignore)
+
+[配列に要素を追加する方法[PowerShell] : バヤシタ](https://bayashita.com/p/entry/show/195)
+
+[比較演算子について - PowerShell | Microsoft Docs](https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.2)
+
+[配列に指定した値が含まれるかを確認する方法[PowerShell] : バヤシタ](https://bayashita.com/p/entry/show/202)
+
+[gitignore.ioのススメ - Qiita](https://qiita.com/dhun/items/adcae139b5ba1da56c81)
+
+[gitignore.io - Sample Code and Directory of libraries for Android Developers - AndroidHiro.com](https://androidhiro.com/source/android/example/gitignoreio/934)
+
+[PowerShellでのSplitによる文字列の分割とは？基本を紹介！ | .NETコラム](https://www.fenet.jp/dotnet/column/tool/6740/)
+
+[Write-HostとWrite-Outputの違い - しばたテックブログ](https://blog.shibata.tech/entry/2016/01/11/151201)
+
+[PowerShellで変数のNullや空文字を判定する方法 | miajimyu note](https://www.miajimyu.com/docs/powershell/powershell-tips/how-to-judge-null-and-empty/)
+
+[typing --- 型ヒントのサポート — Python 3.10.4 ドキュメント](https://docs.python.org/ja/3/library/typing.html)
+
+[VSCodeを使ったPythonパッケージの作り方 - Qiita](https://qiita.com/SolKul/items/9208163c79dc4002733c)
+
+[Python でパッケージを開発して配布する標準的な方法 - Qiita](https://qiita.com/propella/items/803923b2ff02482242cd)
+
+[Coronavirus Tracker](https://corona-stats.online/jp?minimal=true)
+
+[Pythonでランダムな小数・整数を生成するrandom, randrange, randintなど | note.nkmk.me](https://note.nkmk.me/python-random-randrange-randint/)
+
+[string --- 一般的な文字列操作 — Python 3.10.4 ドキュメント](https://docs.python.org/ja/3/library/string.html)
+
+[【Python】 "PermissionError: [Errno 13] Permission denied"の原因と対処 | テキストファイルを読み込むサンプル](https://tooljp.com/Python/ErrorMessage/PermissionError-Errno-13-Permission-denied-3D73.html)
+
+</details>
