@@ -3135,4 +3135,92 @@ notepad .\Microsoft.VSCode_profile.ps1
 
 [【Python】 "PermissionError: [Errno 13] Permission denied"の原因と対処 | テキストファイルを読み込むサンプル](https://tooljp.com/Python/ErrorMessage/PermissionError-Errno-13-Permission-denied-3D73.html)
 
+[enginearn (enginearn)](https://github.com/enginearn)
+
+[PyPI · The Python Package Index](https://pypi.org/)
+
+[Setup Nu · Actions · GitHub Marketplace](https://github.com/marketplace/actions/setup-nu)
+
+[Setup | Nushell](https://www.nushell.sh/cookbook/setup.html)
+
+[Nu のインストール | Nushell](https://www.nushell.sh/ja/book/installation.html#%E3%83%92%E3%82%99%E3%83%AB%E3%83%88%E3%82%99%E6%B8%88%E3%81%BF%E3%81%AE%E3%83%8F%E3%82%99%E3%82%A4%E3%83%8A%E3%83%AA%E3%83%BC)
+
+[PowerShellの演算子](http://www.vwnet.jp/windows/PowerShell/Ope/OpeListg.htm)
+
+[変数の値が NULL かを判定する方法[PowerShell] : バヤシタ](https://bayashita.com/p/entry/show/214)
+
+[.gitignore は、生成サービス gitignore.io を使って作ろう！ | Articles | Riotz.works](https://riotz.works/articles/lulzneko/2019/06/18/lets-create-gitignore-using-generation-service-gitignoreio/)
+
+[git ignoreコマンドで.gitignoreを取得する | something tech.](https://blog.web-apps.tech/gitignore-from-cli/)
+
+[Gitignore.io Template Fork](https://blog.joeblau.com/gitignore-io-template-fork)
+
+[github/gitignore: A collection of useful .gitignore templates](https://github.com/github/gitignore)
+
+[配列に要素を追加する方法[PowerShell] : バヤシタ](https://bayashita.com/p/entry/show/195)
+
+[比較演算子について - PowerShell | Microsoft Docs](https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.2)
+
+[配列に指定した値が含まれるかを確認する方法[PowerShell] : バヤシタ](https://bayashita.com/p/entry/show/202)
+
+[gitignore.ioのススメ - Qiita](https://qiita.com/dhun/items/adcae139b5ba1da56c81)
+
+[gitignore.io - Sample Code and Directory of libraries for Android Developers - AndroidHiro.com](https://androidhiro.com/source/android/example/gitignoreio/934)
+
+[PowerShellでのSplitによる文字列の分割とは？基本を紹介！ | .NETコラム](https://www.fenet.jp/dotnet/column/tool/6740/)
+
+[Write-HostとWrite-Outputの違い - しばたテックブログ](https://blog.shibata.tech/entry/2016/01/11/151201)
+
+[PowerShellで変数のNullや空文字を判定する方法 | miajimyu note](https://www.miajimyu.com/docs/powershell/powershell-tips/how-to-judge-null-and-empty/)
+
+[typing --- 型ヒントのサポート — Python 3.10.4 ドキュメント](https://docs.python.org/ja/3/library/typing.html)
+
+[VSCodeを使ったPythonパッケージの作り方 - Qiita](https://qiita.com/SolKul/items/9208163c79dc4002733c)
+
+[Python でパッケージを開発して配布する標準的な方法 - Qiita](https://qiita.com/propella/items/803923b2ff02482242cd)
+
+[Coronavirus Tracker](https://corona-stats.online/jp?minimal=true)
+
+[Pythonでランダムな小数・整数を生成するrandom, randrange, randintなど | note.nkmk.me](https://note.nkmk.me/python-random-randrange-randint/)
+
+[string --- 一般的な文字列操作 — Python 3.10.4 ドキュメント](https://docs.python.org/ja/3/library/string.html)
+
+[【Python】 "PermissionError: [Errno 13] Permission denied"の原因と対処 | テキストファイルを読み込むサンプル](https://tooljp.com/Python/ErrorMessage/PermissionError-Errno-13-Permission-denied-3D73.html)
+
+[クラウド コンピューティング サービス  |  Google Cloud](https://cloud.google.com/?authuser=1)
+
+[検索 – My First Project – Google Cloud Console](https://console.cloud.google.com/search;q=translation%20api;queryString=translation%20api;currentProjectOnly=false;searchScope=projects%2Fresolute-fold-352811;resultTypes=google.appengine.v1.Version,artifactregistry.googleapis.com%2FDockerImage,bigquery.googleapis.com%2FDataset,bigquery.googleapis.com%2FTable,bigtableadmin.googleapis.com%2FInstance,compute.BackendBucket,compute.Disk,compute.HealthCheck,compute.InstanceTemplate,compute.Instance,compute.InstanceGroup,compute.Snapshot,compute.googleapis.com%2FCommitment,compute.googleapis.com%2FNetworkEndpointGroup,compute.googleapis.com%2FNodeGroup,tpu.googleapis.com%2FNode,compute.googleapis.com%2FReservation,datafusion.googleapis.com%2FInstance,google.cloud.dataproc.v1.Cluster,google.cloud.dataproc.v1.Job,documentai.googleapis.com%2FProcessor,file.googleapis.com%2FBackup,file.googleapis.com%2FInstance,cloudfunctions.googleapis.com%2FCloudFunction,compute.googleapis.com%2FTargetVpnGateway,compute.googleapis.com%2FVpnGateway,compute.googleapis.com%2FVpnTunnel,compute.Router,google.iam.admin.v1.ServiceAccount,container.googleapis.com%2FCluster,k8s.io%2FPod,k8s.io%2FNode,k8s.io%2FService,apps.k8s.io%2FDeployment,apps.k8s.io%2FReplicaSet,batch.k8s.io%2FJob,container.googleapis.com%2FNodePool,dns.googleapis.com%2FManagedZone,compute.googleapis.com%2FBackendService,compute.googleapis.com%2FTargetPool,compute.googleapis.com%2FTargetTcpProxy,compute.googleapis.com%2FSslPolicy,compute.googleapis.com%2FSecurityPolicy,compute.Network,compute.TargetHttpProxy,compute.TargetHttpsProxy,compute.TargetSslProxy,compute.SslCertificate,spanner.googleapis.com%2FInstance,spanner.googleapis.com%2FDatabase,spanner.googleapis.com%2FBackup,sqladmin.googleapis.com%2FInstance,storage.googleapis.com%2FBucket,compute.Subnetwork,compute.googleapis.com%2FPacketMirroring,compute.googleapis.com%2FRoute,compute.Firewall,cloud.site.page,console.site.page,console.tutorial.walkthrough,google.api.emporium.Solution,google.api.emporium.Api,google.cloudresourcemanager.projects.v1beta1.Project,google.cloud.resourcemanager.v2alpha1.Folder,cloud.resourcemanager.Organization,resources,documentation_or_tutorial,marketplace_and_apis;tab=all?q=search&referrer=search&project=resolute-fold-352811&authuser=1&_ga=2.95064156.1773699148.1659233062-80309478.1654773236&walkthrough_id=translate--translate-quickstart-python)
+
+[mainタグの意味と使い方 | HTML | できるネット](https://dekiru.net/article/12866/)
+
+[csv --- CSV ファイルの読み書き — Python 3.10.4 ドキュメント](https://docs.python.org/ja/3/library/csv.html#writer-objects)
+
+[Roboter](file:///C:/Users/nagar/Development/Python/Basics/roboter/roboter/pages/index_template.html)
+
+[［解決！Python］CSVファイルから読み込みを行うには（csvモジュール編）：解決！Python - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/2108/03/news018.html)
+
+[Python でファイルの存在確認をする - Python のファイル入出力 - Python の基本 - Python 入門](https://python.keicode.com/lang/file-exists.php)
+
+[【備忘録】pgAdmin4の「ユーティリティが存在しません」というエラーを解消 - Qiita](https://qiita.com/rivRoxxx/items/0e2b941f7a6f9f9ee803)
+
+[pythonでCSVファイルの同ヘッダ列に追記したい - paloma blog](https://paloma69.hatenablog.com/entry/2019/11/13/235714)
+
+[【PostgreSQL】テーブルの列一覧を取得する | PostgresWeb - ポスグレウェブ](https://postgresweb.com/get-columns-in-table)
+
+[【python】辞書(dict)の値(value)の足し算](https://python-academia.com/dict-addition/)
+
+[Pythonにおけるno module namedエラーの回避方法を現役エンジニアが解説【初心者向け】 | TechAcademyマガジン](https://techacademy.jp/magazine/27259)
+
+[正規表現 HOWTO — Python 3.10.4 ドキュメント](https://docs.python.org/ja/3/howto/regex.html#regex-howto)
+
+[全角英数字を半角に変換](https://zenn.dev/atu4403/articles/89c1380293cc6e22a19c)
+
+[unicodedata --- Unicode データベース — Python 3.10.4 ドキュメント](https://docs.python.org/ja/3/library/unicodedata.html)
+
+[Python で親フォルダのファイルを import する](http://var.blog.jp/archives/81938617.html)
+
+[辞書 Python でキーの数をカウントする | Delft スタック](https://www.delftstack.com/ja/howto/python/number-of-keys-in-dictionary-python/)
+
+[Python で YAML ファイルを扱う - まくまくPythonノート](https://maku77.github.io/python/io/yaml.html)
+
 </details>
