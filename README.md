@@ -1781,6 +1781,16 @@ git pull origin main
 
 </details>
 
+<details>
+<summary></summary>
+
+``` 
+git config --global alias.ignore '!gi() { curl -L -s gitignore.io/api/$@ -o .gitignore;}; gi'
+```
+
+</details>
+
+
 
 ## docker-compose
 
@@ -2037,6 +2047,16 @@ echo "what you entered: $entered"
 ```
 
 </details>
+
+<details>
+<summary>連番フォルダ作成</summary>
+
+``` bash
+for i in `seq -f %03g 1 10`; do mkdir chapter_${i}; done
+```
+
+</details>
+
 
 ## ubuntu 22.04にPython環境構築
 
