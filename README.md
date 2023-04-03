@@ -179,19 +179,19 @@ RawContent        : HTTP/1.1 200 OK
                     X-XSS-Protection: 1; mode=block
                     X-Content-Type-Op…
 Headers           : {[Date, System.String[]], [Transfer-Encoding, System.String[]], [Connection, System.String[]], [Server, System.String[]]…}
-Images            : {@{outerHTML=<img loading="lazy" alt="「URIとは？「URL」と「URI」の違いを解説！」の見出し画像" width="800" height="600" src="https://ferret.akamaized.net/uploads/article/4637/eyecatch/default-d51f6b54f653accfe5bf19d2d2d75fb7.jpg" />; tagName=IMG; loading=lazy; alt=「URI 
-                    とは？「URL」と「URI」の違いを解説！」の見出し画像; width=800; height=600; src=https://ferret.akamaized.net/uploads/article/4637/eyecatch/default-d51f6b54f653accfe5bf19d2d2d75fb7.jpg}, @{outerHTML=<img src="https://ferret.akamaized.net/images/579073cb69702d514a0a0000/la 
-                    rge.jpeg?1469084618" alt="Untitled(3)_(3).png">; tagName=IMG; src=https://ferret.akamaized.net/images/579073cb69702d514a0a0000/large.jpeg?1469084618; alt=Untitled(3)_(3).png}, @{outerHTML=<img class="article-eyecatch" loading="lazy" alt="「市場調査の方法は？3つの手法と  
-                    具体的なレポート事例を解説」の見出し画像" width="400" height="300" src="https://ferret.akamaized.net/uploads/article/63461/eyecatch/default-3501af993cf2c87dcd0b5a3ccd2b460d.jpg" />; tagName=IMG; class=article-eyecatch; loading=lazy; alt=「市場調査の方法は？3つの手法と具 
-                    体的なレポート事例を解説」の見出し画像; width=400; height=300; src=https://ferret.akamaized.net/uploads/article/63461/eyecatch/default-3501af993cf2c87dcd0b5a3ccd2b460d.jpg}, @{outerHTML=<img class="article-eyecatch" loading="lazy" alt="「顧客管理のやり方間違ってませんか 
+Images            : {@{outerHTML=<img loading="lazy" alt="「URIとは？「URL」と「URI」の違いを解説！」の見出し画像" width="800" height="600" src="https://ferret.akamaized.net/uploads/article/4637/eyecatch/default-d51f6b54f653accfe5bf19d2d2d75fb7.jpg" />; tagName=IMG; loading=lazy; alt=「URI
+                    とは？「URL」と「URI」の違いを解説！」の見出し画像; width=800; height=600; src=https://ferret.akamaized.net/uploads/article/4637/eyecatch/default-d51f6b54f653accfe5bf19d2d2d75fb7.jpg}, @{outerHTML=<img src="https://ferret.akamaized.net/images/579073cb69702d514a0a0000/la
+                    rge.jpeg?1469084618" alt="Untitled(3)_(3).png">; tagName=IMG; src=https://ferret.akamaized.net/images/579073cb69702d514a0a0000/large.jpeg?1469084618; alt=Untitled(3)_(3).png}, @{outerHTML=<img class="article-eyecatch" loading="lazy" alt="「市場調査の方法は？3つの手法と
+                    具体的なレポート事例を解説」の見出し画像" width="400" height="300" src="https://ferret.akamaized.net/uploads/article/63461/eyecatch/default-3501af993cf2c87dcd0b5a3ccd2b460d.jpg" />; tagName=IMG; class=article-eyecatch; loading=lazy; alt=「市場調査の方法は？3つの手法と具
+                    体的なレポート事例を解説」の見出し画像; width=400; height=300; src=https://ferret.akamaized.net/uploads/article/63461/eyecatch/default-3501af993cf2c87dcd0b5a3ccd2b460d.jpg}, @{outerHTML=<img class="article-eyecatch" loading="lazy" alt="「顧客管理のやり方間違ってませんか
                     ？リアル店舗とECにおけるデータ管理の課題と“心地良い購買体験”とは
-                    」の見出し画像" width="400" height="300" src="https://ferret.akamaized.net/uploads/article/64210/eyecatch/default-e4f3c25863ba596dbd23c1b9d4e6702c.jpg" />; tagName=IMG; class=article-eyecatch; loading=lazy; alt=「顧客管理のやり方間違ってませんか？リアル店舗とECにおける  
+                    」の見出し画像" width="400" height="300" src="https://ferret.akamaized.net/uploads/article/64210/eyecatch/default-e4f3c25863ba596dbd23c1b9d4e6702c.jpg" />; tagName=IMG; class=article-eyecatch; loading=lazy; alt=「顧客管理のやり方間違ってませんか？リアル店舗とECにおける
                     データ管理の課題と“心地良い購買体験”とは
                     」の見出し画像; width=400; height=300; src=https://ferret.akamaized.net/uploads/article/64210/eyecatch/default-e4f3c25863ba596dbd23c1b9d4e6702c.jpg}…}
-InputFields       : {@{outerHTML=<input class="q-text-field js-search-form-input" required="required" placeholder="キーワードで記事を検索" type="text" name="q" id="q" />; tagName=INPUT; class=q-text-field js-search-form-input; required=required; placeholder=キーワードで記事を検索; type=tex 
+InputFields       : {@{outerHTML=<input class="q-text-field js-search-form-input" required="required" placeholder="キーワードで記事を検索" type="text" name="q" id="q" />; tagName=INPUT; class=q-text-field js-search-form-input; required=required; placeholder=キーワードで記事を検索; type=tex
                     t; name=q; id=q}}
-Links             : {@{outerHTML=<a class="ferret-root-link" href="/"><svg class="ferret-icon"><use xlink:href="https://ferret-plus.com/assets/icons-501a8b6f6002f26fac774ba463aa6c7f39c2cb481106f85e62da592cf4b172ad.svg#ferret"></use></svg></a>; tagName=A; class=ferret-root-link; href=/}, @{ 
-                    outerHTML=<a class="main-link is-current" href="/articles">記事</a>; tagName=A; class=main-link is-current; href=/articles}, @{outerHTML=<a class="main-link " href="/useful-items">お役立ち資料</a>; tagName=A; class=main-link ; href=/useful-items}, @{outerHTML=<a class=" 
+Links             : {@{outerHTML=<a class="ferret-root-link" href="/"><svg class="ferret-icon"><use xlink:href="https://ferret-plus.com/assets/icons-501a8b6f6002f26fac774ba463aa6c7f39c2cb481106f85e62da592cf4b172ad.svg#ferret"></use></svg></a>; tagName=A; class=ferret-root-link; href=/}, @{
+                    outerHTML=<a class="main-link is-current" href="/articles">記事</a>; tagName=A; class=main-link is-current; href=/articles}, @{outerHTML=<a class="main-link " href="/useful-items">お役立ち資料</a>; tagName=A; class=main-link ; href=/useful-items}, @{outerHTML=<a class="
                     main-link " href="/tools">ツール</a>; tagName=A; class=main-link ; href=/tools}…}
 RawContentLength  : 89148
 RelationLink      : {}
@@ -571,7 +571,7 @@ Run 'docker volume COMMAND --help' for more information on a command.
 ```
 
 ``` docker
-$ docker volume prune  
+$ docker volume prune
 WARNING! This will remove all local volumes not used by at least one container.
 Are you sure you want to continue? [y/N] y
 Deleted Volumes:
@@ -699,7 +699,7 @@ $
 ```
 
 ``` docker
-SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. 
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host.
 All files and directories added to build context will have '-rwxr-xr-x' permissions.
 It is recommended to double check and reset permissions for sensitive files and directories.
 ```
@@ -805,7 +805,7 @@ HTTP request sent, awaiting response... 200 OK
 Length: 18012 (18K) [application/x-debian-package]
 Saving to: ‘mysql-apt-config_0.8.22-1_all.deb’
 
-mysql-apt-config_0.8.22-1_a 100%[========================================>]  17.59K  --.-KB/s    in 0s      
+mysql-apt-config_0.8.22-1_a 100%[========================================>]  17.59K  --.-KB/s    in 0s
 
 2022-06-09 22:00:39 (128 MB/s) - ‘mysql-apt-config_0.8.22-1_all.deb’ saved [18012/18012]
 
@@ -846,7 +846,7 @@ $ sudo systemctl restart apache2
 ``` bash
 $ sudo apt install phpmyadmin
 Reading package lists... Done
-Building dependency tree       
+Building dependency tree
 Reading state information... Done
 Some packages could not be installed. This may mean that you have
 requested an impossible situation or if you are using the unstable
@@ -863,7 +863,7 @@ E: Unable to correct problems, you have held broken packages.
 
 $ sudo apt upgrade phpmyadmin
 Reading package lists... Done
-Building dependency tree       
+Building dependency tree
 Reading state information... Done
 Calculating upgrade... Done
 Some packages could not be installed. This may mean that you have
@@ -918,7 +918,7 @@ libjs-sphinxdoc php-bz2 php-tcpdf php-zip
 ``` bash
 $ sudo apt install phpmyadmin
 Reading package lists... Done
-Building dependency tree       
+Building dependency tree
 Reading state information... Done
 Some packages could not be installed. This may mean that you have
 requested an impossible situation or if you are using the unstable
@@ -933,7 +933,7 @@ The following packages have unmet dependencies:
 ``` bash
 $ sudo apt -t buster-backports install php-twig
 Reading package lists... Done
-Building dependency tree       
+Building dependency tree
 Reading state information... Done
 Suggested packages:
   php-twig-doc
@@ -943,7 +943,7 @@ The following packages will be upgraded:
 Need to get 121 kB of archives.
 After this operation, 73.7 kB of additional disk space will be used.
 Get:1 http://deb.debian.org/debian buster-backports/main amd64 php-twig all 2.14.3-1~bpo10+1 [121 kB]
-Fetched 121 kB in 0s (386 kB/s) 
+Fetched 121 kB in 0s (386 kB/s)
 (Reading database ... 79611 files and directories currently installed.)
 Preparing to unpack .../php-twig_2.14.3-1~bpo10+1_all.deb ...
 Unpacking php-twig (2.14.3-1~bpo10+1) over (2.6.2-2) ...
@@ -971,7 +971,7 @@ $ sudo service mysql start && sudo service apache2 start
 ``` bash
 $ sudo apt install php-fpm libapache2-mod-php8.1 php-mbstring
 Reading package lists... Done
-Building dependency tree       
+Building dependency tree
 Reading state information... Done
 The following additional packages will be installed:
   php8.1-fpm
@@ -982,7 +982,7 @@ The following NEW packages will be installed:
 0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
 Need to get 1679 kB of archives.
 After this operation, 5594 kB of additional disk space will be used.
-Do you want to continue? [Y/n] 
+Do you want to continue? [Y/n]
 Get:1 https://packages.sury.org/php buster/main amd64 php8.1-fpm amd64 8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1 [1672 kB]
 Get:2 https://packages.sury.org/php buster/main amd64 php-fpm all 2:8.1+92+0~20220117.43+debian10~1.gbpe0d14e [7476 B]
 Fetched 1679 kB in 2s (885 kB/s)
@@ -1024,7 +1024,7 @@ Zend Engine v4.1.6, Copyright (c) Zend Technologies
 ``` bash
 $ sudo apt install libapache2-mod-php8.1
 Reading package lists... Done
-Building dependency tree       
+Building dependency tree
 Reading state information... Done
 Suggested packages:
   php-pear
@@ -1034,7 +1034,7 @@ The following NEW packages will be installed:
 Need to get 1603 kB of archives.
 After this operation, 5425 kB of additional disk space will be used.
 Get:1 https://packages.sury.org/php buster/main amd64 libapache2-mod-php8.1 amd64 8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1 [1603 kB]
-Fetched 1603 kB in 2s (903 kB/s)                 
+Fetched 1603 kB in 2s (903 kB/s)
 Selecting previously unselected package libapache2-mod-php8.1.
 (Reading database ... 81807 files and directories currently installed.)
 Preparing to unpack .../libapache2-mod-php8.1_8.1.6-1+0~20220517.17+debian10~1.gbp6b3bd1_amd64.deb ...
@@ -1385,10 +1385,10 @@ $ sudo dnf config-manager --set-enabled remi
 $ sudo dnf module list reset php -y
 Last metadata expiration check: 0:14:13 ago on Fri 17 Jun 2022 10:00:15 PM JST.
 Remi's Modular repository for Enterprise Linux 9 - x86_64
-Name             Stream               Profiles                              Summary                          
-php              remi-7.4             common [d], devel, minimal            PHP scripting language           
-php              remi-8.0             common [d], devel, minimal            PHP scripting language           
-php              remi-8.1             common [d], devel, minimal            PHP scripting language           
+Name             Stream               Profiles                              Summary
+php              remi-7.4             common [d], devel, minimal            PHP scripting language
+php              remi-8.0             common [d], devel, minimal            PHP scripting language
+php              remi-8.1             common [d], devel, minimal            PHP scripting language
 
 Hint: [d]efault, [e]nabled, [x]disabled, [i]nstalled
 $ sudo dnf module enable php:remi-8.1
@@ -1398,7 +1398,7 @@ Dependencies resolved.
  Package                  Architecture            Version                     Repository                Size
 =============================================================================================================
 Enabling module streams:
- php                                              remi-8.1                                                  
+ php                                              remi-8.1
 
 Transaction Summary
 =============================================================================================================
@@ -1440,15 +1440,15 @@ trusted (active)
   target: ACCEPT
   icmp-block-inversion: no
   interfaces: eth0
-  sources: 
-  services: 
-  ports: 
-  protocols: 
+  sources:
+  services:
+  ports:
+  protocols:
   forward: yes
   masquerade: no
-  forward-ports: 
-  source-ports: 
-  icmp-blocks: 
+  forward-ports:
+  source-ports:
+  icmp-blocks:
   rich rules:
 ```
 
@@ -1479,15 +1479,15 @@ trusted (active)
   target: ACCEPT
   icmp-block-inversion: no
   interfaces: eth0
-  sources: 
+  sources:
   services: ssh
   ports: 80/tcp 443/tcp
-  protocols: 
+  protocols:
   forward: yes
   masquerade: no
-  forward-ports: 
-  source-ports: 
-  icmp-blocks: 
+  forward-ports:
+  source-ports:
+  icmp-blocks:
   rich rules:
 ```
 
@@ -1518,7 +1518,7 @@ $ sudo systemctl enable chronyd
 ||      Log2(Polling interval) --.      |          |  yyyy = measured offset,
 ||                                \     |          |  zzzz = estimated error.
 ||                                 |    |           \
-MS Name/IP address         Stratum Poll Reach LastRx Last sample               
+MS Name/IP address         Stratum Poll Reach LastRx Last sample
 ===============================================================================
 ^- ntp-b2.nict.go.jp             1   6   177    65   +176us[ +176us] +/- 1329us
 ^* metadata.google.internal      2   6   177    65  +9151ns[  +24us] +/-  353us
@@ -1629,7 +1629,7 @@ $ export PATH=$PATH:/usr/local/go/bin
 
 ``` bash
 $ wget https://github.com/gohugoio/hugo/releases/download/v0.101.0/hugo_0.101.0_Linux-64bit.tar.gz
-]$ sudo tar -C /usr/bin -xvzf hugo_0.101.0_Linux-64bit.tar.gz 
+]$ sudo tar -C /usr/bin -xvzf hugo_0.101.0_Linux-64bit.tar.gz
 LICENSE
 README.md
 hugo
@@ -1647,7 +1647,7 @@ hugo v0.101.0-466fa43c16709b4483689930a4f9ac8add5c9f66 linux/amd64 BuildDate=202
 ``` bash
 $ sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-9-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 Last metadata expiration check: 2:10:05 ago on Tue 21 Jun 2022 08:55:29 PM JST.
-pgdg-redhat-repo-latest.noarch.rpm                                           9.2 kB/s |  12 kB     00:01    
+pgdg-redhat-repo-latest.noarch.rpm                                           9.2 kB/s |  12 kB     00:01
 Dependencies resolved.
 =============================================================================================================
  Package                        Architecture         Version                Repository                  Size
@@ -1667,12 +1667,12 @@ Transaction check succeeded.
 Running transaction test
 Transaction test succeeded.
 Running transaction
-  Preparing        :                                                                                     1/1 
-  Installing       : pgdg-redhat-repo-42.0-24.noarch                                                     1/1 
-  Verifying        : pgdg-redhat-repo-42.0-24.noarch                                                     1/1 
+  Preparing        :                                                                                     1/1
+  Installing       : pgdg-redhat-repo-42.0-24.noarch                                                     1/1
+  Verifying        : pgdg-redhat-repo-42.0-24.noarch                                                     1/1
 
 Installed:
-  pgdg-redhat-repo-42.0-24.noarch                                                                            
+  pgdg-redhat-repo-42.0-24.noarch
 
 Complete!
 ```
@@ -1739,7 +1739,7 @@ git reset --hard <commit id>
 ```
 
 ``` git
-git status   
+git status
 On branch master
 Your branch and 'origin/main' have diverged,
 and have 2 and 6 different commits each, respectively.
@@ -1749,7 +1749,7 @@ nothing to commit, working tree clean
 ```
 
 ``` git
-git pull  
+git pull
 fatal: refusing to merge unrelated histories
 ```
 
@@ -1784,7 +1784,7 @@ git pull origin main
 <details>
 <summary></summary>
 
-``` 
+```
 git config --global alias.ignore '!gi() { curl -L -s gitignore.io/api/$@ -o .gitignore;}; gi'
 ```
 
@@ -1895,7 +1895,7 @@ Status: inactive
 
 $ sudo vim /etc/ssh/sshd_config # Port 22
 ubuntu@ubuntu:~$ sudo ufw default deny
-Default incoming policy changed to 'deny' 
+Default incoming policy changed to 'deny'
 (be sure to update your rules accordingly)
 
 $ sudo ufw enable
@@ -1927,7 +1927,7 @@ Firewall is active and enabled on system startup
 <details>
 <summary>printの出力結果をUTF-8に</summary>
 
-``` 
+```
 # printの出力結果をUTF-8に
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
@@ -1942,7 +1942,7 @@ print('標準エラー出力(stderr)へ、utf-8で出力', file=sys.stderr)
 <details>
 <summary>install nginx</summary>
 
-``` 
+```
 
 ```
 
@@ -1951,7 +1951,7 @@ print('標準エラー出力(stderr)へ、utf-8で出力', file=sys.stderr)
 <details>
 <summary>ufw確認</summary>
 
-``` 
+```
 $ sudo ufw status
 状態: アクティブ
 
@@ -1983,9 +1983,9 @@ created virtual environment CPython2.7.18.final.0-64 in 5958ms
 DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
 Package    Version
 ---------- -------
-pip        20.0.2 
-setuptools 44.1.0 
-wheel      0.34.2 
+pip        20.0.2
+setuptools 44.1.0
+wheel      0.34.2
 WARNING: You are using pip version 20.0.2; however, version 20.3.4 is available.
 You should consider upgrading via the 'C:\Users\pathto\Development\Python\venv27\Scripts\python.exe -m pip install --upgrade pip' command.
 (venv27) PS C:\Users\pathto\Development\Python> python -m pip install -U pip
@@ -2007,7 +2007,7 @@ Successfully installed pip-20.3.4
 <summary>Python 3.x</summary>
 
 ``` PowerShell
-PS C:\Users\pathto\Development\Python> py -3.10 -m venv venv310 
+PS C:\Users\pathto\Development\Python> py -3.10 -m venv venv310
 PS C:\Users\pathto\Development\Python> .\venv310\Scripts\activate
 (venv310) PS C:\Users\pathto\Development\Python>
 (venv310) PS C:\Users\pathto\Development\Python> pip list
@@ -2082,21 +2082,21 @@ $ sudo apt install python3 python3-pip
 状態情報を読み取っています... 完了
 以下の追加パッケージがインストールされます:
   binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2 ca-certificates cpp cpp-11 dirmngr dpkg-dev fakeroot fontconfig-config fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm
-  javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan6 libassuan0 libatomic1 libbinutils libbrotli1 libbsd0 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libdpkg-perl libexpat1-dev libfakeroot     
-  libfile-fcntllock-perl libfontconfig1 libfreetype6 libgcc-11-dev libgd3 libgdbm-compat4 libgdbm6 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore libksba8 libldap-2.5-0 libldap-common liblocale-gettext-perl liblsan0 libmd0 libmpc3   
-  libmpfr6 libnpth0 libnsl-dev libperl5.34 libpng16-16 libpython3-dev libpython3-stdlib libpython3.10-dev libquadmath0 libsasl2-2 libsasl2-modules libsasl2-modules-db libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4   
-  linux-libc-dev lto-disabled-list make manpages manpages-dev netbase openssl patch perl perl-modules-5.34 pinentry-curses python3-dev python3-distutils python3-lib2to3 python3-minimal python3-pkg-resources python3-setuptools python3-wheel python3.10 python3.10-dev python3.10-minimal       
+  javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan6 libassuan0 libatomic1 libbinutils libbrotli1 libbsd0 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libfontconfig1 libfreetype6 libgcc-11-dev libgd3 libgdbm-compat4 libgdbm6 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore libksba8 libldap-2.5-0 libldap-common liblocale-gettext-perl liblsan0 libmd0 libmpc3
+  libmpfr6 libnpth0 libnsl-dev libperl5.34 libpng16-16 libpython3-dev libpython3-stdlib libpython3.10-dev libquadmath0 libsasl2-2 libsasl2-modules libsasl2-modules-db libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4
+  linux-libc-dev lto-disabled-list make manpages manpages-dev netbase openssl patch perl perl-modules-5.34 pinentry-curses python3-dev python3-distutils python3-lib2to3 python3-minimal python3-pkg-resources python3-setuptools python3-wheel python3.10 python3.10-dev python3.10-minimal
   rpcsvc-proto ucf xz-utils zlib1g-dev
 提案パッケージ:
-  binutils-doc bzip2-doc cpp-doc gcc-11-locales dbus-user-session libpam-systemd pinentry-gnome3 tor debian-keyring g++-multilib g++-11-multilib gcc-11-doc gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-11-multilib parcimonie xloadimage scdaemon apache2 | lighttpd        
+  binutils-doc bzip2-doc cpp-doc gcc-11-locales dbus-user-session libpam-systemd pinentry-gnome3 tor debian-keyring g++-multilib g++-11-multilib gcc-11-doc gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-11-multilib parcimonie xloadimage scdaemon apache2 | lighttpd
   | httpd glibc-doc git bzr libgd-tools gdbm-l10n libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql libstdc++-11-doc make-doc man-browser ed diffutils-doc perl-doc libterm-readline-gnu-perl
   | libterm-readline-perl-perl libtap-harness-archive-perl pinentry-doc python3-doc python3-tk python3-venv python-setuptools-doc python3.10-venv python3.10-doc binfmt-support
 以下のパッケージが新たにインストールされます:
   binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2 ca-certificates cpp cpp-11 dirmngr dpkg-dev fakeroot fontconfig-config fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm
-  javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan6 libassuan0 libatomic1 libbinutils libbrotli1 libbsd0 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libdpkg-perl libexpat1-dev libfakeroot     
-  libfile-fcntllock-perl libfontconfig1 libfreetype6 libgcc-11-dev libgd3 libgdbm-compat4 libgdbm6 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore libksba8 libldap-2.5-0 libldap-common liblocale-gettext-perl liblsan0 libmd0 libmpc3   
-  libmpfr6 libnpth0 libnsl-dev libperl5.34 libpng16-16 libpython3-dev libpython3-stdlib libpython3.10-dev libquadmath0 libsasl2-2 libsasl2-modules libsasl2-modules-db libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4   
-  linux-libc-dev lto-disabled-list make manpages manpages-dev netbase openssl patch perl perl-modules-5.34 pinentry-curses python3 python3-dev python3-distutils python3-lib2to3 python3-minimal python3-pip python3-pkg-resources python3-setuptools python3-wheel python3.10 python3.10-dev      
+  javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan6 libassuan0 libatomic1 libbinutils libbrotli1 libbsd0 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libfontconfig1 libfreetype6 libgcc-11-dev libgd3 libgdbm-compat4 libgdbm6 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore libksba8 libldap-2.5-0 libldap-common liblocale-gettext-perl liblsan0 libmd0 libmpc3
+  libmpfr6 libnpth0 libnsl-dev libperl5.34 libpng16-16 libpython3-dev libpython3-stdlib libpython3.10-dev libquadmath0 libsasl2-2 libsasl2-modules libsasl2-modules-db libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4
+  linux-libc-dev lto-disabled-list make manpages manpages-dev netbase openssl patch perl perl-modules-5.34 pinentry-curses python3 python3-dev python3-distutils python3-lib2to3 python3-minimal python3-pip python3-pkg-resources python3-setuptools python3-wheel python3.10 python3.10-dev
   python3.10-minimal rpcsvc-proto ucf xz-utils zlib1g-dev
 アップグレード: 0 個、新規インストール: 122 個、 削除: 0 個、保留: 0 個。
 95.0 MB のアーカイブを取得する必要があります。
@@ -2126,22 +2126,22 @@ $ sudo apt install python3 python3-pip python3-venv
 依存関係ツリーを作成しています... 完了
 状態情報を読み取っています... 完了
 以下の追加パッケージがインストールされます:
-  binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2 ca-certificates cpp cpp-11 dirmngr dpkg-dev fakeroot fontconfig-config fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm       
+  binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2 ca-certificates cpp cpp-11 dirmngr dpkg-dev fakeroot fontconfig-config fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm
   javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan6 libassuan0 libatomic1 libbinutils libbrotli1 libbsd0 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libdpkg-perl libexpat1-dev libfakeroot
-  libfile-fcntllock-perl libfontconfig1 libfreetype6 libgcc-11-dev libgd3 libgdbm-compat4 libgdbm6 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore libksba8 libldap-2.5-0 libldap-common liblocale-gettext-perl liblsan0 libmd0 libmpc3   
-  libmpfr6 libnpth0 libnsl-dev libperl5.34 libpng16-16 libpython3-dev libpython3-stdlib libpython3.10-dev libquadmath0 libsasl2-2 libsasl2-modules libsasl2-modules-db libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4   
-  linux-libc-dev lto-disabled-list make manpages manpages-dev netbase openssl patch perl perl-modules-5.34 pinentry-curses python3-dev python3-distutils python3-lib2to3 python3-minimal python3-pip-whl python3-pkg-resources python3-setuptools python3-setuptools-whl python3-wheel python3.10  
+  libfile-fcntllock-perl libfontconfig1 libfreetype6 libgcc-11-dev libgd3 libgdbm-compat4 libgdbm6 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore libksba8 libldap-2.5-0 libldap-common liblocale-gettext-perl liblsan0 libmd0 libmpc3
+  libmpfr6 libnpth0 libnsl-dev libperl5.34 libpng16-16 libpython3-dev libpython3-stdlib libpython3.10-dev libquadmath0 libsasl2-2 libsasl2-modules libsasl2-modules-db libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4
+  linux-libc-dev lto-disabled-list make manpages manpages-dev netbase openssl patch perl perl-modules-5.34 pinentry-curses python3-dev python3-distutils python3-lib2to3 python3-minimal python3-pip-whl python3-pkg-resources python3-setuptools python3-setuptools-whl python3-wheel python3.10
   python3.10-dev python3.10-minimal python3.10-venv rpcsvc-proto ucf xz-utils zlib1g-dev
 提案パッケージ:
-  binutils-doc bzip2-doc cpp-doc gcc-11-locales dbus-user-session libpam-systemd pinentry-gnome3 tor debian-keyring g++-multilib g++-11-multilib gcc-11-doc gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-11-multilib parcimonie xloadimage scdaemon apache2 | lighttpd        
+  binutils-doc bzip2-doc cpp-doc gcc-11-locales dbus-user-session libpam-systemd pinentry-gnome3 tor debian-keyring g++-multilib g++-11-multilib gcc-11-doc gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-11-multilib parcimonie xloadimage scdaemon apache2 | lighttpd
   | httpd glibc-doc git bzr libgd-tools gdbm-l10n libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql libstdc++-11-doc make-doc man-browser ed diffutils-doc perl-doc libterm-readline-gnu-perl
   | libterm-readline-perl-perl libtap-harness-archive-perl pinentry-doc python3-doc python3-tk python-setuptools-doc python3.10-doc binfmt-support
 以下のパッケージが新たにインストールされます:
   binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2 ca-certificates cpp cpp-11 dirmngr dpkg-dev fakeroot fontconfig-config fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm
-  javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan6 libassuan0 libatomic1 libbinutils libbrotli1 libbsd0 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libdpkg-perl libexpat1-dev libfakeroot     
-  libfile-fcntllock-perl libfontconfig1 libfreetype6 libgcc-11-dev libgd3 libgdbm-compat4 libgdbm6 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore libksba8 libldap-2.5-0 libldap-common liblocale-gettext-perl liblsan0 libmd0 libmpc3   
-  libmpfr6 libnpth0 libnsl-dev libperl5.34 libpng16-16 libpython3-dev libpython3-stdlib libpython3.10-dev libquadmath0 libsasl2-2 libsasl2-modules libsasl2-modules-db libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4   
-  linux-libc-dev lto-disabled-list make manpages manpages-dev netbase openssl patch perl perl-modules-5.34 pinentry-curses python3 python3-dev python3-distutils python3-lib2to3 python3-minimal python3-pip python3-pip-whl python3-pkg-resources python3-setuptools python3-setuptools-whl       
+  javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan6 libassuan0 libatomic1 libbinutils libbrotli1 libbsd0 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libfontconfig1 libfreetype6 libgcc-11-dev libgd3 libgdbm-compat4 libgdbm6 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore libksba8 libldap-2.5-0 libldap-common liblocale-gettext-perl liblsan0 libmd0 libmpc3
+  libmpfr6 libnpth0 libnsl-dev libperl5.34 libpng16-16 libpython3-dev libpython3-stdlib libpython3.10-dev libquadmath0 libsasl2-2 libsasl2-modules libsasl2-modules-db libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4
+  linux-libc-dev lto-disabled-list make manpages manpages-dev netbase openssl patch perl perl-modules-5.34 pinentry-curses python3 python3-dev python3-distutils python3-lib2to3 python3-minimal python3-pip python3-pip-whl python3-pkg-resources python3-setuptools python3-setuptools-whl
   python3-venv python3-wheel python3.10 python3.10-dev python3.10-minimal python3.10-venv rpcsvc-proto ucf xz-utils zlib1g-dev
 アップグレード: 0 個、新規インストール: 126 個、 削除: 0 個、保留: 0 個。
 97.4 MB のアーカイブを取得する必要があります。
@@ -2197,7 +2197,7 @@ sudo apt install postgresql postgresql-dev-145 --install-suggests
 <details>
 <summary>基本的な使い方</summary>
 
-``` 
+```
 
 ```
 
@@ -2274,7 +2274,7 @@ Downloading https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v7.94
 
 ``` Powershell
 # adminでPowerShellを起動
-cd 
+cd
 notepad .\profile.ps1
 notepad .\Microsoft.VSCode_profile.ps1
 `C:\Users\nagar\AppData\Local\Programs\oh-my-posh\themes`
@@ -2287,7 +2287,7 @@ notepad .\Microsoft.VSCode_profile.ps1
 <details>
 <summary>YES NO</summary>
 
-``` 
+```
 ^(YES|Yes|yes|Y|y)$
 ^(Y|y.+)$
 
@@ -3207,10 +3207,6 @@ notepad .\Microsoft.VSCode_profile.ps1
 
 [【Python】 "PermissionError: [Errno 13] Permission denied"の原因と対処 | テキストファイルを読み込むサンプル](https://tooljp.com/Python/ErrorMessage/PermissionError-Errno-13-Permission-denied-3D73.html)
 
-[クラウド コンピューティング サービス  |  Google Cloud](https://cloud.google.com/?authuser=1)
-
-[検索 – My First Project – Google Cloud Console](https://console.cloud.google.com/search;q=translation%20api;queryString=translation%20api;currentProjectOnly=false;searchScope=projects%2Fresolute-fold-352811;resultTypes=google.appengine.v1.Version,artifactregistry.googleapis.com%2FDockerImage,bigquery.googleapis.com%2FDataset,bigquery.googleapis.com%2FTable,bigtableadmin.googleapis.com%2FInstance,compute.BackendBucket,compute.Disk,compute.HealthCheck,compute.InstanceTemplate,compute.Instance,compute.InstanceGroup,compute.Snapshot,compute.googleapis.com%2FCommitment,compute.googleapis.com%2FNetworkEndpointGroup,compute.googleapis.com%2FNodeGroup,tpu.googleapis.com%2FNode,compute.googleapis.com%2FReservation,datafusion.googleapis.com%2FInstance,google.cloud.dataproc.v1.Cluster,google.cloud.dataproc.v1.Job,documentai.googleapis.com%2FProcessor,file.googleapis.com%2FBackup,file.googleapis.com%2FInstance,cloudfunctions.googleapis.com%2FCloudFunction,compute.googleapis.com%2FTargetVpnGateway,compute.googleapis.com%2FVpnGateway,compute.googleapis.com%2FVpnTunnel,compute.Router,google.iam.admin.v1.ServiceAccount,container.googleapis.com%2FCluster,k8s.io%2FPod,k8s.io%2FNode,k8s.io%2FService,apps.k8s.io%2FDeployment,apps.k8s.io%2FReplicaSet,batch.k8s.io%2FJob,container.googleapis.com%2FNodePool,dns.googleapis.com%2FManagedZone,compute.googleapis.com%2FBackendService,compute.googleapis.com%2FTargetPool,compute.googleapis.com%2FTargetTcpProxy,compute.googleapis.com%2FSslPolicy,compute.googleapis.com%2FSecurityPolicy,compute.Network,compute.TargetHttpProxy,compute.TargetHttpsProxy,compute.TargetSslProxy,compute.SslCertificate,spanner.googleapis.com%2FInstance,spanner.googleapis.com%2FDatabase,spanner.googleapis.com%2FBackup,sqladmin.googleapis.com%2FInstance,storage.googleapis.com%2FBucket,compute.Subnetwork,compute.googleapis.com%2FPacketMirroring,compute.googleapis.com%2FRoute,compute.Firewall,cloud.site.page,console.site.page,console.tutorial.walkthrough,google.api.emporium.Solution,google.api.emporium.Api,google.cloudresourcemanager.projects.v1beta1.Project,google.cloud.resourcemanager.v2alpha1.Folder,cloud.resourcemanager.Organization,resources,documentation_or_tutorial,marketplace_and_apis;tab=all?q=search&referrer=search&project=resolute-fold-352811&authuser=1&_ga=2.95064156.1773699148.1659233062-80309478.1654773236&walkthrough_id=translate--translate-quickstart-python)
-
 [mainタグの意味と使い方 | HTML | できるネット](https://dekiru.net/article/12866/)
 
 [csv --- CSV ファイルの読み書き — Python 3.10.4 ドキュメント](https://docs.python.org/ja/3/library/csv.html#writer-objects)
@@ -3242,5 +3238,35 @@ notepad .\Microsoft.VSCode_profile.ps1
 [辞書 Python でキーの数をカウントする | Delft スタック](https://www.delftstack.com/ja/howto/python/number-of-keys-in-dictionary-python/)
 
 [Python で YAML ファイルを扱う - まくまくPythonノート](https://maku77.github.io/python/io/yaml.html)
+
+[Virtual Box上にKali Linuxをインストールする方法 - Qiita](https://qiita.com/LittleBear-6w6/items/e1c39ab711cefe5577c6)
+
+[kali linuxで日本語入力できるようにする-14にゴー](https://blog.14nigo.net/2023/01/installfcitxmozconkali.html?m=1)
+
+[KaliLinuxを使えるようになるのだ（基礎編） - Qiita](https://qiita.com/TAKANEKOMACHI/items/428f47999c834656eb64)
+
+[Linux xfsファイルシステム作成方法（CentOS 7） | Oji-Cloud](https://oji-cloud.net/2019/08/22/post-2813/)
+
+[Use the OverlayFS storage driver](https://docs.docker.com/storage/storagedriver/overlayfs-driver/)
+
+[Kali Linuxの日本語表示関連設定 | Abillyz](https://abillyz.com/mamezou/studies/679)
+
+[VirtualBoxをコマンド操作する場合に使いそうなコマンド一覧 - Qiita](https://qiita.com/sakai00kou/items/708b2ee88f7375ce98bd)
+
+[Docker on CentOS 7 machine with XFS filesystem can cause trouble when d_type is not supported | Pim Widdershoven](https://www.pimwiddershoven.nl/entry/docker-on-centos-7-machine-with-xfs-filesystem-can-cause-trouble-when-d-type-is-not-supported)
+
+[よくあるご質問 | Linuxのファイルシステムの確認方法を教えてください。](https://faq.cybozu.info/alphascope/cybozu/web/office10/Detail.aspx?id=2125&isCrawler=1)
+
+[連関の検定(カイ二乗検定)のやり方をわかりやすく徹底解説【統計学入門31】](https://datawokagaku.com/chi2_test/)
+
+[Pythonデータ可視化に使えるseaborn 25メソッド - Qiita](https://qiita.com/kakiuchis/items/f7c830a2b726992a6165)
+
+[帰無仮説 | 統計用語集 | 統計WEB](https://bellcurve.jp/statistics/glossary/899.html)
+
+[Compose ファイル構築リファレンス — Docker-docs-ja 20.10 ドキュメント](https://docs.docker.jp/compose/compose-file/build.html)
+
+[知っておくとちょっと便利！xargs コマンドの便利な使い方 | SIOS Tech. Lab](https://tech-lab.sios.jp/archives/29544)
+
+[【 wc 】コマンド――テキストファイルの文字数や行数を数える：Linux基本コマンドTips（62） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/1611/07/news026.html)
 
 </details>
