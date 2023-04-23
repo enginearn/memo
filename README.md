@@ -2297,6 +2297,70 @@ notepad .\Microsoft.VSCode_profile.ps1
 
 </details>
 
+## npm
+
+<details>
+<summary>outdated</summary></summary>
+
+``` PowerShell
+npm outdated -g
+```
+
+</details>
+
+<details>
+<summary>update all packages</summary>
+
+``` PowerShell
+npm update -g
+```
+
+</details>
+
+<details>
+<summary>package list</summary>
+
+``` PowerShell
+npm list -g --outdated
+C:\Users\nagar\AppData\Roaming\npm
+├── @angular/cli@15.2.6
+├── @google/clasp@2.4.2
+├── @loopback/cli@4.2.1
+├── angular@1.8.3
+├── cors@2.8.5
+├── firebase-tools@11.28.0
+├── jsdom@21.1.1
+├── jshint@2.13.6
+├── json-server@0.17.3
+├── live-server@1.2.2
+├── loopback@3.28.0
+├── nodemon@2.0.22
+├── npm@9.6.5
+├── serve@14.2.0
+└── typescript@5.0.4
+```
+
+``` PowerShell
+npm list -g
+C:\Users\nagar\AppData\Roaming\npm
+├── @angular/cli@15.2.6
+├── @google/clasp@2.4.2
+├── @loopback/cli@4.2.1
+├── angular@1.8.3
+├── cors@2.8.5
+├── firebase-tools@11.28.0
+├── jsdom@21.1.1
+├── jshint@2.13.6
+├── json-server@0.17.3
+├── live-server@1.2.2
+├── loopback@3.28.0
+├── nodemon@2.0.22
+├── npm@9.6.5
+├── serve@14.2.0
+└── typescript@5.0.4
+```
+
+</details>
 
 ---
 
