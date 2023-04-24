@@ -2362,6 +2362,35 @@ C:\Users\nagar\AppData\Roaming\npm
 
 </details>
 
+## Rust
+
+### rust-analyzer on VS Code
+
+`rust-project.json`
+
+``` json
+{
+    "sysroot_src": "C:\\Users\\path\\to\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\src\\rust\\library",
+    "crates": [
+        {
+            "root_module": "src/main.rs",
+            "edition": "2021",
+            "deps": []
+        }
+    ]
+}
+```
+
+VS Code `setting.json`
+
+``` json
+"rust-analyzer.linkedProjects": [
+        "C:\\Users\\path\\to\\Development\\Rust\\rust-project.json",
+    ],
+```
+
+[Cargoプロジェクト以外でもrust-analyzerを使いたい](https://qiita.com/ohakutsu/items/d3ab48f0f1f932385dd4)
+
 ---
 
 ## References
