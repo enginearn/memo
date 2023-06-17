@@ -3362,4 +3362,192 @@ VS Code `setting.json`
 
 [【 wc 】コマンド――テキストファイルの文字数や行数を数える：Linux基本コマンドTips（62） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/1611/07/news026.html)
 
+[【Go】基本文法④(配列・スライス) - Qiita](https://qiita.com/k-penguin-sato/items/daad9986d6c42bdcde90)
+
+[gopherdata/gophernotes: The Go kernel for Jupyter notebooks and nteract.](https://github.com/gopherdata/gophernotes)
+
+[WindowsのPowerShellで環境変数の確認 - Qiita](https://qiita.com/zabu/items/85b01ec14e697cb2ff35)
+
+[【PowerShell】環境変数を設定する - ほそぼそプログラミング日記](https://hosopro.blogspot.com/2017/01/powershell-set-environment-variable.html)
+
+[（powershell）xcopyコマンドでバックアップ世代管理 - ＩＴ管理のマメ知識](https://persimoon.hatenablog.com/entry/2022/03/04/232452)
+
+[enginearn/react_native_meals_app](https://github.com/enginearn/react_native_meals_app)
+
+[Setting up the development environment · React Native](https://reactnative.dev/docs/environment-setup)
+
+[Dashboard — Expo](https://expo.dev/accounts/enginearn)
+
+[brexhq/prompt-engineering: Tips and tricks for working with Large Language Models like OpenAI's GPT-4.](https://github.com/brexhq/prompt-engineering)
+
+[ChatGPT plugins初期搭載プラグインまとめ【全13種】](https://zenn.dev/umi_mori/articles/chatgpt-initial-plugins-13)
+
+[E資格動画リンク - Google スプレッドシート](https://docs.google.com/spreadsheets/d/1kK2YRxuhUSwAVD5vYUla7BA19Lpgs_N1X9XKGm575oQ/edit#gid=0)
+
+[オンラインコース - いろんなことを、あなたのペースで | Udemy](https://www.udemy.com/)
+
+[react-native-practical-guide-code/success.png at 04-deep-dive-real-app · academind/react-native-practical-guide-code · GitHub](https://github.com/academind/react-native-practical-guide-code/blob/04-deep-dive-real-app/extra-files/images/success.png)
+
+[Getting Started | asdf](https://asdf-vm.com/guide/getting-started.html)
+
+[GPT-4](https://openai.com/product/gpt-4)
+
+[New chat](https://chat.openai.com/?model=gpt-4)
+
+[[1706.03762] Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+
+[openai/whisper: Robust Speech Recognition via Large-Scale Weak Supervision](https://github.com/openai/whisper#available-models-and-languages)
+
+[Models - OpenAI API](https://platform.openai.com/docs/models/overview)
+
+[Embeddings - OpenAI API](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings)
+
+[Embeddings - OpenAI API](https://platform.openai.com/docs/guides/embeddings/limitations-risks)
+
+[マイドライブ - Google ドライブ](https://drive.google.com/drive/u/1/my-drive)
+
+[openai_conversation - Google スプレッドシート](https://docs.google.com/spreadsheets/d/1SNMCrowHz-TCxqt-UpJ_x3jkIXH9G78PrVmkx-q3iFU/edit#gid=149423156)
+
+[Make the Project Installable — Flask Documentation (2.3.x)](https://flask.palletsprojects.com/en/2.3.x/tutorial/install/)
+
+[Keep Developing! — Flask Documentation (2.3.x)](https://flask.palletsprojects.com/en/2.3.x/tutorial/next/)
+
+[flask/examples/tutorial at 2.3.2 · pallets/flask · GitHub](https://github.com/pallets/flask/tree/2.3.2/examples/tutorial)
+
+[Packaging Python Projects — Python Packaging User Guide](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+
+[【Flask】開発用WEBサーバーを "app.run()" or "flask run" のどちらで起動する？ - Qiita](https://qiita.com/MashCannu/items/52b8da2090dd77d0dea2)
+
+[VSCodeでDraw.ioが使えるようになったらしい！ - Qiita](https://qiita.com/riku-shiru/items/5ab7c5aecdfea323ec4e)
+
+[Home - OpenAPI Initiative](https://www.openapis.org/)
+
+[Structure of an OpenAPI Document | OpenAPI Documentation](https://learn.openapis.org/specification/structure.html)
+
+[ChatGPT Prompt Engineering for Developers - DeepLearning.AI](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/)
+
+[OpenAI](https://openai.com/)
+
+[openai/openai-python: The OpenAI Python library provides convenient access to the OpenAI API from applications written in the Python language.](https://github.com/openai/openai-python)
+
+[PowerShell JSONを読み込む/出力する | ITSakura](https://itsakura.com/powershell-json)
+
+[Invoke-WebRequestとInvoke-RestMethodの違い - Qiita](https://qiita.com/startPG/items/7b37c527667fa43ab173)
+
+[Bearer認証について - Qiita](https://qiita.com/h_tyokinuhata/items/ab8e0337085997be04b1)
+
+[Authentication](https://developer.company-information.service.gov.uk/authentication)
+
+[jqをWindowsにインストールしてコマンドプロンプトで使う | 突撃なんでもチートシート](https://blog.totsugeki.com/post-1055/)
+
+[[Python]自作のモジュール・パッケージのimport | 藤の手帳](https://fuji-pocketbook.net/selfmade-modules/)
+
+[Python | 大文字と小文字を変換する(lower, upper, capitalize, title, swapcase)](https://www.javadrive.jp/python/string/index12.html)
+
+[【解説】MVCモデルとは？メリット・デメリット│東京・福岡のソフトウェア開発・システム開発会社｜メディアファイブ株式会社](https://system-kaihatu.com/archives/3204#:~:text=MVC%E3%83%A2%E3%83%87%E3%83%AB%E3%81%A8%E3%81%AF%E3%80%81%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0,%E3%83%A2%E3%83%87%E3%83%AB%E3%81%A8%E5%91%BC%E3%81%B0%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82)
+
+[PostgreSQLでCSVファイルをインポート／エクスポートする方法 | アシスト](https://www.ashisuto.co.jp/db_blog/article/how-import-and-export-data-using-csv-files-postgresql.html)
+
+[Dream - AI-powered No-Code Builder](https://usedream.app/)
+
+[Overview — Panel v0.14.4](https://panel.holoviz.org/)
+
+[PromptStormがChatGPTの新たな進化をもたらす: プロンプトいらずの新しい体験｜0xpanda alpha lab｜note](https://note.com/panda_lab/n/n3e3d40ac5bf9)
+
+[新人Webエンジニア必須？の知識「PRGパターン」について](https://zenn.dev/imah/articles/3d186a6462ecc8)
+
+[werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.register'. Did you mean 'auth.index' instead? // Werkzeug Debugger](http://127.0.0.1:5000/auth/login)
+
+[G208: アクセシブルな名前 (accessible name) の一部として可視ラベルのテキストを含める](https://waic.jp/translations/WCAG21/Techniques/general/G208)
+
+[CSSの否定擬似クラスnotとは？一部の要素を除外する方法 | 侍エンジニアブログ](https://www.sejuku.net/blog/56193)
+
+[flaskのパスを指定する - Qiita](https://qiita.com/mink0212/items/a4eb875f19b0e47718d3)
+
+[アプリケーションの用意（Application Setup） — Flask Documentation (2.2.x)](https://msiz07-flask-docs-ja.readthedocs.io/ja/latest/tutorial/factory.html)
+
+[Python FlaskによるWebアプリ開発入門 物体検知アプリ&機械学習APIの作り方 電子書籍｜翔泳社の本](https://www.shoeisha.co.jp/book/detail/9784798175164)
+
+[Failed to find Flask application or factory in module 'NAME'.](https://blog.fantom.co.jp/2021/12/29/failed-to-find-flask-application/)
+
+[Establishing Connectivity - the Engine — SQLAlchemy 2.0 Documentation](https://docs.sqlalchemy.org/en/20/tutorial/engine.html)
+
+[python - Flask - ImportError: No module named app - Stack Overflow](https://stackoverflow.com/questions/22711087/flask-importerror-no-module-named-app)
+
+[Automatically Load Environment Variables in Flask](https://prettyprinted.com/tutorials/automatically_load_environment_variables_in_flask/)
+
+[Flask + SQLAlchemyプロジェクトを始める手順 - Qiita](https://qiita.com/shirakiya/items/0114d51e9c189658002e)
+
+[SQLite — SQLAlchemy 2.0 Documentation](https://docs.sqlalchemy.org/en/20/dialects/sqlite.html)
+
+[Darumadrop One - Google Fonts](https://fonts.google.com/specimen/Darumadrop+One)
+
+[ARToolKit5/README (ARToolKit for Windows Phone 8.1 and Windows Store 8.1).md at master · artoolkit/ARToolKit5 · GitHub](https://github.com/artoolkit/ARToolKit5/blob/master/README%20(ARToolKit%20for%20Windows%20Phone%208.1%20and%20Windows%20Store%208.1).md)
+
+[Windows install | Flutter](https://docs.flutter.dev/get-started/install/windows)
+
+[Download Android Studio & App Tools - Android Developers](https://developer.android.com/studio)
+
+[WindowsでiOS向けFlutter開発環境を用意する](https://zenn.dev/winteryukky/articles/2453a109825860)
+
+[Android Studio Setup stuck on Downloading Components [242767866] - Visible to Public - Issue Tracker](https://issuetracker.google.com/issues/242767866)
+
+[Installation Instructions on Windows · intel/haxm Wiki](https://github.com/intel/haxm/wiki/Installation-Instructions-on-Windows)
+
+[Releases · intel/haxm](https://github.com/intel/haxm/releases)
+
+[Release Android Emulator hypervisor driver 2.1 · google/android-emulator-hypervisor-driver](https://github.com/google/android-emulator-hypervisor-driver/releases/tag/v2.1)
+
+[fluter doctorに「Android sdkmanager not found.」と言われた時の対処 - Qiita](https://qiita.com/ShortArrow/items/46ca3717384039419605)
+
+[Write your first Flutter app | Flutter](https://docs.flutter.dev/get-started/codelab)
+
+[Your first Flutter app  |  Google Codelabs](https://codelabs.developers.google.com/codelabs/flutter-codelab-first#2)
+
+[VSCode+Flutterの開発環境を構築する方法[Windows] - NRIネットコムBlog](https://tech.nri-net.com/entry/getting_started_with_flutter_on_windows)
+
+[Install | Flutter](https://docs.flutter.dev/get-started/install)
+
+[Flutter環境構築（Windows） 後編 - エミュレータ作成と実行 - シー・エス・エス イノベーションラボ（ブログ）](https://blog.css-net.co.jp/entry/2022/06/06/112045)
+
+[dice - Google 検索](https://www.google.com/search?q=dice&rlz=1C1TKQJ_jaJP1021JP1021&sxsrf=APwXEdeVTHOQkxbWw03kebLeSew3HXmKuw:1683908994085&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj5prTrmfD-AhUIslYBHSNzCaoQ_AUoAnoECAIQBA&biw=1904&bih=869&dpr=1#imgrc=8KBS0Bwq4rdd7M)
+
+[美しい無料画像と写真の数々 | Unsplash](https://unsplash.com/ja)
+
+[Flutterの環境構築(Windows編)｜Flutter基礎入門 by Flutter大学](https://zenn.dev/kboy/books/ca6a9c93fd23f3/viewer/e09318)
+
+[Layout with Flexbox · React Native](https://reactnative.dev/docs/flexbox)
+
+[Font - Expo Documentation](https://docs.expo.dev/versions/latest/sdk/font/#error-codes)
+
+[Black Ops One - Google Fonts](https://fonts.google.com/specimen/Black+Ops+One)
+
+[SplashScreen - Expo Documentation](https://docs.expo.dev/versions/latest/sdk/splash-screen/)
+
+[Text · React Native](https://reactnative.dev/docs/text)
+
+[Machine Learning  |  Google Developers](https://developers.google.com/machine-learning?hl=ja)
+
+[Start Locally | PyTorch](https://pytorch.org/get-started/locally/)
+
+[Bard](https://bard.google.com/)
+
+[Amazon.co.jp: コンテンツと端末の管理](https://www.amazon.co.jp/hz/mycd/myx#/home/settings/payment)
+
+[Amazon.co.jp: Reinforcement Learning, second edition: An Introduction (Adaptive Computation and Machine Learning series) (English Edition) 電子書籍: Sutton, Richard S., Barto, Andrew G.: 洋書](https://www.amazon.co.jp/Reinforcement-Learning-second-Introduction-Computation-ebook/dp/B08BSYL7R1/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=OLNVFFMWP2QE&keywords=%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92+Richard+S.+Sutton%2C+Andrew+G.+Barto&qid=1684072155&s=digital-text&sprefix=%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92+richard+s.+sutton+andrew+g.+barto%2Cdigital-text%2C222&sr=1-1)
+
+[RLbook2020.pdf](http://incompleteideas.net/book/RLbook2020.pdf)
+
+[KindleにPDFをファイルを転送する方法を紹介](https://pdf.wondershare.jp/pdf-tips/transfer-pdf-files-to-kindle.html)
+
+[受信トレイ (3,765) - nagasawa.ryuji@gmail.com - Gmail](https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox)
+
+[マイドライブ - Google ドライブ](https://drive.google.com/drive/u/0/my-drive)
+
+[ChatGPTを使って論文を翻訳・校正する方法 - Qiita](https://qiita.com/yamato0811/items/9997bf4489287a035539)
+
+[2303.05352.pdf](https://arxiv.org/pdf/2303.05352.pdf)
+
+[DeepL Pro | テキスト、Wordその他の文書ファイルをセキュアに翻訳](https://www.deepl.com/pro?cta=header-prices)
+
 </details>
