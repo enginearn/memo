@@ -261,6 +261,16 @@ py -3.10 -m pip install -U pip
 py -3.10 -m venv venv
 ```
 
+`pip`で一括で`package upgrade`する。
+
+コマンド的には、一括ではなく1つずつupgradeしている...
+
+``` PowerShell
+pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}
+```
+
+[How to Update All Python Packages](https://www.activestate.com/resources/quick-reads/how-to-update-all-python-packages/)
+
 ``` ubuntu
 $ localectl list-locales
 C.UTF-8
