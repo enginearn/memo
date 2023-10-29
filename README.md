@@ -1271,10 +1271,8 @@ Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 2
 Redirecting vhost in /etc/apache2/sites-enabled/000-default.conf to ssl vhost in /etc/apache2/sites-enabled/wordpress-https.conf
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Congratulations! You have successfully enabled https://enginearn.dev
 
 You should test your configuration at:
-https://www.ssllabs.com/ssltest/analyze.html?d=enginearn.dev
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 IMPORTANT NOTES:
@@ -1288,8 +1286,6 @@ IMPORTANT NOTES:
    your certificates, run "certbot renew"
  - If you like Certbot, please consider supporting our work by:
 
-   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
-   Donating to EFF:                    https://eff.org/donate-le
 
 $ sudo certbot certonly --apache
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
@@ -1999,7 +1995,6 @@ wheel      0.34.2
 WARNING: You are using pip version 20.0.2; however, version 20.3.4 is available.
 You should consider upgrading via the 'C:\Users\pathto\Development\Python\venv27\Scripts\python.exe -m pip install --upgrade pip' command.
 (venv27) PS C:\Users\pathto\Development\Python> python -m pip install -U pip
-DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
 Collecting pip
   Downloading pip-20.3.4-py2.py3-none-any.whl (1.5 MB)
      |################################| 1.5 MB 2.0 MB/s
@@ -2262,7 +2257,6 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 Category: Productivity
 Pricing: Free
 Free Trial: No
-Terms of Transaction: https://aka.ms/microsoft-store-terms-of-transaction
 Seizure Warning: https://aka.ms/microsoft-store-seizure-warning
 Store License Terms: https://aka.ms/microsoft-store-license
 
@@ -2542,7 +2536,6 @@ VS Code `setting.json`
 
 [VSCodeからGCP(GoogleCloudPlatform)にSSH接続 - FlatKids](https://flat-kids.net/2020/03/09/vscode%E3%81%8B%E3%82%89gcpgooglecloudplatform%E3%81%ABssh%E6%8E%A5%E7%B6%9A/)
 
-[SSHでPermission deniedが解決しないと思ったらauthorized_keysに"\n"が紛れ込んでいた - Qiita](https://qiita.com/noir_neo/items/60532baaf051f91f3013)
 
 [GCP: Compute Engineに対して通常のsshコマンドでSSHできるようにする - nwtgck / Ryo Ota](https://scrapbox.io/nwtgck/GCP:_Compute_Engine%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A6%E9%80%9A%E5%B8%B8%E3%81%AEssh%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%A7SSH%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B)
 
@@ -2587,7 +2580,6 @@ VS Code `setting.json`
 
 [Docker run reference | Docker Documentation](https://docs.docker.com/engine/reference/run/)
 
-[第17回 Dockerで植物が育つ様子を自動録画してみよう――その1：古賀政純の「攻めのITのためのDocker塾」（2/2 ページ） - ITmedia エンタープライズ](https://www.itmedia.co.jp/enterprise/articles/1603/02/news031_2.html)
 
 [Windows環境でDockerコンテナにUSBウェブカメラを認識させる | UNITRUST](https://www.unitrust.co.jp/7117)
 
@@ -2612,7 +2604,6 @@ VS Code `setting.json`
 
 [index.htmlとは（indexの優先順位も）【初心者向け】 | エンジニア足立のコーディング日記](https://deep-blog.jp/engineer/index-html-priority/)
 
-[WordPress｜コアファイルの処理フロー(管理画面編) - わくわくBank](https://www.wakuwakubank.com/posts/657-wordpress-core-manage-flow/)
 
 [CentOS Stream 9 LAMPサーバインストールメモ【Apache2.4＋MySQL8.0＋PHP8.0】 | あぱーブログ](https://blog.apar.jp/linux/15791/)
 
@@ -2634,7 +2625,6 @@ VS Code `setting.json`
 
 [Install Hugo | Hugo](https://gohugo.io/getting-started/installing/)
 
-[gohugoio/hugo: The world’s fastest framework for building websites.](https://github.com/gohugoio/hugo)
 
 [インストール](https://garretlab.web.fc2.com/hugo/introduction/installation/)
 
@@ -2654,7 +2644,6 @@ VS Code `setting.json`
 
 [Visual Studio Code Remote Development Troubleshooting Tips and Tricks](https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent)
 
-[メモモモモ: Windowsで始める初めてのSSH](http://memomo2.blogspot.com/2018/06/windowsssh.html)
 
 [クリップボードに値をコピーする : PowerShell プログラミング | iPentec](https://www.ipentec.com/document/powershell-copy-to-clipboard)
 
@@ -2732,7 +2721,6 @@ VS Code `setting.json`
 
 [Eikon の仕様とダウンロード | リフィニティブ](https://www.refinitiv.com/ja/products/eikon-trading-software/download-eikon)
 
-[VM インスタンス – Compute Engine – My First Project – Google Cloud Console](https://console.cloud.google.com/compute/instances?authuser=4&hl=ja&project=resolute-fold-352811)
 
 [useキーワードでパスをスコープに持ち込む - The Rust Programming Language 日本語版](https://doc.rust-jp.rs/book-ja/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html)
 
@@ -2792,11 +2780,9 @@ VS Code `setting.json`
 
 [メソッド - Rust By Example 日本語版](https://doc.rust-jp.rs/rust-by-example-ja/fn/methods.html)
 
-[enginearn (enginearn)](https://github.com/enginearn)
 
 [参照と借用 - The Rust Programming Language 日本語版](https://doc.rust-jp.rs/book-ja/ch04-02-references-and-borrowing.html)
 
-[gohugoio/hugo: The world’s fastest framework for building websites.](https://github.com/gohugoio/hugo)
 
 [Rustを学ぶ - Rustプログラミング言語](https://www.rust-lang.org/ja/learn)
 
@@ -2814,7 +2800,6 @@ VS Code `setting.json`
 
 [centos9 streamにpostgresql11をインストールする方法 - Qiita](https://qiita.com/birune/items/01435f7be8371ea70f97)
 
-[PostgreSQL: Linux downloads (Red Hat family)](https://www.postgresql.org/download/linux/redhat/)
 
 [PostgreSQL12 Red Hat Enterprise Linux 8 dnf install: a23note](http://a23.sblo.jp/article/186925521.html)
 
@@ -2824,9 +2809,7 @@ VS Code `setting.json`
 
 [Microsoft about_profile](https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.2)
 
-[enginearn (enginearn)](https://github.com/enginearn)
 
-[centos9 streamにpostgresql11をインストールする方法 - Qiita](https://qiita.com/birune/items/01435f7be8371ea70f97)
 
 [Wooting | Signup](https://hub.wooting.io/auth/create-account)
 
@@ -2878,7 +2861,6 @@ VS Code `setting.json`
 
 [Rust Playground](https://play.rust-lang.org/?code=%23!%5Ballow(unused)%5D%0Afn%20main()%20%7B%0Afn%20returns_i64()%20-%3E%20i64%20%7B%0A%20%20%20%201i64%0A%7D%0Afn%20returns_unit()%20%7B%0A%20%20%20%201i64%3B%0A%7D%0A%0Alet%20is_i64%20%3D%20%7B%0A%20%20%20%20returns_i64()%0A%7D%3B%0Alet%20is_unit%20%3D%20%7B%0A%20%20%20%20returns_i64()%3B%0A%7D%3B%0A%7D&edition=2021)
 
-[unit - Rust](https://doc.rust-lang.org/std/primitive.unit.html)
 
 [Rust の型変換イディオム - Qiita](https://qiita.com/legokichi/items/0f1c592d46a9aaf9a0ea)
 
@@ -2926,7 +2908,6 @@ VS Code `setting.json`
 
 [Python で OAuth 2.0 認証を通して YouTube Data API を叩いてみた | DevelopersIO](https://dev.classmethod.jp/articles/oauth2-youtube-data-api/)
 
-[34.84.110.68 / localhost | phpMyAdmin 5.2.0](http://34.84.110.68/phpmyadmin/index.php?route=/&route=%2F)
 
 [Installation — phpMyAdmin 5.2.0 documentation](http://34.84.110.68/phpmyadmin/doc/html/setup.html#ssl)
 
@@ -2946,7 +2927,6 @@ VS Code `setting.json`
 
 [異なるデザインの固定ページを作成する【WordPress制作入門講座】 | Skillhub[スキルハブ]](https://skillhub.jp/courses/241/lessons/1764)
 
-[PHPのスレッドセーフ版(TS)とノンスレッドセーフ版(NTS)の違い | Dr.Clover’s Computer Clinic](https://clover.fcg.world/2017/03/19/8093/)
 
 [Apache httpdでエラー！AH00558 : … fully qualified domain name… さあ、どうする？](https://salumarine.com/how-to-fix-fqdn-warning-on-httpd/)
 
@@ -3162,7 +3142,6 @@ VS Code `setting.json`
 
 [【Linux】psqlコマンドが叩けない](https://zenn.dev/mizuneko4345/articles/d3dcae86b9cb05)
 
-[Postgresqlに接続できない時の対処法 - Qiita](https://qiita.com/Dexctersu/items/3d6bc50bf1d4a294980b)
 
 [17.3. データベースサーバの起動](https://www.postgresql.jp/docs/9.5/server-start.html)
 
@@ -3176,7 +3155,6 @@ VS Code `setting.json`
 
 [postgresql — ポート5432でpostgresqlに接続できません](https://www.web-dev-qa-db-ja.com/ja/postgresql/%E3%83%9D%E3%83%BC%E3%83%885432%E3%81%A7postgresql%E3%81%AB%E6%8E%A5%E7%B6%9A%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93/957137713/)
 
-[enginearn (enginearn)](https://github.com/enginearn)
 
 [HTML5 table](https://ja.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fja.dbpedia.org&query=PREFIX+geo%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23%3E%0D%0APREFIX+dbpedia-owl%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0Aselect+*+where+%7B%0D%0A++%3Flink+a+dbpedia-owl%3AStation%3B+%0D%0A++rdfs%3Alabel+%3Ftitle%3B%0D%0A++geo%3Alat+%3Flat%3B%0D%0A++geo%3Along+%3Flong.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on&log_debug_info=on)
 
@@ -3206,7 +3184,6 @@ VS Code `setting.json`
 
 [HTML5 table](https://ja.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fja.dbpedia.org&query=PREFIX+geo%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23%3E%0D%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+prop-ja%3A+%3Chttp%3A%2F%2Fja.dbpedia.org%2Fproperty%2F%3E%0D%0A%0D%0Aselect+*+where+%7B%0D%0A++%3Flink+a+owl%3AMuseum+%3B%0D%0A++rdfs%3Alabel+%3Ftitle+%3B%0D%0A++prop-ja%3A%E6%89%80%E5%9C%A8%E5%9C%B0+%3Faddress+%3B%0D%0A++geo%3Alat+%3Flat+%3B%0D%0A++geo%3Along+%3Flong+.+%0D%0AFILTER+REGEX%28%3Faddress%2C+%27%5E%5C%5Cp%7BHan%7D%7B2%2C3%7D%5B%E9%83%BD%E9%81%93%E5%BA%9C%E7%9C%8C%5D%27%29%0D%0A%7D+ORDER+BY+%3Ftitle&format=text%2Fhtml&timeout=0&signal_void=on)
 
-[enginearn (enginearn)](https://github.com/enginearn)
 
 [PyPI · The Python Package Index](https://pypi.org/)
 
@@ -3258,57 +3235,31 @@ VS Code `setting.json`
 
 [【Python】 "PermissionError: [Errno 13] Permission denied"の原因と対処 | テキストファイルを読み込むサンプル](https://tooljp.com/Python/ErrorMessage/PermissionError-Errno-13-Permission-denied-3D73.html)
 
-[enginearn (enginearn)](https://github.com/enginearn)
 
-[PyPI · The Python Package Index](https://pypi.org/)
 
-[Setup Nu · Actions · GitHub Marketplace](https://github.com/marketplace/actions/setup-nu)
 
-[Setup | Nushell](https://www.nushell.sh/cookbook/setup.html)
 
-[Nu のインストール | Nushell](https://www.nushell.sh/ja/book/installation.html#%E3%83%92%E3%82%99%E3%83%AB%E3%83%88%E3%82%99%E6%B8%88%E3%81%BF%E3%81%AE%E3%83%8F%E3%82%99%E3%82%A4%E3%83%8A%E3%83%AA%E3%83%BC)
 
-[PowerShellの演算子](http://www.vwnet.jp/windows/PowerShell/Ope/OpeListg.htm)
 
-[変数の値が NULL かを判定する方法[PowerShell] : バヤシタ](https://bayashita.com/p/entry/show/214)
 
-[.gitignore は、生成サービス gitignore.io を使って作ろう！ | Articles | Riotz.works](https://riotz.works/articles/lulzneko/2019/06/18/lets-create-gitignore-using-generation-service-gitignoreio/)
 
-[git ignoreコマンドで.gitignoreを取得する | something tech.](https://blog.web-apps.tech/gitignore-from-cli/)
 
-[Gitignore.io Template Fork](https://blog.joeblau.com/gitignore-io-template-fork)
 
-[github/gitignore: A collection of useful .gitignore templates](https://github.com/github/gitignore)
 
-[配列に要素を追加する方法[PowerShell] : バヤシタ](https://bayashita.com/p/entry/show/195)
 
-[比較演算子について - PowerShell | Microsoft Docs](https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.2)
 
-[配列に指定した値が含まれるかを確認する方法[PowerShell] : バヤシタ](https://bayashita.com/p/entry/show/202)
 
-[gitignore.ioのススメ - Qiita](https://qiita.com/dhun/items/adcae139b5ba1da56c81)
 
-[gitignore.io - Sample Code and Directory of libraries for Android Developers - AndroidHiro.com](https://androidhiro.com/source/android/example/gitignoreio/934)
 
-[PowerShellでのSplitによる文字列の分割とは？基本を紹介！ | .NETコラム](https://www.fenet.jp/dotnet/column/tool/6740/)
 
-[Write-HostとWrite-Outputの違い - しばたテックブログ](https://blog.shibata.tech/entry/2016/01/11/151201)
 
-[PowerShellで変数のNullや空文字を判定する方法 | miajimyu note](https://www.miajimyu.com/docs/powershell/powershell-tips/how-to-judge-null-and-empty/)
 
-[typing --- 型ヒントのサポート — Python 3.10.4 ドキュメント](https://docs.python.org/ja/3/library/typing.html)
 
-[VSCodeを使ったPythonパッケージの作り方 - Qiita](https://qiita.com/SolKul/items/9208163c79dc4002733c)
 
-[Python でパッケージを開発して配布する標準的な方法 - Qiita](https://qiita.com/propella/items/803923b2ff02482242cd)
 
-[Coronavirus Tracker](https://corona-stats.online/jp?minimal=true)
 
-[Pythonでランダムな小数・整数を生成するrandom, randrange, randintなど | note.nkmk.me](https://note.nkmk.me/python-random-randrange-randint/)
 
-[string --- 一般的な文字列操作 — Python 3.10.4 ドキュメント](https://docs.python.org/ja/3/library/string.html)
 
-[【Python】 "PermissionError: [Errno 13] Permission denied"の原因と対処 | テキストファイルを読み込むサンプル](https://tooljp.com/Python/ErrorMessage/PermissionError-Errno-13-Permission-denied-3D73.html)
 
 [mainタグの意味と使い方 | HTML | できるネット](https://dekiru.net/article/12866/)
 
@@ -3559,5 +3510,152 @@ VS Code `setting.json`
 [2303.05352.pdf](https://arxiv.org/pdf/2303.05352.pdf)
 
 [DeepL Pro | テキスト、Wordその他の文書ファイルをセキュアに翻訳](https://www.deepl.com/pro?cta=header-prices)
+
+[Overview of best practices for writing Dockerfiles | Docker Docs](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+
+[hylang - Official Image | Docker Hub](https://hub.docker.com/_/hylang/?_gl=1*12q4gvk*_ga*NDM5NDA2OTI4LjE2NzU3Njc3Mzg.*_ga_XJWPQMJYHQ*MTY5ODQ4MTg2MS42Ni4xLjE2OTg0ODMwODEuNTkuMC4w)
+
+[WLS上のシンボリックリンクの設定](https://chat.openai.com/c/5b2c7acf-aae4-4e22-b9a8-fa5f58ee3c83)
+
+[Index of /pub/nasm/releasebuilds/2.16.01/win64](https://www.nasm.us/pub/nasm/releasebuilds/2.16.01/win64/)
+
+[Social Network for Programmers and Developers](https://morioh.com/explore/popular)
+
+[vcpkgでC/C++ライブラリを簡単に導入しよう | ktakedev](https://www.ktakedev.com/blog/90/)
+
+[microsoft/vcpkg: C++ Library Manager for Windows, Linux, and MacOS](https://github.com/microsoft/vcpkg)
+
+[vcpkg のドキュメント | Microsoft Learn](https://learn.microsoft.com/ja-jp/vcpkg/)
+
+[Get Started - The Go Programming Language](https://go.dev/learn/)
+
+[First Steps | Deno Docs](https://docs.deno.com/runtime/manual/getting_started/first_steps)
+
+[contour-terminal/contour: Modern C++ Terminal Emulator](https://github.com/contour-terminal/contour)
+
+[golang Tags | Docker Hub](https://hub.docker.com/_/golang/tags)
+
+[Dockerfile リファレンス — Docker-docs-ja 24.0 ドキュメント](https://docs.docker.jp/engine/reference/builder.html#builder-buildkit)
+
+[使用していない Docker オブジェクトの削除（prune） — Docker-docs-ja 24.0 ドキュメント](https://docs.docker.jp/config/pruning.html)
+
+[docker-compose で exit with status 0 の解決法](https://zenn.dev/torkralle/articles/388ae878cb5f8b)
+
+[Dev Containers - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+
+[Troubleshoot Visual Studio Code Integrated Terminal launch failures](https://code.visualstudio.com/docs/supporting/troubleshoot-terminal-launch)
+
+[Managing accessibility settings - GitHub Docs](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-user-account-settings/managing-accessibility-settings#managing-the-appearance-of-links)
+
+[Overview - Rocket Programming Guide](https://rocket.rs/v0.5-rc/guide/overview/)
+
+[Rust Docker-compose `[cargo: not found` Warning While Trying to Build Development Container - Stack Overflow](https://stackoverflow.com/questions/76802552/rust-docker-compose-cargo-not-found-warning-while-trying-to-build-developmen)
+
+[rust Tags | Docker Hub](https://hub.docker.com/_/rust/tags)
+
+[Docker](https://hub.docker.com/_/neurodebian)
+
+[Cargo build error : linking with `cc` failed: exit status: 1 - Developers - Internet Computer Developer Forum](https://forum.dfinity.org/t/cargo-build-error-linking-with-cc-failed-exit-status-1/22291/9)
+
+[getrandom - Rust](https://docs.rs/getrandom/latest/getrandom/#webassembly-support)
+
+[久々にRustに取り組んで困ったこと](https://zenn.dev/sgtkuc1118/articles/1b49a8d037e484)
+
+[The `wasm-bindgen` Guide](https://rustwasm.github.io/docs/wasm-bindgen/print.html)
+
+[Address config not working when building in container · Issue #1811 · SergioBenitez/Rocket](https://github.com/SergioBenitez/Rocket/issues/1811)
+
+[Configuration - Rocket Programming Guide](https://rocket.rs/v0.5-rc/guide/configuration/#rockettoml)
+
+[tools/gopls/doc/workspace.md at master · golang/tools](https://github.com/golang/tools/blob/master/gopls/doc/workspace.md)
+
+[proposal/design/37720-gopls-workspaces.md at master · golang/proposal](https://github.com/golang/proposal/blob/master/design/37720-gopls-workspaces.md#goplsmod)
+
+[go buildはできるのに、VSCodeでgolangのimportがエラーと表示される #Go - Qiita](https://qiita.com/okaponta_/items/fdebb544ee154492ddf5)
+
+[GOPATH set to GOROOT (C:\Go\) has no effectの対策方法 | Engineer Log](https://engineer-log.net/index.php/2016/11/25/gopath-set-to-goroot-cgo-has-no-effect/)
+
+[プロジェクトごとにVSCodeの色とテーマを変えて気持ちを切り替える #VSCode - Qiita](https://qiita.com/mottox2/items/a5813feeaf653ef3e2c3)
+
+[Theme Color | Visual Studio Code Extension API](https://code.visualstudio.com/api/references/theme-color)
+
+[【Go】GOPATH変更できないときにやったこと #Go - Qiita](https://qiita.com/seicode/items/4392ca24a3b943dee900)
+
+[【golang】DockerでGoの開発環境を構築する](https://zenn.dev/yusuke49/articles/9ed37838861b1d)
+
+[x/tools/gopls: remove the "expandWorkspaceToModule" setting · Issue #63536 · golang/go](https://github.com/golang/go/issues/63536)
+
+
+[proposal/design/37720-gopls-workspaces.md at master · golang/proposal](https://github.com/golang/proposal/blob/master/design/37720-gopls-workspaces.md)
+
+[Go1.18からのWorkspace modeをさっそく使ってみた](https://zenn.dev/kimuson13/articles/go-workspace-mode-impressions)
+
+[Tutorial: Getting started with multi-module workspaces - The Go Programming Language](https://go.dev/doc/tutorial/workspaces#learn-more-about-workspaces)
+
+[Tutorial: Create a Go module - The Go Programming Language](https://go.dev/doc/tutorial/create-module)
+
+[fmt package - fmt - Go Packages](https://pkg.go.dev/fmt#Sprintf)
+
+[Call your code from another module - The Go Programming Language](https://go.dev/doc/tutorial/call-module-code)
+
+[Module version numbering - The Go Programming Language](https://go.dev/doc/modules/version-numbers)
+
+[typesinternal package - golang.org/x/tools/internal/typesinternal - Go Packages](https://pkg.go.dev/golang.org/x/tools/internal/typesinternal#BrokenImport)
+
+[Tutorial: Getting started with multi-module workspaces - The Go Programming Language](https://go.dev/doc/tutorial/workspaces)
+
+[Go1.20からrand.Seedは非推奨になった - 🐾 Nekonote](https://scrapbox.io/dojineko/Go1.20%E3%81%8B%E3%82%89rand.Seed%E3%81%AF%E9%9D%9E%E6%8E%A8%E5%A5%A8%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F)
+
+[rand package - math/rand - Go Packages](https://pkg.go.dev/math/rand#Seed)
+
+[Go言語やるぞ](https://zenn.dev/sasasin/scraps/08bddde21614cb)
+
+[go mod完全に理解した](https://zenn.dev/optimisuke/articles/105feac3f8e726830f8c)
+
+[prefix-dev/rip: Solve and install Python packages quickly with rip (pip in Rust)](https://github.com/prefix-dev/rip)
+
+[bmizerany/pat](https://github.com/bmizerany/pat)
+
+[go-chi/chi: lightweight, idiomatic and composable router for building Go HTTP services](https://github.com/go-chi/chi)
+
+[justinas/nosurf: CSRF protection middleware for Go.](https://github.com/justinas/nosurf)
+
+[nosurf package - github.com/justinas/nosurf - Go Packages](https://pkg.go.dev/github.com/justinas/nosurf@v1.1.1)
+
+[gorilla/csrf: Package gorilla/csrf provides Cross Site Request Forgery (CSRF) prevention middleware for Go web applications & services 🔒](https://github.com/gorilla/csrf)
+
+[alexedwards/scs: HTTP Session Management for Go](https://github.com/alexedwards/scs)
+
+[Cursor - The AI-first Code Editor](https://cursor.sh/settings)
+
+[getcursor/cursor: An AI-powered code editor based on VSCode 🤖](https://github.com/getcursor/cursor)
+
+[AIを活用したコードエディタ Cursor の使い方｜npaka](https://note.com/npaka/n/n2a70365a1667)
+
+[How to uninstall RealWorld Cursor Editor with Revo Uninstaller](https://www.revouninstaller.com/preview-log/?pid=1836&pname=RealWorld+Cursor+Editor)
+
+[Getting Started: Installation | Next.js](https://nextjs.org/docs/getting-started/installation)
+
+[Dockerコンテナをずっと起動しておく - WEB開発ノート](https://utouto97.hatenablog.com/entry/2022/03/15/092924)
+
+[Alpineでsudoを使う #Linux - Qiita](https://qiita.com/niwatori_chicken/items/b3d7fc95f20dea3c9951)
+
+[doas - ArchWiki](https://wiki.archlinux.jp/index.php/Doas)
+
+[Alpine Linux packages](https://pkgs.alpinelinux.org/packages?name=doas&branch=edge&repo=&arch=&maintainer=)
+
+[docker-node/21/alpine3.17/Dockerfile at 62c2e3cfb17ba8d9167b0daebbff9ea5ecaef6e4 · nodejs/docker-node](https://github.com/nodejs/docker-node/blob/62c2e3cfb17ba8d9167b0daebbff9ea5ecaef6e4/21/alpine3.17/Dockerfile)
+
+[hylang/hy: A dialect of Lisp that's embedded in Python](https://github.com/hylang/hy)
+
+[Modular Docs - Hello, world!](https://docs.modular.com/mojo/manual/get-started/hello-world.html)
+
+[babyagi/docs at main · yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi/tree/main/docs)
+
+[Pathの設定方法（Windows10） | コラビィコラム](https://collabe.pro/contents/?p=323)
+
+[Windows 10 環境変数の一覧と既定値](https://www.tipsfound.com/windows10/11010-windows10)
+
+[VSCodeにWSL2を連携する方法 | ヒトリセカイ](https://hitori-sekai.com/tool/vscode-wsl/)
 
 </details>
